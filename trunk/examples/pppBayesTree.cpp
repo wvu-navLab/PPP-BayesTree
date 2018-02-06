@@ -1,11 +1,8 @@
-/**
+/*
 
- * @file pppBayesTree.cpp
+ * @file gnssOnlyISAM.cpp
  * @brief Iterative GPS Range/Phase Estimator
  * @author Ryan Watson & Jason Gross
- */
-/**
- * TODO :: Test time-dependent phase-bias noise
  */
 
 // GTSAM related includes.
@@ -56,21 +53,16 @@ using symbol_shorthand::G;   // bias states ( Phase Biases )
 
 int main(int argc, char* argv[])
 {
-        // define std out print color
-        unsigned int prn;
-        int nThreads(3), phase_break = 0, break_count = 0;
-        double xn, yn, zn, gpsErf, deltaRange, deltaPhase;
-        double east, north, vertical, measRange, measPhase;
+        int nThreads(-1), break_count(0);
+        double xn, yn, zn, gpsErf;
+        double east, north, vertical;
         string confFile, gnssFile;
         const string red("\033[0;31m");
         const string green("\033[0;32m");
-        bool trop = true;
-        bool printBias = true;
-        bool printXYZ = true;
+        bool printBias(true), trop(true), printXYZ(true);
         Eigen::VectorXi prn_pre(1), prn_curr(1);
         Eigen::Matrix<double,96,1> gps = Eigen::Matrix<double,96,1>::Zero();
         Eigen::Matrix<double,96,1> gps_pre = Eigen::Matrix<double,96,1>::Zero();
-
 
         cout.precision(12);
 
@@ -89,7 +81,7 @@ int main(int argc, char* argv[])
         string station;
 
         if (confFile.empty() ) {
-                cout << red << "\n\n You need to provide a conf file \n"
+                cout << red << "\n\n Currently, you need to provide a conf file \n"
                      << "\n\n"  << green << desc << endl;
         }
 
@@ -139,7 +131,7 @@ int main(int argc, char* argv[])
 
         double output_time = 0.0;
         double rangeWeight = pow(2.5,2);
-        double phaseWeight = pow(0.25,2);
+        double phaseWeight = pow(0.0025,2);
 
         ifstream file(gnssFile.c_str());
         string value;
@@ -159,9 +151,9 @@ int main(int argc, char* argv[])
 
         noiseModel::Diagonal::shared_ptr nonBias_InitNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 1.0, 1.0, 1.0, 3e6, 3e-1).finished());
 
-        noiseModel::Diagonal::shared_ptr nonBias_ProcessNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 5.0, 5.0, 5.0, 2e4, 3e-5).finished());
+        noiseModel::Diagonal::shared_ptr nonBias_ProcessNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 5.0, 5.0, 5.0, 2e4, 100).finished());
 
-        biasStates initNoise = (gtsam::Vector(1) << 100).finished();
+        biasStates initNoise = (gtsam::Vector(1) << 5e-5).finished();
         diagNoise::shared_ptr biasInitNoise = diagNoise::Sigmas( initNoise );
 
         NonlinearFactorGraph *graph = new NonlinearFactorGraph();

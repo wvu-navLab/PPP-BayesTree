@@ -1,0 +1,36 @@
+# CMake generated Testfile for 
+# Source directory: /home/rmw/Documents/git/PPP-BayesTree/trunk/tests
+# Build directory: /home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(testNonlinearISAM "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testNonlinearISAM")
+add_test(testManifold "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testManifold")
+add_test(testDoglegOptimizer "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testDoglegOptimizer")
+add_test(testMarginals "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testMarginals")
+add_test(testNonlinearFactorGraph "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testNonlinearFactorGraph")
+add_test(testGaussianBayesTreeB "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGaussianBayesTreeB")
+add_test(testSimulated2D "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSimulated2D")
+add_test(testGaussianJunctionTreeB "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGaussianJunctionTreeB")
+add_test(testNonlinearFactor "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testNonlinearFactor")
+add_test(testGradientDescentOptimizer "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGradientDescentOptimizer")
+add_test(testGaussianISAM2 "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGaussianISAM2")
+add_test(testNonlinearOptimizer "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testNonlinearOptimizer")
+add_test(testPCGSolver "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testPCGSolver")
+add_test(testPreconditioner "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testPreconditioner")
+add_test(testGraph "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGraph")
+add_test(testSimulated3D "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSimulated3D")
+add_test(testNonlinearEquality "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testNonlinearEquality")
+add_test(testIterative "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testIterative")
+add_test(testExpressionFactor "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testExpressionFactor")
+add_test(testGeneralSFMFactorB "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGeneralSFMFactorB")
+add_test(testExtendedKalmanFilter "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testExtendedKalmanFilter")
+add_test(testGaussianISAM "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGaussianISAM")
+add_test(testSimulated2DOriented "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSimulated2DOriented")
+add_test(testLie "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testLie")
+add_test(testBoundingConstraint "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testBoundingConstraint")
+add_test(testRot3Optimization "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testRot3Optimization")
+add_test(testGaussianFactorGraphB "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testGaussianFactorGraphB")
+add_test(testSerializationSLAM "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSerializationSLAM")
+add_test(testSubgraphPreconditioner "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSubgraphPreconditioner")
+add_test(testSubgraphSolver "/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/testSubgraphSolver")

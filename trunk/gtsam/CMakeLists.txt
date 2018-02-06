@@ -8,7 +8,11 @@ set (gtsam_subdirs
     symbolic
     linear
     nonlinear
+    sam
+    sfm
     slam
+    smart
+    navigation
     gnssNavigation
     configReader
     robustModels
@@ -75,6 +79,7 @@ set(gtsam_srcs
     ${linear_srcs}
     ${nonlinear_srcs}
     ${slam_srcs}
+    ${navigation_srcs}
     ${gnssNavigation_srcs}
     ${configReader_srcs}
     ${robustModels_srcs}

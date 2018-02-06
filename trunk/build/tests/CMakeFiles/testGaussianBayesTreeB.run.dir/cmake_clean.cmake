@@ -1,0 +1,8 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/testGaussianBayesTreeB.run"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/testGaussianBayesTreeB.run.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
