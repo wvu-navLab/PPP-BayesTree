@@ -1,6 +1,6 @@
 # PPP-BayesTree
 
-This repository contains a modified version of [GTSAM](https://bitbucket.org/gtborg/gtsam), which has been modified for GNSS data processing. A detailed description of the modification made can be found in "Evaluation of Precise Point Positioning Convergence with an Incremental Graph Optimizer". This software has been cleared for public release by the USAF Case # PENDING
+This repository contains a modified version of [GTSAM](https://bitbucket.org/gtborg/gtsam), which has been modified for GNSS data processing. A detailed description of the modification made can be found in "Evaluation of Precise Point Positioning Convergence with an Incremental Graph Optimizer". This software has been cleared for public release by the USAF Case # 88ABW-2018-0905
 
 
 ## How to Install
@@ -35,8 +35,6 @@ make
 ````
 
 ### 4) Test
-
-**ADD MORE HERE LATER**
 
 ````bash
 ./examples/pppBayesTree -c example.conf
