@@ -342,6 +342,11 @@ endif()
 # Build CppUnitLite
 add_subdirectory(CppUnitLite)
 
+# Build wrap
+if (GTSAM_BUILD_WRAP)
+    add_subdirectory(wrap)
+endif(GTSAM_BUILD_WRAP)
+
 # Build GTSAM library
 add_subdirectory(gtsam)
 
@@ -353,6 +358,30 @@ add_subdirectory(examples)
 
 # Build timing
 add_subdirectory(timing)
+
+# Matlab toolbox
+if (GTSAM_INSTALL_MATLAB_TOOLBOX)
+	add_subdirectory(matlab)
+endif()
+
+# Python wrap
+if (GTSAM_BUILD_PYTHON)
+	include(GtsamPythonWrap)
+
+	# NOTE: The automatic generation of python wrapper from the gtsampy.h interface is
+	#       not working yet, so we're using a handwritten wrapper files on python/handwritten.
+	#       Once the python wrapping from the interface file is working, you can _swap_ the
+	#       comments on the next lines
+
+	# wrap_and_install_python(gtsampy.h "${GTSAM_ADDITIONAL_LIBRARIES}" "")
+	add_subdirectory(python)
+
+endif()
+
+# Build gtsam_unstable
+if (GTSAM_BUILD_UNSTABLE)
+    add_subdirectory(gtsam_unstable)
+endif(GTSAM_BUILD_UNSTABLE)
 
 # Install config and export files
 GtsamMakeConfigFile(GTSAM "${CMAKE_CURRENT_SOURCE_DIR}/gtsam_extra.cmake.in")
