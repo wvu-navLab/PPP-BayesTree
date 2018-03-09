@@ -36,5 +36,5 @@ make
 ### 4) Test
 
 ````bash
-./examples/pppBayesTree -c example.conf
+./examples/pppBayesTree -c ../data/example.conf
 ````
