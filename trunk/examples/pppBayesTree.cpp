@@ -236,11 +236,11 @@ int main(int argc, char* argv[])
                 prop_xyz = prop_xyz - delta_xyz;
 
                 if (printXYZ) {
-                        cout << "xyz " << prop_xyz.x() << " " << prop_xyz.y() << " " << prop_xyz.z() << endl;
+                        cout << "ECEF-XYZ " << prop_xyz.x() << " " << prop_xyz.y() << " " << prop_xyz.z() << endl;
                 }
 
                 if (printBias) {
-                        cout << "gps ";
+                        cout << "Carrier-Phase Ambiguity ";
                         for (int k=0; k<numSats; k++) {
                                 cout << result.at<biasStates>(G(bias_counter[prn_curr(k)])) << " ";
                         }
