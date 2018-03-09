@@ -34,10 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/robustModels" TYPE FILE FILES
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/switchVariableLinear.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/betweenFactorSwitchable.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/BetweenFactorMaxMix.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/PseudorangeSwitchFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/betweenFactorSwitchable.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/switchVariableLinear.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/BetweenFactorMaxMix.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/robustModels/PseudorangeMaxMix.h"
     )
 endif()

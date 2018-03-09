@@ -112,16 +112,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/local/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -133,16 +133,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : rebuild_cache/fast
+.PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -218,21 +218,6 @@ testLieScalar/fast:
 .PHONY : testLieScalar/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testDebug.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDebug.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testDebug.dir/rule
-
-# Convenience name for target.
-testDebug: gtsam/base/tests/CMakeFiles/testDebug.dir/rule
-
-.PHONY : testDebug
-
-# fast build rule for target.
-testDebug/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDebug.dir/build.make gtsam/base/tests/CMakeFiles/testDebug.dir/build
-.PHONY : testDebug/fast
-
-# Convenience name for target.
 gtsam/base/tests/CMakeFiles/testLieMatrix.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testLieMatrix.run.dir/rule
 .PHONY : gtsam/base/tests/CMakeFiles/testLieMatrix.run.dir/rule
@@ -248,6 +233,126 @@ testLieMatrix.run/fast:
 .PHONY : testLieMatrix.run/fast
 
 # Convenience name for target.
+gtsam/base/tests/CMakeFiles/testLieVector.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
+
+# Convenience name for target.
+testLieVector: gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
+
+.PHONY : testLieVector
+
+# fast build rule for target.
+testLieVector/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testLieVector.dir/build.make gtsam/base/tests/CMakeFiles/testLieVector.dir/build
+.PHONY : testLieVector/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
+
+# Convenience name for target.
+testFastContainers: gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
+
+.PHONY : testFastContainers
+
+# fast build rule for target.
+testFastContainers/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testFastContainers.dir/build.make gtsam/base/tests/CMakeFiles/testFastContainers.dir/build
+.PHONY : testFastContainers/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
+
+# Convenience name for target.
+testVerticalBlockMatrix.run: gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
+
+.PHONY : testVerticalBlockMatrix.run
+
+# fast build rule for target.
+testVerticalBlockMatrix.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/build
+.PHONY : testVerticalBlockMatrix.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
+
+# Convenience name for target.
+testVerticalBlockMatrix: gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
+
+.PHONY : testVerticalBlockMatrix
+
+# fast build rule for target.
+testVerticalBlockMatrix/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/build
+.PHONY : testVerticalBlockMatrix/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
+
+# Convenience name for target.
+testCholesky.run: gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
+
+.PHONY : testCholesky.run
+
+# fast build rule for target.
+testCholesky.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testCholesky.run.dir/build.make gtsam/base/tests/CMakeFiles/testCholesky.run.dir/build
+.PHONY : testCholesky.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testVector.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
+
+# Convenience name for target.
+testVector.run: gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
+
+.PHONY : testVector.run
+
+# fast build rule for target.
+testVector.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVector.run.dir/build.make gtsam/base/tests/CMakeFiles/testVector.run.dir/build
+.PHONY : testVector.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
+
+# Convenience name for target.
+testMatrix.run: gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
+
+.PHONY : testMatrix.run
+
+# fast build rule for target.
+testMatrix.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testMatrix.run.dir/build
+.PHONY : testMatrix.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testGroup.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testGroup.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testGroup.dir/rule
+
+# Convenience name for target.
+testGroup: gtsam/base/tests/CMakeFiles/testGroup.dir/rule
+
+.PHONY : testGroup
+
+# fast build rule for target.
+testGroup/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testGroup.dir/build.make gtsam/base/tests/CMakeFiles/testGroup.dir/build
+.PHONY : testGroup/fast
+
+# Convenience name for target.
 gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/rule
 .PHONY : gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/rule
@@ -261,36 +366,6 @@ testTestableAssertions: gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/r
 testTestableAssertions/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/build.make gtsam/base/tests/CMakeFiles/testTestableAssertions.dir/build
 .PHONY : testTestableAssertions/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
-
-# Convenience name for target.
-testSymmetricBlockMatrix.run: gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
-
-.PHONY : testSymmetricBlockMatrix.run
-
-# fast build rule for target.
-testSymmetricBlockMatrix.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/build
-.PHONY : testSymmetricBlockMatrix.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
-
-# Convenience name for target.
-testSymmetricBlockMatrix: gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
-
-.PHONY : testSymmetricBlockMatrix
-
-# fast build rule for target.
-testSymmetricBlockMatrix/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/build
-.PHONY : testSymmetricBlockMatrix/fast
 
 # Convenience name for target.
 gtsam/base/tests/CMakeFiles/testLieMatrix.dir/rule:
@@ -323,214 +398,34 @@ testTreeTraversal.run/fast:
 .PHONY : testTreeTraversal.run/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
+gtsam/base/tests/CMakeFiles/testDebug.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDebug.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testDebug.dir/rule
 
 # Convenience name for target.
-testOptionalJacobian.run: gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
+testDebug: gtsam/base/tests/CMakeFiles/testDebug.dir/rule
 
-.PHONY : testOptionalJacobian.run
+.PHONY : testDebug
 
 # fast build rule for target.
-testOptionalJacobian.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/build.make gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/build
-.PHONY : testOptionalJacobian.run/fast
+testDebug/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDebug.dir/build.make gtsam/base/tests/CMakeFiles/testDebug.dir/build
+.PHONY : testDebug/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testVector.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVector.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testVector.dir/rule
+gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
 
 # Convenience name for target.
-testVector: gtsam/base/tests/CMakeFiles/testVector.dir/rule
+testTreeTraversal: gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
 
-.PHONY : testVector
+.PHONY : testTreeTraversal
 
 # fast build rule for target.
-testVector/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVector.dir/build.make gtsam/base/tests/CMakeFiles/testVector.dir/build
-.PHONY : testVector/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testGroup.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testGroup.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testGroup.dir/rule
-
-# Convenience name for target.
-testGroup: gtsam/base/tests/CMakeFiles/testGroup.dir/rule
-
-.PHONY : testGroup
-
-# fast build rule for target.
-testGroup/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testGroup.dir/build.make gtsam/base/tests/CMakeFiles/testGroup.dir/build
-.PHONY : testGroup/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testLieVector.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
-
-# Convenience name for target.
-testLieVector: gtsam/base/tests/CMakeFiles/testLieVector.dir/rule
-
-.PHONY : testLieVector
-
-# fast build rule for target.
-testLieVector/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testLieVector.dir/build.make gtsam/base/tests/CMakeFiles/testLieVector.dir/build
-.PHONY : testLieVector/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
-
-# Convenience name for target.
-testDebug.run: gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
-
-.PHONY : testDebug.run
-
-# fast build rule for target.
-testDebug.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDebug.run.dir/build.make gtsam/base/tests/CMakeFiles/testDebug.run.dir/build
-.PHONY : testDebug.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/check.base.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/check.base.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/check.base.dir/rule
-
-# Convenience name for target.
-check.base: gtsam/base/tests/CMakeFiles/check.base.dir/rule
-
-.PHONY : check.base
-
-# fast build rule for target.
-check.base/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/check.base.dir/build.make gtsam/base/tests/CMakeFiles/check.base.dir/build
-.PHONY : check.base/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testCholesky.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
-
-# Convenience name for target.
-testCholesky: gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
-
-.PHONY : testCholesky
-
-# fast build rule for target.
-testCholesky/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testCholesky.dir/build.make gtsam/base/tests/CMakeFiles/testCholesky.dir/build
-.PHONY : testCholesky/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
-
-# Convenience name for target.
-testFastContainers.run: gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
-
-.PHONY : testFastContainers.run
-
-# fast build rule for target.
-testFastContainers.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/build.make gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/build
-.PHONY : testFastContainers.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
-
-# Convenience name for target.
-testMatrix.run: gtsam/base/tests/CMakeFiles/testMatrix.run.dir/rule
-
-.PHONY : testMatrix.run
-
-# fast build rule for target.
-testMatrix.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testMatrix.run.dir/build
-.PHONY : testMatrix.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testVector.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
-
-# Convenience name for target.
-testVector.run: gtsam/base/tests/CMakeFiles/testVector.run.dir/rule
-
-.PHONY : testVector.run
-
-# fast build rule for target.
-testVector.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVector.run.dir/build.make gtsam/base/tests/CMakeFiles/testVector.run.dir/build
-.PHONY : testVector.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
-
-# Convenience name for target.
-testOptionalJacobian: gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
-
-.PHONY : testOptionalJacobian
-
-# fast build rule for target.
-testOptionalJacobian/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/build.make gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/build
-.PHONY : testOptionalJacobian/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
-
-# Convenience name for target.
-testGroup.run: gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
-
-.PHONY : testGroup.run
-
-# fast build rule for target.
-testGroup.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testGroup.run.dir/build.make gtsam/base/tests/CMakeFiles/testGroup.run.dir/build
-.PHONY : testGroup.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
-
-# Convenience name for target.
-testVerticalBlockMatrix.run: gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/rule
-
-.PHONY : testVerticalBlockMatrix.run
-
-# fast build rule for target.
-testVerticalBlockMatrix.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.run.dir/build
-.PHONY : testVerticalBlockMatrix.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
-
-# Convenience name for target.
-testFastContainers: gtsam/base/tests/CMakeFiles/testFastContainers.dir/rule
-
-.PHONY : testFastContainers
-
-# fast build rule for target.
-testFastContainers/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testFastContainers.dir/build.make gtsam/base/tests/CMakeFiles/testFastContainers.dir/build
-.PHONY : testFastContainers/fast
+testTreeTraversal/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/build.make gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/build
+.PHONY : testTreeTraversal/fast
 
 # Convenience name for target.
 gtsam/base/tests/CMakeFiles/testDSFVector.run.dir/rule:
@@ -563,79 +458,19 @@ testNumericalDerivative.run/fast:
 .PHONY : testNumericalDerivative.run/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
+gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
 
 # Convenience name for target.
-testLieVector.run: gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
+testSerializationBase.run: gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
 
-.PHONY : testLieVector.run
+.PHONY : testSerializationBase.run
 
 # fast build rule for target.
-testLieVector.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testLieVector.run.dir/build.make gtsam/base/tests/CMakeFiles/testLieVector.run.dir/build
-.PHONY : testLieVector.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testMatrix.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
-
-# Convenience name for target.
-testMatrix: gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
-
-.PHONY : testMatrix
-
-# fast build rule for target.
-testMatrix/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testMatrix.dir/build
-.PHONY : testMatrix/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
-
-# Convenience name for target.
-testCholesky.run: gtsam/base/tests/CMakeFiles/testCholesky.run.dir/rule
-
-.PHONY : testCholesky.run
-
-# fast build rule for target.
-testCholesky.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testCholesky.run.dir/build.make gtsam/base/tests/CMakeFiles/testCholesky.run.dir/build
-.PHONY : testCholesky.run/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
-
-# Convenience name for target.
-testDSFVector: gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
-
-.PHONY : testDSFVector
-
-# fast build rule for target.
-testDSFVector/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDSFVector.dir/build.make gtsam/base/tests/CMakeFiles/testDSFVector.dir/build
-.PHONY : testDSFVector/fast
-
-# Convenience name for target.
-gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
-
-# Convenience name for target.
-testNumericalDerivative: gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
-
-.PHONY : testNumericalDerivative
-
-# fast build rule for target.
-testNumericalDerivative/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/build.make gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/build
-.PHONY : testNumericalDerivative/fast
+testSerializationBase.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/build.make gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/build
+.PHONY : testSerializationBase.run/fast
 
 # Convenience name for target.
 gtsam/base/tests/CMakeFiles/testTestableAssertions.run.dir/rule:
@@ -668,49 +503,214 @@ testSerializationBase/fast:
 .PHONY : testSerializationBase/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
+gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
 
 # Convenience name for target.
-testSerializationBase.run: gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/rule
+testDSFVector: gtsam/base/tests/CMakeFiles/testDSFVector.dir/rule
 
-.PHONY : testSerializationBase.run
+.PHONY : testDSFVector
 
 # fast build rule for target.
-testSerializationBase.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/build.make gtsam/base/tests/CMakeFiles/testSerializationBase.run.dir/build
-.PHONY : testSerializationBase.run/fast
+testDSFVector/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDSFVector.dir/build.make gtsam/base/tests/CMakeFiles/testDSFVector.dir/build
+.PHONY : testDSFVector/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
+gtsam/base/tests/CMakeFiles/testVector.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testVector.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testVector.dir/rule
 
 # Convenience name for target.
-testVerticalBlockMatrix: gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/rule
+testVector: gtsam/base/tests/CMakeFiles/testVector.dir/rule
 
-.PHONY : testVerticalBlockMatrix
+.PHONY : testVector
 
 # fast build rule for target.
-testVerticalBlockMatrix/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testVerticalBlockMatrix.dir/build
-.PHONY : testVerticalBlockMatrix/fast
+testVector/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testVector.dir/build.make gtsam/base/tests/CMakeFiles/testVector.dir/build
+.PHONY : testVector/fast
 
 # Convenience name for target.
-gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
-.PHONY : gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
+gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
 
 # Convenience name for target.
-testTreeTraversal: gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/rule
+testOptionalJacobian.run: gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/rule
 
-.PHONY : testTreeTraversal
+.PHONY : testOptionalJacobian.run
 
 # fast build rule for target.
-testTreeTraversal/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/build.make gtsam/base/tests/CMakeFiles/testTreeTraversal.dir/build
-.PHONY : testTreeTraversal/fast
+testOptionalJacobian.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/build.make gtsam/base/tests/CMakeFiles/testOptionalJacobian.run.dir/build
+.PHONY : testOptionalJacobian.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
+
+# Convenience name for target.
+testNumericalDerivative: gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/rule
+
+.PHONY : testNumericalDerivative
+
+# fast build rule for target.
+testNumericalDerivative/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/build.make gtsam/base/tests/CMakeFiles/testNumericalDerivative.dir/build
+.PHONY : testNumericalDerivative/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
+
+# Convenience name for target.
+testLieVector.run: gtsam/base/tests/CMakeFiles/testLieVector.run.dir/rule
+
+.PHONY : testLieVector.run
+
+# fast build rule for target.
+testLieVector.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testLieVector.run.dir/build.make gtsam/base/tests/CMakeFiles/testLieVector.run.dir/build
+.PHONY : testLieVector.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testMatrix.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
+
+# Convenience name for target.
+testMatrix: gtsam/base/tests/CMakeFiles/testMatrix.dir/rule
+
+.PHONY : testMatrix
+
+# fast build rule for target.
+testMatrix/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testMatrix.dir/build
+.PHONY : testMatrix/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
+
+# Convenience name for target.
+testOptionalJacobian: gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/rule
+
+.PHONY : testOptionalJacobian
+
+# fast build rule for target.
+testOptionalJacobian/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/build.make gtsam/base/tests/CMakeFiles/testOptionalJacobian.dir/build
+.PHONY : testOptionalJacobian/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
+
+# Convenience name for target.
+testGroup.run: gtsam/base/tests/CMakeFiles/testGroup.run.dir/rule
+
+.PHONY : testGroup.run
+
+# fast build rule for target.
+testGroup.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testGroup.run.dir/build.make gtsam/base/tests/CMakeFiles/testGroup.run.dir/build
+.PHONY : testGroup.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/check.base.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/check.base.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/check.base.dir/rule
+
+# Convenience name for target.
+check.base: gtsam/base/tests/CMakeFiles/check.base.dir/rule
+
+.PHONY : check.base
+
+# fast build rule for target.
+check.base/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/check.base.dir/build.make gtsam/base/tests/CMakeFiles/check.base.dir/build
+.PHONY : check.base/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
+
+# Convenience name for target.
+testDebug.run: gtsam/base/tests/CMakeFiles/testDebug.run.dir/rule
+
+.PHONY : testDebug.run
+
+# fast build rule for target.
+testDebug.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testDebug.run.dir/build.make gtsam/base/tests/CMakeFiles/testDebug.run.dir/build
+.PHONY : testDebug.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
+
+# Convenience name for target.
+testSymmetricBlockMatrix: gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/rule
+
+.PHONY : testSymmetricBlockMatrix
+
+# fast build rule for target.
+testSymmetricBlockMatrix/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/build.make gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.dir/build
+.PHONY : testSymmetricBlockMatrix/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
+
+# Convenience name for target.
+testSymmetricBlockMatrix.run: gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/rule
+
+.PHONY : testSymmetricBlockMatrix.run
+
+# fast build rule for target.
+testSymmetricBlockMatrix.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/build.make gtsam/base/tests/CMakeFiles/testSymmetricBlockMatrix.run.dir/build
+.PHONY : testSymmetricBlockMatrix.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
+
+# Convenience name for target.
+testFastContainers.run: gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/rule
+
+.PHONY : testFastContainers.run
+
+# fast build rule for target.
+testFastContainers.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/build.make gtsam/base/tests/CMakeFiles/testFastContainers.run.dir/build
+.PHONY : testFastContainers.run/fast
+
+# Convenience name for target.
+gtsam/base/tests/CMakeFiles/testCholesky.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
+.PHONY : gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
+
+# Convenience name for target.
+testCholesky: gtsam/base/tests/CMakeFiles/testCholesky.dir/rule
+
+.PHONY : testCholesky
+
+# fast build rule for target.
+testCholesky/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/base/tests/CMakeFiles/testCholesky.dir/build.make gtsam/base/tests/CMakeFiles/testCholesky.dir/build
+.PHONY : testCholesky/fast
 
 testCholesky.o: testCholesky.cpp.o
 
@@ -1184,43 +1184,43 @@ help:
 	@echo "... testLieScalar.run"
 	@echo "... test"
 	@echo "... testLieScalar"
-	@echo "... install/local"
-	@echo "... testDebug"
 	@echo "... testLieMatrix.run"
+	@echo "... testLieVector"
+	@echo "... testFastContainers"
+	@echo "... testVerticalBlockMatrix.run"
+	@echo "... testVerticalBlockMatrix"
+	@echo "... testCholesky.run"
+	@echo "... testVector.run"
+	@echo "... testMatrix.run"
+	@echo "... rebuild_cache"
+	@echo "... testGroup"
 	@echo "... testTestableAssertions"
-	@echo "... testSymmetricBlockMatrix.run"
-	@echo "... testSymmetricBlockMatrix"
 	@echo "... list_install_components"
 	@echo "... testLieMatrix"
 	@echo "... testTreeTraversal.run"
-	@echo "... testOptionalJacobian.run"
-	@echo "... testVector"
-	@echo "... rebuild_cache"
-	@echo "... testGroup"
-	@echo "... testLieVector"
-	@echo "... testDebug.run"
-	@echo "... check.base"
-	@echo "... testCholesky"
-	@echo "... testFastContainers.run"
-	@echo "... testMatrix.run"
-	@echo "... testVector.run"
-	@echo "... testOptionalJacobian"
-	@echo "... testGroup.run"
-	@echo "... testVerticalBlockMatrix.run"
-	@echo "... testFastContainers"
+	@echo "... install/local"
+	@echo "... testDebug"
+	@echo "... testTreeTraversal"
 	@echo "... testDSFVector.run"
 	@echo "... testNumericalDerivative.run"
+	@echo "... testSerializationBase.run"
+	@echo "... testTestableAssertions.run"
+	@echo "... testSerializationBase"
+	@echo "... testDSFVector"
+	@echo "... testVector"
+	@echo "... testOptionalJacobian.run"
+	@echo "... testNumericalDerivative"
 	@echo "... install/strip"
 	@echo "... testLieVector.run"
 	@echo "... testMatrix"
-	@echo "... testCholesky.run"
-	@echo "... testDSFVector"
-	@echo "... testNumericalDerivative"
-	@echo "... testTestableAssertions.run"
-	@echo "... testSerializationBase"
-	@echo "... testSerializationBase.run"
-	@echo "... testVerticalBlockMatrix"
-	@echo "... testTreeTraversal"
+	@echo "... testOptionalJacobian"
+	@echo "... testGroup.run"
+	@echo "... check.base"
+	@echo "... testDebug.run"
+	@echo "... testSymmetricBlockMatrix"
+	@echo "... testSymmetricBlockMatrix.run"
+	@echo "... testFastContainers.run"
+	@echo "... testCholesky"
 	@echo "... testCholesky.o"
 	@echo "... testCholesky.i"
 	@echo "... testCholesky.s"

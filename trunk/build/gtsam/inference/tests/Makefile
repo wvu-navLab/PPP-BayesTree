@@ -188,21 +188,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
-.PHONY : gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
-
-# Convenience name for target.
-testOrdering: gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
-
-.PHONY : testOrdering
-
-# fast build rule for target.
-testOrdering/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testOrdering.dir/build.make gtsam/inference/tests/CMakeFiles/testOrdering.dir/build
-.PHONY : testOrdering/fast
-
-# Convenience name for target.
 gtsam/inference/tests/CMakeFiles/testLabeledSymbol.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testLabeledSymbol.dir/rule
 .PHONY : gtsam/inference/tests/CMakeFiles/testLabeledSymbol.dir/rule
@@ -218,6 +203,21 @@ testLabeledSymbol/fast:
 .PHONY : testLabeledSymbol/fast
 
 # Convenience name for target.
+gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
+.PHONY : gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
+
+# Convenience name for target.
+testOrdering: gtsam/inference/tests/CMakeFiles/testOrdering.dir/rule
+
+.PHONY : testOrdering
+
+# fast build rule for target.
+testOrdering/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testOrdering.dir/build.make gtsam/inference/tests/CMakeFiles/testOrdering.dir/build
+.PHONY : testOrdering/fast
+
+# Convenience name for target.
 gtsam/inference/tests/CMakeFiles/testKey.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testKey.dir/rule
 .PHONY : gtsam/inference/tests/CMakeFiles/testKey.dir/rule
@@ -231,6 +231,21 @@ testKey: gtsam/inference/tests/CMakeFiles/testKey.dir/rule
 testKey/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testKey.dir/build.make gtsam/inference/tests/CMakeFiles/testKey.dir/build
 .PHONY : testKey/fast
+
+# Convenience name for target.
+gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
+.PHONY : gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
+
+# Convenience name for target.
+testVariableSlots.run: gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
+
+.PHONY : testVariableSlots.run
+
+# fast build rule for target.
+testVariableSlots.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/build.make gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/build
+.PHONY : testVariableSlots.run/fast
 
 # Convenience name for target.
 gtsam/inference/tests/CMakeFiles/testOrdering.run.dir/rule:
@@ -261,21 +276,6 @@ testLabeledSymbol.run: gtsam/inference/tests/CMakeFiles/testLabeledSymbol.run.di
 testLabeledSymbol.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testLabeledSymbol.run.dir/build.make gtsam/inference/tests/CMakeFiles/testLabeledSymbol.run.dir/build
 .PHONY : testLabeledSymbol.run/fast
-
-# Convenience name for target.
-gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
-.PHONY : gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
-
-# Convenience name for target.
-testVariableSlots.run: gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/rule
-
-.PHONY : testVariableSlots.run
-
-# fast build rule for target.
-testVariableSlots.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/build.make gtsam/inference/tests/CMakeFiles/testVariableSlots.run.dir/build
-.PHONY : testVariableSlots.run/fast
 
 # Convenience name for target.
 gtsam/inference/tests/CMakeFiles/testVariableSlots.dir/rule:
@@ -442,12 +442,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... testOrdering"
 	@echo "... testLabeledSymbol"
+	@echo "... testOrdering"
 	@echo "... testKey"
+	@echo "... testVariableSlots.run"
 	@echo "... testOrdering.run"
 	@echo "... testLabeledSymbol.run"
-	@echo "... testVariableSlots.run"
 	@echo "... package"
 	@echo "... testVariableSlots"
 	@echo "... check.inference"

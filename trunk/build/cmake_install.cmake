@@ -82,7 +82,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/rmw/Documents/git/PPP-BayesTree/trunk/build/tests/cmake_install.cmake")
   include("/home/rmw/Documents/git/PPP-BayesTree/trunk/build/examples/cmake_install.cmake")
   include("/home/rmw/Documents/git/PPP-BayesTree/trunk/build/timing/cmake_install.cmake")
-  include("/home/rmw/Documents/git/PPP-BayesTree/trunk/build/doc/cmake_install.cmake")
   include("/home/rmw/Documents/git/PPP-BayesTree/trunk/build/cmake/cmake_install.cmake")
 
 endif()

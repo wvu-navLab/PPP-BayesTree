@@ -188,21 +188,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
-
-# Convenience name for target.
-testSmartFactorBase.run: gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
-
-.PHONY : testSmartFactorBase.run
-
-# fast build rule for target.
-testSmartFactorBase.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/build
-.PHONY : testSmartFactorBase.run/fast
-
-# Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testRegularImplicitSchurFactor.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testRegularImplicitSchurFactor.run.dir/rule
 .PHONY : gtsam/slam/tests/CMakeFiles/testRegularImplicitSchurFactor.run.dir/rule
@@ -233,34 +218,79 @@ testRegularImplicitSchurFactor/fast:
 .PHONY : testRegularImplicitSchurFactor/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
 
 # Convenience name for target.
-testRotateFactor.run: gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
+testPoseTranslationPrior: gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
 
-.PHONY : testRotateFactor.run
+.PHONY : testPoseTranslationPrior
 
 # fast build rule for target.
-testRotateFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/build
-.PHONY : testRotateFactor.run/fast
+testPoseTranslationPrior/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/build.make gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/build
+.PHONY : testPoseTranslationPrior/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
 
 # Convenience name for target.
-testGeneralSFMFactor.run: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
+testGeneralSFMFactor_Cal3Bundler.run: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
 
-.PHONY : testGeneralSFMFactor.run
+.PHONY : testGeneralSFMFactor_Cal3Bundler.run
 
 # fast build rule for target.
-testGeneralSFMFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/build
-.PHONY : testGeneralSFMFactor.run/fast
+testGeneralSFMFactor_Cal3Bundler.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/build
+.PHONY : testGeneralSFMFactor_Cal3Bundler.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
+
+# Convenience name for target.
+testRotateFactor: gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
+
+.PHONY : testRotateFactor
+
+# fast build rule for target.
+testRotateFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/build
+.PHONY : testRotateFactor/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
+
+# Convenience name for target.
+testGeneralSFMFactor_Cal3Bundler: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
+
+.PHONY : testGeneralSFMFactor_Cal3Bundler
+
+# fast build rule for target.
+testGeneralSFMFactor_Cal3Bundler/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/build
+.PHONY : testGeneralSFMFactor_Cal3Bundler/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
+
+# Convenience name for target.
+testTriangulationFactor: gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
+
+.PHONY : testTriangulationFactor
+
+# fast build rule for target.
+testTriangulationFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/build
+.PHONY : testTriangulationFactor/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testAntiFactor.run.dir/rule:
@@ -278,6 +308,36 @@ testAntiFactor.run/fast:
 .PHONY : testAntiFactor.run/fast
 
 # Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
+
+# Convenience name for target.
+testGeneralSFMFactor.run: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/rule
+
+.PHONY : testGeneralSFMFactor.run
+
+# fast build rule for target.
+testGeneralSFMFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.run.dir/build
+.PHONY : testGeneralSFMFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
+
+# Convenience name for target.
+testRotateFactor.run: gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/rule
+
+.PHONY : testRotateFactor.run
+
+# fast build rule for target.
+testRotateFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testRotateFactor.run.dir/build
+.PHONY : testRotateFactor.run/fast
+
+# Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run.dir/rule
 .PHONY : gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run.dir/rule
@@ -291,66 +351,6 @@ testPoseRotationPrior.run: gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run
 testPoseRotationPrior.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run.dir/build.make gtsam/slam/tests/CMakeFiles/testPoseRotationPrior.run.dir/build
 .PHONY : testPoseRotationPrior.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
-
-# Convenience name for target.
-testEssentialMatrixFactor: gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
-
-.PHONY : testEssentialMatrixFactor
-
-# fast build rule for target.
-testEssentialMatrixFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/build
-.PHONY : testEssentialMatrixFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
-
-# Convenience name for target.
-testEssentialMatrixConstraint: gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
-
-.PHONY : testEssentialMatrixConstraint
-
-# fast build rule for target.
-testEssentialMatrixConstraint/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/build
-.PHONY : testEssentialMatrixConstraint/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
-
-# Convenience name for target.
-testTriangulationFactor.run: gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
-
-.PHONY : testTriangulationFactor.run
-
-# fast build rule for target.
-testTriangulationFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/build
-.PHONY : testTriangulationFactor.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
-
-# Convenience name for target.
-testRotateFactor: gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/rule
-
-.PHONY : testRotateFactor
-
-# fast build rule for target.
-testRotateFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testRotateFactor.dir/build
-.PHONY : testRotateFactor/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testStereoFactor.run.dir/rule:
@@ -383,109 +383,19 @@ check.slam/fast:
 .PHONY : check.slam/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
+gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
 
 # Convenience name for target.
-testBetweenFactor: gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
+testBetweenFactor.run: gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
 
-.PHONY : testBetweenFactor
+.PHONY : testBetweenFactor.run
 
 # fast build rule for target.
-testBetweenFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/build
-.PHONY : testBetweenFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
-
-# Convenience name for target.
-testTriangulationFactor: gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/rule
-
-.PHONY : testTriangulationFactor
-
-# fast build rule for target.
-testTriangulationFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testTriangulationFactor.dir/build
-.PHONY : testTriangulationFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
-
-# Convenience name for target.
-testGeneralSFMFactor_Cal3Bundler: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/rule
-
-.PHONY : testGeneralSFMFactor_Cal3Bundler
-
-# fast build rule for target.
-testGeneralSFMFactor_Cal3Bundler/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.dir/build
-.PHONY : testGeneralSFMFactor_Cal3Bundler/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
-
-# Convenience name for target.
-testSlamExpressions: gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
-
-.PHONY : testSlamExpressions
-
-# fast build rule for target.
-testSlamExpressions/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/build.make gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/build
-.PHONY : testSlamExpressions/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
-
-# Convenience name for target.
-testStereoFactor: gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
-
-.PHONY : testStereoFactor
-
-# fast build rule for target.
-testStereoFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/build
-.PHONY : testStereoFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
-
-# Convenience name for target.
-testSlamExpressions.run: gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
-
-.PHONY : testSlamExpressions.run
-
-# fast build rule for target.
-testSlamExpressions.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/build
-.PHONY : testSlamExpressions.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
-
-# Convenience name for target.
-testSmartProjectionCameraFactor: gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
-
-.PHONY : testSmartProjectionCameraFactor
-
-# fast build rule for target.
-testSmartProjectionCameraFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/build
-.PHONY : testSmartProjectionCameraFactor/fast
+testBetweenFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/build
+.PHONY : testBetweenFactor.run/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.dir/rule:
@@ -501,21 +411,6 @@ testGeneralSFMFactor: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.dir/rule
 testGeneralSFMFactor/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor.dir/build
 .PHONY : testGeneralSFMFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
-
-# Convenience name for target.
-testBetweenFactor.run: gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/rule
-
-.PHONY : testBetweenFactor.run
-
-# fast build rule for target.
-testBetweenFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testBetweenFactor.run.dir/build
-.PHONY : testBetweenFactor.run/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testInitializePose3.dir/rule:
@@ -548,81 +443,6 @@ testLago/fast:
 .PHONY : testLago/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
-
-# Convenience name for target.
-testSmartProjectionCameraFactor.run: gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
-
-.PHONY : testSmartProjectionCameraFactor.run
-
-# fast build rule for target.
-testSmartProjectionCameraFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/build
-.PHONY : testSmartProjectionCameraFactor.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
-
-# Convenience name for target.
-testEssentialMatrixFactor.run: gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
-
-.PHONY : testEssentialMatrixFactor.run
-
-# fast build rule for target.
-testEssentialMatrixFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/build
-.PHONY : testEssentialMatrixFactor.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
-
-# Convenience name for target.
-testEssentialMatrixConstraint.run: gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
-
-.PHONY : testEssentialMatrixConstraint.run
-
-# fast build rule for target.
-testEssentialMatrixConstraint.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/build
-.PHONY : testEssentialMatrixConstraint.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
-
-# Convenience name for target.
-testInitializePose3.run: gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
-
-.PHONY : testInitializePose3.run
-
-# fast build rule for target.
-testInitializePose3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/build.make gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/build
-.PHONY : testInitializePose3.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
-
-# Convenience name for target.
-testSmartProjectionPoseFactor.run: gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
-
-.PHONY : testSmartProjectionPoseFactor.run
-
-# fast build rule for target.
-testSmartProjectionPoseFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/build
-.PHONY : testSmartProjectionPoseFactor.run/fast
-
-# Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/rule
 .PHONY : gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/rule
@@ -636,21 +456,6 @@ testAntiFactor: gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/rule
 testAntiFactor/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testAntiFactor.dir/build
 .PHONY : testAntiFactor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
-
-# Convenience name for target.
-testPriorFactor: gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
-
-.PHONY : testPriorFactor
-
-# fast build rule for target.
-testPriorFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/build
-.PHONY : testPriorFactor/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testProjectionFactor.dir/rule:
@@ -668,79 +473,64 @@ testProjectionFactor/fast:
 .PHONY : testProjectionFactor/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
 
 # Convenience name for target.
-testPriorFactor.run: gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
+testPriorFactor: gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/rule
 
-.PHONY : testPriorFactor.run
+.PHONY : testPriorFactor
 
 # fast build rule for target.
-testPriorFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/build
-.PHONY : testPriorFactor.run/fast
+testPriorFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testPriorFactor.dir/build
+.PHONY : testPriorFactor/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
+gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
 
 # Convenience name for target.
-testReferenceFrameFactor: gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
+testOrientedPlane3Factor.run: gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
 
-.PHONY : testReferenceFrameFactor
+.PHONY : testOrientedPlane3Factor.run
 
 # fast build rule for target.
-testReferenceFrameFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/build
-.PHONY : testReferenceFrameFactor/fast
+testOrientedPlane3Factor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/build
+.PHONY : testOrientedPlane3Factor.run/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
 
 # Convenience name for target.
-testDataset.run: gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
+testSmartFactorBase: gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
 
-.PHONY : testDataset.run
+.PHONY : testSmartFactorBase
 
 # fast build rule for target.
-testDataset.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testDataset.run.dir/build.make gtsam/slam/tests/CMakeFiles/testDataset.run.dir/build
-.PHONY : testDataset.run/fast
+testSmartFactorBase/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/build
+.PHONY : testSmartFactorBase/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
 
 # Convenience name for target.
-testGeneralSFMFactor_Cal3Bundler.run: gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/rule
+testProjectionFactor.run: gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
 
-.PHONY : testGeneralSFMFactor_Cal3Bundler.run
+.PHONY : testProjectionFactor.run
 
 # fast build rule for target.
-testGeneralSFMFactor_Cal3Bundler.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/build.make gtsam/slam/tests/CMakeFiles/testGeneralSFMFactor_Cal3Bundler.run.dir/build
-.PHONY : testGeneralSFMFactor_Cal3Bundler.run/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
-
-# Convenience name for target.
-testPoseTranslationPrior: gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/rule
-
-.PHONY : testPoseTranslationPrior
-
-# fast build rule for target.
-testPoseTranslationPrior/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/build.make gtsam/slam/tests/CMakeFiles/testPoseTranslationPrior.dir/build
-.PHONY : testPoseTranslationPrior/fast
+testProjectionFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/build
+.PHONY : testProjectionFactor.run/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testDataset.dir/rule:
@@ -788,64 +578,49 @@ testPoseRotationPrior/fast:
 .PHONY : testPoseRotationPrior/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
 
 # Convenience name for target.
-testProjectionFactor.run: gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/rule
+testDataset.run: gtsam/slam/tests/CMakeFiles/testDataset.run.dir/rule
 
-.PHONY : testProjectionFactor.run
+.PHONY : testDataset.run
 
 # fast build rule for target.
-testProjectionFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testProjectionFactor.run.dir/build
-.PHONY : testProjectionFactor.run/fast
+testDataset.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testDataset.run.dir/build.make gtsam/slam/tests/CMakeFiles/testDataset.run.dir/build
+.PHONY : testDataset.run/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
+gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
 
 # Convenience name for target.
-testReferenceFrameFactor.run: gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
+testReferenceFrameFactor: gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/rule
 
-.PHONY : testReferenceFrameFactor.run
+.PHONY : testReferenceFrameFactor
 
 # fast build rule for target.
-testReferenceFrameFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/build
-.PHONY : testReferenceFrameFactor.run/fast
+testReferenceFrameFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.dir/build
+.PHONY : testReferenceFrameFactor/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
+gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
 
 # Convenience name for target.
-testOrientedPlane3Factor: gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
+testSmartFactorBase.run: gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/rule
 
-.PHONY : testOrientedPlane3Factor
+.PHONY : testSmartFactorBase.run
 
 # fast build rule for target.
-testOrientedPlane3Factor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/build.make gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/build
-.PHONY : testOrientedPlane3Factor/fast
-
-# Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
-
-# Convenience name for target.
-testOrientedPlane3Factor.run: gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/rule
-
-.PHONY : testOrientedPlane3Factor.run
-
-# fast build rule for target.
-testOrientedPlane3Factor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.run.dir/build
-.PHONY : testOrientedPlane3Factor.run/fast
+testSmartFactorBase.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartFactorBase.run.dir/build
+.PHONY : testSmartFactorBase.run/fast
 
 # Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.dir/rule:
@@ -863,6 +638,126 @@ testSmartProjectionPoseFactor/fast:
 .PHONY : testSmartProjectionPoseFactor/fast
 
 # Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
+
+# Convenience name for target.
+testPriorFactor.run: gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/rule
+
+.PHONY : testPriorFactor.run
+
+# fast build rule for target.
+testPriorFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testPriorFactor.run.dir/build
+.PHONY : testPriorFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
+
+# Convenience name for target.
+testSmartProjectionPoseFactor.run: gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/rule
+
+.PHONY : testSmartProjectionPoseFactor.run
+
+# fast build rule for target.
+testSmartProjectionPoseFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionPoseFactor.run.dir/build
+.PHONY : testSmartProjectionPoseFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
+
+# Convenience name for target.
+testSmartProjectionCameraFactor.run: gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/rule
+
+.PHONY : testSmartProjectionCameraFactor.run
+
+# fast build rule for target.
+testSmartProjectionCameraFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.run.dir/build
+.PHONY : testSmartProjectionCameraFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
+
+# Convenience name for target.
+testEssentialMatrixFactor.run: gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/rule
+
+.PHONY : testEssentialMatrixFactor.run
+
+# fast build rule for target.
+testEssentialMatrixFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.run.dir/build
+.PHONY : testEssentialMatrixFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
+
+# Convenience name for target.
+testTriangulationFactor.run: gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/rule
+
+.PHONY : testTriangulationFactor.run
+
+# fast build rule for target.
+testTriangulationFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testTriangulationFactor.run.dir/build
+.PHONY : testTriangulationFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
+
+# Convenience name for target.
+testEssentialMatrixConstraint: gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/rule
+
+.PHONY : testEssentialMatrixConstraint
+
+# fast build rule for target.
+testEssentialMatrixConstraint/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.dir/build
+.PHONY : testEssentialMatrixConstraint/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
+
+# Convenience name for target.
+testInitializePose3.run: gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/rule
+
+.PHONY : testInitializePose3.run
+
+# fast build rule for target.
+testInitializePose3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/build.make gtsam/slam/tests/CMakeFiles/testInitializePose3.run.dir/build
+.PHONY : testInitializePose3.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
+
+# Convenience name for target.
+testEssentialMatrixConstraint.run: gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/rule
+
+.PHONY : testEssentialMatrixConstraint.run
+
+# fast build rule for target.
+testEssentialMatrixConstraint.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixConstraint.run.dir/build
+.PHONY : testEssentialMatrixConstraint.run/fast
+
+# Convenience name for target.
 gtsam/slam/tests/CMakeFiles/testLago.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testLago.run.dir/rule
 .PHONY : gtsam/slam/tests/CMakeFiles/testLago.run.dir/rule
@@ -878,19 +773,124 @@ testLago.run/fast:
 .PHONY : testLago.run/fast
 
 # Convenience name for target.
-gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
-.PHONY : gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
+gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
 
 # Convenience name for target.
-testSmartFactorBase: gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/rule
+testEssentialMatrixFactor: gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/rule
 
-.PHONY : testSmartFactorBase
+.PHONY : testEssentialMatrixFactor
 
 # fast build rule for target.
-testSmartFactorBase/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartFactorBase.dir/build
-.PHONY : testSmartFactorBase/fast
+testEssentialMatrixFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testEssentialMatrixFactor.dir/build
+.PHONY : testEssentialMatrixFactor/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
+
+# Convenience name for target.
+testStereoFactor: gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/rule
+
+.PHONY : testStereoFactor
+
+# fast build rule for target.
+testStereoFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testStereoFactor.dir/build
+.PHONY : testStereoFactor/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
+
+# Convenience name for target.
+testSlamExpressions: gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/rule
+
+.PHONY : testSlamExpressions
+
+# fast build rule for target.
+testSlamExpressions/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/build.make gtsam/slam/tests/CMakeFiles/testSlamExpressions.dir/build
+.PHONY : testSlamExpressions/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
+
+# Convenience name for target.
+testSmartProjectionCameraFactor: gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/rule
+
+.PHONY : testSmartProjectionCameraFactor
+
+# fast build rule for target.
+testSmartProjectionCameraFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testSmartProjectionCameraFactor.dir/build
+.PHONY : testSmartProjectionCameraFactor/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
+
+# Convenience name for target.
+testSlamExpressions.run: gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/rule
+
+.PHONY : testSlamExpressions.run
+
+# fast build rule for target.
+testSlamExpressions.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/build.make gtsam/slam/tests/CMakeFiles/testSlamExpressions.run.dir/build
+.PHONY : testSlamExpressions.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
+
+# Convenience name for target.
+testOrientedPlane3Factor: gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/rule
+
+.PHONY : testOrientedPlane3Factor
+
+# fast build rule for target.
+testOrientedPlane3Factor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/build.make gtsam/slam/tests/CMakeFiles/testOrientedPlane3Factor.dir/build
+.PHONY : testOrientedPlane3Factor/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
+
+# Convenience name for target.
+testReferenceFrameFactor.run: gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/rule
+
+.PHONY : testReferenceFrameFactor.run
+
+# fast build rule for target.
+testReferenceFrameFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/build.make gtsam/slam/tests/CMakeFiles/testReferenceFrameFactor.run.dir/build
+.PHONY : testReferenceFrameFactor.run/fast
+
+# Convenience name for target.
+gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
+.PHONY : gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
+
+# Convenience name for target.
+testBetweenFactor: gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/rule
+
+.PHONY : testBetweenFactor
+
+# fast build rule for target.
+testBetweenFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/build.make gtsam/slam/tests/CMakeFiles/testBetweenFactor.dir/build
+.PHONY : testBetweenFactor/fast
 
 testAntiFactor.o: testAntiFactor.cpp.o
 
@@ -1526,55 +1526,55 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... testSmartFactorBase.run"
 	@echo "... testRegularImplicitSchurFactor.run"
 	@echo "... testRegularImplicitSchurFactor"
+	@echo "... testPoseTranslationPrior"
+	@echo "... testGeneralSFMFactor_Cal3Bundler.run"
+	@echo "... testRotateFactor"
+	@echo "... testGeneralSFMFactor_Cal3Bundler"
+	@echo "... testTriangulationFactor"
+	@echo "... testAntiFactor.run"
+	@echo "... testGeneralSFMFactor.run"
 	@echo "... rebuild_cache"
 	@echo "... testRotateFactor.run"
-	@echo "... testGeneralSFMFactor.run"
-	@echo "... testAntiFactor.run"
 	@echo "... testPoseRotationPrior.run"
-	@echo "... testEssentialMatrixFactor"
-	@echo "... testEssentialMatrixConstraint"
-	@echo "... testTriangulationFactor.run"
-	@echo "... testRotateFactor"
 	@echo "... testStereoFactor.run"
 	@echo "... install"
 	@echo "... check.slam"
-	@echo "... testBetweenFactor"
-	@echo "... testTriangulationFactor"
-	@echo "... testGeneralSFMFactor_Cal3Bundler"
-	@echo "... testSlamExpressions"
-	@echo "... testStereoFactor"
-	@echo "... testSlamExpressions.run"
-	@echo "... testSmartProjectionCameraFactor"
-	@echo "... testGeneralSFMFactor"
 	@echo "... testBetweenFactor.run"
+	@echo "... testGeneralSFMFactor"
 	@echo "... testInitializePose3"
 	@echo "... testLago"
-	@echo "... testSmartProjectionCameraFactor.run"
-	@echo "... testEssentialMatrixFactor.run"
-	@echo "... testEssentialMatrixConstraint.run"
-	@echo "... testInitializePose3.run"
-	@echo "... testSmartProjectionPoseFactor.run"
 	@echo "... testAntiFactor"
-	@echo "... testPriorFactor"
 	@echo "... testProjectionFactor"
-	@echo "... testPriorFactor.run"
-	@echo "... testReferenceFrameFactor"
-	@echo "... testDataset.run"
-	@echo "... testGeneralSFMFactor_Cal3Bundler.run"
-	@echo "... testPoseTranslationPrior"
+	@echo "... testPriorFactor"
+	@echo "... testOrientedPlane3Factor.run"
+	@echo "... testSmartFactorBase"
+	@echo "... testProjectionFactor.run"
 	@echo "... testDataset"
 	@echo "... testPoseTranslationPrior.run"
 	@echo "... testPoseRotationPrior"
-	@echo "... testProjectionFactor.run"
-	@echo "... testReferenceFrameFactor.run"
-	@echo "... testOrientedPlane3Factor"
-	@echo "... testOrientedPlane3Factor.run"
+	@echo "... testDataset.run"
+	@echo "... testReferenceFrameFactor"
+	@echo "... testSmartFactorBase.run"
 	@echo "... testSmartProjectionPoseFactor"
+	@echo "... testPriorFactor.run"
+	@echo "... testSmartProjectionPoseFactor.run"
+	@echo "... testSmartProjectionCameraFactor.run"
+	@echo "... testEssentialMatrixFactor.run"
+	@echo "... testTriangulationFactor.run"
+	@echo "... testEssentialMatrixConstraint"
+	@echo "... testInitializePose3.run"
+	@echo "... testEssentialMatrixConstraint.run"
 	@echo "... testLago.run"
-	@echo "... testSmartFactorBase"
+	@echo "... testEssentialMatrixFactor"
+	@echo "... testStereoFactor"
+	@echo "... testSlamExpressions"
+	@echo "... testSmartProjectionCameraFactor"
+	@echo "... testSlamExpressions.run"
+	@echo "... testOrientedPlane3Factor"
+	@echo "... testReferenceFrameFactor.run"
+	@echo "... testBetweenFactor"
 	@echo "... testAntiFactor.o"
 	@echo "... testAntiFactor.i"
 	@echo "... testAntiFactor.s"

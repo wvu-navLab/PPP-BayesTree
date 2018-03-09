@@ -97,6 +97,7 @@ int main(int argc, char* argv[])
                 gnssFile = confReader("dataFile", station);
         }
 
+        gnssFile = findExampleDataFile(gnssFile);
         Point3 nomXYZ(xn, yn, zn);
         Point3 prop_xyz = nomXYZ;
 

@@ -111,6 +111,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -132,17 +143,6 @@ package: preinstall
 package/fast: package
 
 .PHONY : package/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -188,199 +188,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
+gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
 
 # Convenience name for target.
-testSymbolicISAM.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
+testSymbolicISAM: gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
 
-.PHONY : testSymbolicISAM.run
+.PHONY : testSymbolicISAM
 
 # fast build rule for target.
-testSymbolicISAM.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/build
-.PHONY : testSymbolicISAM.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
-
-# Convenience name for target.
-testSymbolicFactorGraph.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
-
-.PHONY : testSymbolicFactorGraph.run
-
-# fast build rule for target.
-testSymbolicFactorGraph.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/build
-.PHONY : testSymbolicFactorGraph.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
-
-# Convenience name for target.
-testSymbolicFactorGraph: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
-
-.PHONY : testSymbolicFactorGraph
-
-# fast build rule for target.
-testSymbolicFactorGraph/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/build
-.PHONY : testSymbolicFactorGraph/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
-
-# Convenience name for target.
-testSerializationSymbolic.run: gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
-
-.PHONY : testSerializationSymbolic.run
-
-# fast build rule for target.
-testSerializationSymbolic.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/build
-.PHONY : testSerializationSymbolic.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
-
-# Convenience name for target.
-testSymbolicFactor.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
-
-.PHONY : testSymbolicFactor.run
-
-# fast build rule for target.
-testSymbolicFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/build
-.PHONY : testSymbolicFactor.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
-
-# Convenience name for target.
-testSymbolicEliminationTree: gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
-
-.PHONY : testSymbolicEliminationTree
-
-# fast build rule for target.
-testSymbolicEliminationTree/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/build
-.PHONY : testSymbolicEliminationTree/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
-
-# Convenience name for target.
-testSymbolicEliminationTree.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
-
-.PHONY : testSymbolicEliminationTree.run
-
-# fast build rule for target.
-testSymbolicEliminationTree.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/build
-.PHONY : testSymbolicEliminationTree.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
-
-# Convenience name for target.
-testSymbolicBayesNet: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
-
-.PHONY : testSymbolicBayesNet
-
-# fast build rule for target.
-testSymbolicBayesNet/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/build
-.PHONY : testSymbolicBayesNet/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
-
-# Convenience name for target.
-check.symbolic: gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
-
-.PHONY : check.symbolic
-
-# fast build rule for target.
-check.symbolic/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/build.make gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/build
-.PHONY : check.symbolic/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
-
-# Convenience name for target.
-testSymbolicBayesTree.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
-
-.PHONY : testSymbolicBayesTree.run
-
-# fast build rule for target.
-testSymbolicBayesTree.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/build
-.PHONY : testSymbolicBayesTree.run/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
-
-# Convenience name for target.
-testSerializationSymbolic: gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
-
-.PHONY : testSerializationSymbolic
-
-# fast build rule for target.
-testSerializationSymbolic/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/build
-.PHONY : testSerializationSymbolic/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
-
-# Convenience name for target.
-testSymbolicBayesTree: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
-
-.PHONY : testSymbolicBayesTree
-
-# fast build rule for target.
-testSymbolicBayesTree/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/build
-.PHONY : testSymbolicBayesTree/fast
-
-# Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
-
-# Convenience name for target.
-testSymbolicConditional.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
-
-.PHONY : testSymbolicConditional.run
-
-# fast build rule for target.
-testSymbolicConditional.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/build
-.PHONY : testSymbolicConditional.run/fast
+testSymbolicISAM/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/build
+.PHONY : testSymbolicISAM/fast
 
 # Convenience name for target.
 gtsam/symbolic/tests/CMakeFiles/testSymbolicJunctionTree.dir/rule:
@@ -398,19 +218,79 @@ testSymbolicJunctionTree/fast:
 .PHONY : testSymbolicJunctionTree/fast
 
 # Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
+gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
 
 # Convenience name for target.
-testSymbolicISAM: gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/rule
+testSymbolicISAM.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/rule
 
-.PHONY : testSymbolicISAM
+.PHONY : testSymbolicISAM.run
 
 # fast build rule for target.
-testSymbolicISAM/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.dir/build
-.PHONY : testSymbolicISAM/fast
+testSymbolicISAM.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicISAM.run.dir/build
+.PHONY : testSymbolicISAM.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
+
+# Convenience name for target.
+testSerializationSymbolic.run: gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/rule
+
+.PHONY : testSerializationSymbolic.run
+
+# fast build rule for target.
+testSerializationSymbolic.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.run.dir/build
+.PHONY : testSerializationSymbolic.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
+
+# Convenience name for target.
+testSymbolicEliminationTree: gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/rule
+
+.PHONY : testSymbolicEliminationTree
+
+# fast build rule for target.
+testSymbolicEliminationTree/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.dir/build
+.PHONY : testSymbolicEliminationTree/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
+
+# Convenience name for target.
+testSymbolicFactor.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/rule
+
+.PHONY : testSymbolicFactor.run
+
+# fast build rule for target.
+testSymbolicFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactor.run.dir/build
+.PHONY : testSymbolicFactor.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
+
+# Convenience name for target.
+testSymbolicEliminationTree.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/rule
+
+.PHONY : testSymbolicEliminationTree.run
+
+# fast build rule for target.
+testSymbolicEliminationTree.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicEliminationTree.run.dir/build
+.PHONY : testSymbolicEliminationTree.run/fast
 
 # Convenience name for target.
 gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.dir/rule:
@@ -443,19 +323,49 @@ testSymbolicFactor/fast:
 .PHONY : testSymbolicFactor/fast
 
 # Convenience name for target.
-gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
-.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
+gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
 
 # Convenience name for target.
-testSymbolicBayesNet.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
+testSerializationSymbolic: gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/rule
 
-.PHONY : testSymbolicBayesNet.run
+.PHONY : testSerializationSymbolic
 
 # fast build rule for target.
-testSymbolicBayesNet.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/build
-.PHONY : testSymbolicBayesNet.run/fast
+testSerializationSymbolic/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSerializationSymbolic.dir/build
+.PHONY : testSerializationSymbolic/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
+
+# Convenience name for target.
+testSymbolicFactorGraph: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/rule
+
+.PHONY : testSymbolicFactorGraph
+
+# fast build rule for target.
+testSymbolicFactorGraph/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.dir/build
+.PHONY : testSymbolicFactorGraph/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
+
+# Convenience name for target.
+testSymbolicFactorGraph.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/rule
+
+.PHONY : testSymbolicFactorGraph.run
+
+# fast build rule for target.
+testSymbolicFactorGraph.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicFactorGraph.run.dir/build
+.PHONY : testSymbolicFactorGraph.run/fast
 
 # Convenience name for target.
 gtsam/symbolic/tests/CMakeFiles/testSymbolicJunctionTree.run.dir/rule:
@@ -471,6 +381,36 @@ testSymbolicJunctionTree.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicJuncti
 testSymbolicJunctionTree.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicJunctionTree.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicJunctionTree.run.dir/build
 .PHONY : testSymbolicJunctionTree.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
+
+# Convenience name for target.
+testSymbolicBayesNet.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/rule
+
+.PHONY : testSymbolicBayesNet.run
+
+# fast build rule for target.
+testSymbolicBayesNet.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.run.dir/build
+.PHONY : testSymbolicBayesNet.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
+
+# Convenience name for target.
+testSymbolicBayesNet: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/rule
+
+.PHONY : testSymbolicBayesNet
+
+# fast build rule for target.
+testSymbolicBayesNet/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesNet.dir/build
+.PHONY : testSymbolicBayesNet/fast
 
 # Convenience name for target.
 gtsam/symbolic/tests/CMakeFiles/testVariableIndex.dir/rule:
@@ -501,6 +441,66 @@ testVariableIndex.run: gtsam/symbolic/tests/CMakeFiles/testVariableIndex.run.dir
 testVariableIndex.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testVariableIndex.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testVariableIndex.run.dir/build
 .PHONY : testVariableIndex.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
+
+# Convenience name for target.
+testSymbolicConditional.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/rule
+
+.PHONY : testSymbolicConditional.run
+
+# fast build rule for target.
+testSymbolicConditional.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicConditional.run.dir/build
+.PHONY : testSymbolicConditional.run/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
+
+# Convenience name for target.
+testSymbolicBayesTree: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/rule
+
+.PHONY : testSymbolicBayesTree
+
+# fast build rule for target.
+testSymbolicBayesTree/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.dir/build
+.PHONY : testSymbolicBayesTree/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
+
+# Convenience name for target.
+check.symbolic: gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/rule
+
+.PHONY : check.symbolic
+
+# fast build rule for target.
+check.symbolic/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/build.make gtsam/symbolic/tests/CMakeFiles/check.symbolic.dir/build
+.PHONY : check.symbolic/fast
+
+# Convenience name for target.
+gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
+.PHONY : gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
+
+# Convenience name for target.
+testSymbolicBayesTree.run: gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/rule
+
+.PHONY : testSymbolicBayesTree.run
+
+# fast build rule for target.
+testSymbolicBayesTree.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/build.make gtsam/symbolic/tests/CMakeFiles/testSymbolicBayesTree.run.dir/build
+.PHONY : testSymbolicBayesTree.run/fast
 
 testSerializationSymbolic.o: testSerializationSymbolic.cpp.o
 
@@ -783,30 +783,30 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... install/local"
-	@echo "... testSymbolicISAM.run"
-	@echo "... testSymbolicFactorGraph.run"
-	@echo "... testSymbolicFactorGraph"
-	@echo "... edit_cache"
-	@echo "... testSerializationSymbolic.run"
-	@echo "... package"
-	@echo "... testSymbolicFactor.run"
-	@echo "... testSymbolicEliminationTree"
-	@echo "... testSymbolicEliminationTree.run"
-	@echo "... testSymbolicBayesNet"
-	@echo "... check.symbolic"
-	@echo "... testSymbolicBayesTree.run"
-	@echo "... testSerializationSymbolic"
-	@echo "... testSymbolicBayesTree"
-	@echo "... testSymbolicConditional.run"
-	@echo "... testSymbolicJunctionTree"
 	@echo "... rebuild_cache"
 	@echo "... testSymbolicISAM"
+	@echo "... testSymbolicJunctionTree"
+	@echo "... testSymbolicISAM.run"
+	@echo "... edit_cache"
+	@echo "... testSerializationSymbolic.run"
+	@echo "... testSymbolicEliminationTree"
+	@echo "... package"
+	@echo "... testSymbolicFactor.run"
+	@echo "... testSymbolicEliminationTree.run"
 	@echo "... testSymbolicConditional"
 	@echo "... testSymbolicFactor"
-	@echo "... testSymbolicBayesNet.run"
+	@echo "... testSerializationSymbolic"
+	@echo "... testSymbolicFactorGraph"
+	@echo "... testSymbolicFactorGraph.run"
 	@echo "... testSymbolicJunctionTree.run"
+	@echo "... testSymbolicBayesNet.run"
+	@echo "... testSymbolicBayesNet"
 	@echo "... testVariableIndex"
 	@echo "... testVariableIndex.run"
+	@echo "... testSymbolicConditional.run"
+	@echo "... testSymbolicBayesTree"
+	@echo "... check.symbolic"
+	@echo "... testSymbolicBayesTree.run"
 	@echo "... install/strip"
 	@echo "... testSerializationSymbolic.o"
 	@echo "... testSerializationSymbolic.i"

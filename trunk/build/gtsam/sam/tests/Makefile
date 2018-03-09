@@ -89,6 +89,28 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -120,28 +142,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -188,6 +188,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
+.PHONY : gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
+
+# Convenience name for target.
+testBearingRangeFactor: gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
+
+.PHONY : testBearingRangeFactor
+
+# fast build rule for target.
+testBearingRangeFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/build.make gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/build
+.PHONY : testBearingRangeFactor/fast
+
+# Convenience name for target.
+gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
+.PHONY : gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
+
+# Convenience name for target.
+testRangeFactor.run: gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
+
+.PHONY : testRangeFactor.run
+
+# fast build rule for target.
+testRangeFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/build.make gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/build
+.PHONY : testRangeFactor.run/fast
+
+# Convenience name for target.
+gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
+.PHONY : gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
+
+# Convenience name for target.
+testRangeFactor: gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
+
+.PHONY : testRangeFactor
+
+# fast build rule for target.
+testRangeFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/build.make gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/build
+.PHONY : testRangeFactor/fast
+
+# Convenience name for target.
+gtsam/sam/tests/CMakeFiles/check.sam.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
+.PHONY : gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
+
+# Convenience name for target.
+check.sam: gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
+
+.PHONY : check.sam
+
+# fast build rule for target.
+check.sam/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/check.sam.dir/build.make gtsam/sam/tests/CMakeFiles/check.sam.dir/build
+.PHONY : check.sam/fast
+
+# Convenience name for target.
 gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.run.dir/rule
 .PHONY : gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.run.dir/rule
@@ -218,36 +278,6 @@ testBearingFactor/fast:
 .PHONY : testBearingFactor/fast
 
 # Convenience name for target.
-gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
-.PHONY : gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
-
-# Convenience name for target.
-testBearingRangeFactor: gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/rule
-
-.PHONY : testBearingRangeFactor
-
-# fast build rule for target.
-testBearingRangeFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/build.make gtsam/sam/tests/CMakeFiles/testBearingRangeFactor.dir/build
-.PHONY : testBearingRangeFactor/fast
-
-# Convenience name for target.
-gtsam/sam/tests/CMakeFiles/check.sam.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
-.PHONY : gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
-
-# Convenience name for target.
-check.sam: gtsam/sam/tests/CMakeFiles/check.sam.dir/rule
-
-.PHONY : check.sam
-
-# fast build rule for target.
-check.sam/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/check.sam.dir/build.make gtsam/sam/tests/CMakeFiles/check.sam.dir/build
-.PHONY : check.sam/fast
-
-# Convenience name for target.
 gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/rule
 .PHONY : gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/rule
@@ -261,36 +291,6 @@ testBearingFactor.run: gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/rule
 testBearingFactor.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/build.make gtsam/sam/tests/CMakeFiles/testBearingFactor.run.dir/build
 .PHONY : testBearingFactor.run/fast
-
-# Convenience name for target.
-gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
-.PHONY : gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
-
-# Convenience name for target.
-testRangeFactor: gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/rule
-
-.PHONY : testRangeFactor
-
-# fast build rule for target.
-testRangeFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/build.make gtsam/sam/tests/CMakeFiles/testRangeFactor.dir/build
-.PHONY : testRangeFactor/fast
-
-# Convenience name for target.
-gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
-.PHONY : gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
-
-# Convenience name for target.
-testRangeFactor.run: gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/rule
-
-.PHONY : testRangeFactor.run
-
-# fast build rule for target.
-testRangeFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/build.make gtsam/sam/tests/CMakeFiles/testRangeFactor.run.dir/build
-.PHONY : testRangeFactor.run/fast
 
 testBearingFactor.o: testBearingFactor.cpp.o
 
@@ -382,18 +382,18 @@ help:
 	@echo "... package"
 	@echo "... edit_cache"
 	@echo "... package_source"
+	@echo "... testBearingRangeFactor"
+	@echo "... rebuild_cache"
+	@echo "... testRangeFactor.run"
+	@echo "... test"
+	@echo "... testRangeFactor"
+	@echo "... check.sam"
 	@echo "... testBearingRangeFactor.run"
 	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... testBearingFactor"
-	@echo "... testBearingRangeFactor"
-	@echo "... check.sam"
 	@echo "... testBearingFactor.run"
-	@echo "... test"
-	@echo "... testRangeFactor"
-	@echo "... rebuild_cache"
-	@echo "... testRangeFactor.run"
 	@echo "... install"
 	@echo "... testBearingFactor.o"
 	@echo "... testBearingFactor.i"

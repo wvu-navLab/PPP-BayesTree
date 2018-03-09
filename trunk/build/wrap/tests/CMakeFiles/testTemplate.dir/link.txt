@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11 -Wall -O3 -DNDEBUG    -O3 -DNDEBUG   CMakeFiles/testTemplate.dir/testTemplate.cpp.o  -o testTemplate -rdynamic ../../CppUnitLite/libCppUnitLite.a ../libwrap_lib.a -lboost_system -lboost_filesystem -lboost_thread -lboost_regex 

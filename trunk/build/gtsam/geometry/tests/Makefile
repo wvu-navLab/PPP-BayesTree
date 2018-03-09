@@ -111,16 +111,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : install/local/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target test
 test:
@@ -144,16 +144,16 @@ package_source/fast: package_source
 
 .PHONY : package_source/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : install/strip/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,21 +188,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
-
-# Convenience name for target.
-testPoint3.run: gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
-
-.PHONY : testPoint3.run
-
-# fast build rule for target.
-testPoint3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/build
-.PHONY : testPoint3.run/fast
-
-# Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testCal3DS2.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3DS2.run.dir/rule
 .PHONY : gtsam/geometry/tests/CMakeFiles/testCal3DS2.run.dir/rule
@@ -233,289 +218,19 @@ testCal3DS2/fast:
 .PHONY : testCal3DS2/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
 
 # Convenience name for target.
-testRot3M.run: gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
+testPoint3.run: gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/rule
 
-.PHONY : testRot3M.run
+.PHONY : testPoint3.run
 
 # fast build rule for target.
-testRot3M.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/build
-.PHONY : testRot3M.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
-
-# Convenience name for target.
-testPinholeCamera: gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
-
-.PHONY : testPinholeCamera
-
-# fast build rule for target.
-testPinholeCamera/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/build
-.PHONY : testPinholeCamera/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
-
-# Convenience name for target.
-testSO3.run: gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
-
-.PHONY : testSO3.run
-
-# fast build rule for target.
-testSO3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/build
-.PHONY : testSO3.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
-
-# Convenience name for target.
-testSO3: gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
-
-.PHONY : testSO3
-
-# fast build rule for target.
-testSO3/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSO3.dir/build.make gtsam/geometry/tests/CMakeFiles/testSO3.dir/build
-.PHONY : testSO3/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
-
-# Convenience name for target.
-testEssentialMatrix: gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
-
-.PHONY : testEssentialMatrix
-
-# fast build rule for target.
-testEssentialMatrix/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/build.make gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/build
-.PHONY : testEssentialMatrix/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
-
-# Convenience name for target.
-testCameraSet: gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
-
-.PHONY : testCameraSet
-
-# fast build rule for target.
-testCameraSet/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/build.make gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/build
-.PHONY : testCameraSet/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
-
-# Convenience name for target.
-testCameraSet.run: gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
-
-.PHONY : testCameraSet.run
-
-# fast build rule for target.
-testCameraSet.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/build
-.PHONY : testCameraSet.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
-
-# Convenience name for target.
-testPose2: gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
-
-.PHONY : testPose2
-
-# fast build rule for target.
-testPose2/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose2.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose2.dir/build
-.PHONY : testPose2/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
-
-# Convenience name for target.
-testUnit3: gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
-
-.PHONY : testUnit3
-
-# fast build rule for target.
-testUnit3/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testUnit3.dir/build.make gtsam/geometry/tests/CMakeFiles/testUnit3.dir/build
-.PHONY : testUnit3/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
-
-# Convenience name for target.
-testCal3Unified.run: gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
-
-.PHONY : testCal3Unified.run
-
-# fast build rule for target.
-testCal3Unified.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/build
-.PHONY : testCal3Unified.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
-
-# Convenience name for target.
-testPoint3: gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
-
-.PHONY : testPoint3
-
-# fast build rule for target.
-testPoint3/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint3.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint3.dir/build
-.PHONY : testPoint3/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
-
-# Convenience name for target.
-testPose3: gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
-
-.PHONY : testPose3
-
-# fast build rule for target.
-testPose3/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose3.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose3.dir/build
-.PHONY : testPose3/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
-
-# Convenience name for target.
-testCalibratedCamera.run: gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
-
-.PHONY : testCalibratedCamera.run
-
-# fast build rule for target.
-testCalibratedCamera.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/build
-.PHONY : testCalibratedCamera.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
-
-# Convenience name for target.
-testSerializationGeometry: gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
-
-.PHONY : testSerializationGeometry
-
-# fast build rule for target.
-testSerializationGeometry/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/build.make gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/build
-.PHONY : testSerializationGeometry/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
-
-# Convenience name for target.
-testCal3Bundler.run: gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
-
-.PHONY : testCal3Bundler.run
-
-# fast build rule for target.
-testCal3Bundler.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/build
-.PHONY : testCal3Bundler.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
-
-# Convenience name for target.
-testRot2: gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
-
-.PHONY : testRot2
-
-# fast build rule for target.
-testRot2/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot2.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot2.dir/build
-.PHONY : testRot2/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
-
-# Convenience name for target.
-testCal3_S2.run: gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
-
-.PHONY : testCal3_S2.run
-
-# fast build rule for target.
-testCal3_S2.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/build
-.PHONY : testCal3_S2.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
-
-# Convenience name for target.
-testRot3Q.run: gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
-
-.PHONY : testRot3Q.run
-
-# fast build rule for target.
-testRot3Q.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/build
-.PHONY : testRot3Q.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
-
-# Convenience name for target.
-testStereoCamera: gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
-
-.PHONY : testStereoCamera
-
-# fast build rule for target.
-testStereoCamera/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/build
-.PHONY : testStereoCamera/fast
+testPoint3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint3.run.dir/build
+.PHONY : testPoint3.run/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.run.dir/rule:
@@ -533,49 +248,139 @@ testOrientedPlane3.run/fast:
 .PHONY : testOrientedPlane3.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
+gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
 
 # Convenience name for target.
-testCyclic: gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
+testOrientedPlane3: gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
 
-.PHONY : testCyclic
+.PHONY : testOrientedPlane3
 
 # fast build rule for target.
-testCyclic/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCyclic.dir/build.make gtsam/geometry/tests/CMakeFiles/testCyclic.dir/build
-.PHONY : testCyclic/fast
+testOrientedPlane3/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/build.make gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/build
+.PHONY : testOrientedPlane3/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
+gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
 
 # Convenience name for target.
-testRot3Q: gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
+testPose2: gtsam/geometry/tests/CMakeFiles/testPose2.dir/rule
 
-.PHONY : testRot3Q
+.PHONY : testPose2
 
 # fast build rule for target.
-testRot3Q/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/build
-.PHONY : testRot3Q/fast
+testPose2/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose2.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose2.dir/build
+.PHONY : testPose2/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
 
 # Convenience name for target.
-testCyclic.run: gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
+testSO3.run: gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/rule
 
-.PHONY : testCyclic.run
+.PHONY : testSO3.run
 
 # fast build rule for target.
-testCyclic.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/build
-.PHONY : testCyclic.run/fast
+testSO3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testSO3.run.dir/build
+.PHONY : testSO3.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
+
+# Convenience name for target.
+testRot2.run: gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
+
+.PHONY : testRot2.run
+
+# fast build rule for target.
+testRot2.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/build
+.PHONY : testRot2.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
+
+# Convenience name for target.
+check.geometry: gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
+
+.PHONY : check.geometry
+
+# fast build rule for target.
+check.geometry/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/check.geometry.dir/build.make gtsam/geometry/tests/CMakeFiles/check.geometry.dir/build
+.PHONY : check.geometry/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
+
+# Convenience name for target.
+testPinholePose.run: gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
+
+.PHONY : testPinholePose.run
+
+# fast build rule for target.
+testPinholePose.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/build
+.PHONY : testPinholePose.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
+
+# Convenience name for target.
+testPinholeCamera.run: gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
+
+.PHONY : testPinholeCamera.run
+
+# fast build rule for target.
+testPinholeCamera.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/build
+.PHONY : testPinholeCamera.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
+
+# Convenience name for target.
+testPinholeCamera: gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/rule
+
+.PHONY : testPinholeCamera
+
+# fast build rule for target.
+testPinholeCamera/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeCamera.dir/build
+.PHONY : testPinholeCamera/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
+
+# Convenience name for target.
+testRot3M.run: gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/rule
+
+.PHONY : testRot3M.run
+
+# fast build rule for target.
+testRot3M.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3M.run.dir/build
+.PHONY : testRot3M.run/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.run.dir/rule:
@@ -608,49 +413,19 @@ testBearingRange/fast:
 .PHONY : testBearingRange/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
 
 # Convenience name for target.
-check.geometry: gtsam/geometry/tests/CMakeFiles/check.geometry.dir/rule
+testCal3Bundler: gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
 
-.PHONY : check.geometry
+.PHONY : testCal3Bundler
 
 # fast build rule for target.
-check.geometry/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/check.geometry.dir/build.make gtsam/geometry/tests/CMakeFiles/check.geometry.dir/build
-.PHONY : check.geometry/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
-
-# Convenience name for target.
-testRot2.run: gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/rule
-
-.PHONY : testRot2.run
-
-# fast build rule for target.
-testRot2.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot2.run.dir/build
-.PHONY : testRot2.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
-
-# Convenience name for target.
-testUnit3.run: gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
-
-.PHONY : testUnit3.run
-
-# fast build rule for target.
-testUnit3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/build
-.PHONY : testUnit3.run/fast
+testCal3Bundler/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/build
+.PHONY : testCal3Bundler/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testRot3.dir/rule:
@@ -668,34 +443,19 @@ testRot3/fast:
 .PHONY : testRot3/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
 
 # Convenience name for target.
-testRot3.run: gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
+testUnit3.run: gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/rule
 
-.PHONY : testRot3.run
+.PHONY : testUnit3.run
 
 # fast build rule for target.
-testRot3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/build
-.PHONY : testRot3.run/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
-
-# Convenience name for target.
-testStereoPoint2: gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
-
-.PHONY : testStereoPoint2
-
-# fast build rule for target.
-testStereoPoint2/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/build
-.PHONY : testStereoPoint2/fast
+testUnit3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testUnit3.run.dir/build
+.PHONY : testUnit3.run/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.run.dir/rule:
@@ -713,64 +473,94 @@ testEssentialMatrix.run/fast:
 .PHONY : testEssentialMatrix.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
+gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
 
 # Convenience name for target.
-testCal3Bundler: gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/rule
+testPinholePose: gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
 
-.PHONY : testCal3Bundler
+.PHONY : testPinholePose
 
 # fast build rule for target.
-testCal3Bundler/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Bundler.dir/build
-.PHONY : testCal3Bundler/fast
+testPinholePose/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/build
+.PHONY : testPinholePose/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
 
 # Convenience name for target.
-testPose3.run: gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
+testCal3_S2: gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
 
-.PHONY : testPose3.run
+.PHONY : testCal3_S2
 
 # fast build rule for target.
-testPose3.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/build
-.PHONY : testPose3.run/fast
+testCal3_S2/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/build
+.PHONY : testCal3_S2/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
 
 # Convenience name for target.
-testStereoCamera.run: gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
+testTriangulation.run: gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
 
-.PHONY : testStereoCamera.run
+.PHONY : testTriangulation.run
 
 # fast build rule for target.
-testStereoCamera.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/build
-.PHONY : testStereoCamera.run/fast
+testTriangulation.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/build
+.PHONY : testTriangulation.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
 
 # Convenience name for target.
-testPoint2.run: gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
+testCyclic.run: gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/rule
 
-.PHONY : testPoint2.run
+.PHONY : testCyclic.run
 
 # fast build rule for target.
-testPoint2.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/build
-.PHONY : testPoint2.run/fast
+testCyclic.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCyclic.run.dir/build
+.PHONY : testCyclic.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
+
+# Convenience name for target.
+testRot3Q: gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/rule
+
+.PHONY : testRot3Q
+
+# fast build rule for target.
+testRot3Q/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3Q.dir/build
+.PHONY : testRot3Q/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
+
+# Convenience name for target.
+testQuaternion.run: gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
+
+.PHONY : testQuaternion.run
+
+# fast build rule for target.
+testQuaternion.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/build
+.PHONY : testQuaternion.run/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testPose2.run.dir/rule:
@@ -803,154 +593,109 @@ testPoint2/fast:
 .PHONY : testPoint2/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
+gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
 
 # Convenience name for target.
-testOrientedPlane3: gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/rule
+testRot2: gtsam/geometry/tests/CMakeFiles/testRot2.dir/rule
 
-.PHONY : testOrientedPlane3
+.PHONY : testRot2
 
 # fast build rule for target.
-testOrientedPlane3/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/build.make gtsam/geometry/tests/CMakeFiles/testOrientedPlane3.dir/build
-.PHONY : testOrientedPlane3/fast
+testRot2/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot2.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot2.dir/build
+.PHONY : testRot2/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
 
 # Convenience name for target.
-testTriangulation.run: gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/rule
+testCal3Bundler.run: gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/rule
 
-.PHONY : testTriangulation.run
+.PHONY : testCal3Bundler.run
 
 # fast build rule for target.
-testTriangulation.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testTriangulation.run.dir/build
-.PHONY : testTriangulation.run/fast
+testCal3Bundler.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Bundler.run.dir/build
+.PHONY : testCal3Bundler.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
+gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
 
 # Convenience name for target.
-testCal3_S2: gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/rule
+testPoint2.run: gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/rule
 
-.PHONY : testCal3_S2
+.PHONY : testPoint2.run
 
 # fast build rule for target.
-testCal3_S2/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3_S2.dir/build
-.PHONY : testCal3_S2/fast
+testPoint2.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint2.run.dir/build
+.PHONY : testPoint2.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
+gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
 
 # Convenience name for target.
-testPinholePose: gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/rule
+testStereoCamera: gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/rule
 
-.PHONY : testPinholePose
+.PHONY : testStereoCamera
 
 # fast build rule for target.
-testPinholePose/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholePose.dir/build
-.PHONY : testPinholePose/fast
+testStereoCamera/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoCamera.dir/build
+.PHONY : testStereoCamera/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
 
 # Convenience name for target.
-testPinholeCamera.run: gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/rule
+testStereoCamera.run: gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/rule
 
-.PHONY : testPinholeCamera.run
+.PHONY : testStereoCamera.run
 
 # fast build rule for target.
-testPinholeCamera.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeCamera.run.dir/build
-.PHONY : testPinholeCamera.run/fast
+testStereoCamera.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoCamera.run.dir/build
+.PHONY : testStereoCamera.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
 
 # Convenience name for target.
-testPinholePose.run: gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/rule
+testPose3.run: gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/rule
 
-.PHONY : testPinholePose.run
+.PHONY : testPose3.run
 
 # fast build rule for target.
-testPinholePose.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholePose.run.dir/build
-.PHONY : testPinholePose.run/fast
+testPose3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose3.run.dir/build
+.PHONY : testPose3.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
+gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
 
 # Convenience name for target.
-testRot3M: gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
+testTriangulation: gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
 
-.PHONY : testRot3M
+.PHONY : testTriangulation
 
 # fast build rule for target.
-testRot3M/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3M.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3M.dir/build
-.PHONY : testRot3M/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
-
-# Convenience name for target.
-testCalibratedCamera: gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
-
-.PHONY : testCalibratedCamera
-
-# fast build rule for target.
-testCalibratedCamera/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/build
-.PHONY : testCalibratedCamera/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
-
-# Convenience name for target.
-testQuaternion: gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
-
-.PHONY : testQuaternion
-
-# fast build rule for target.
-testQuaternion/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/build.make gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/build
-.PHONY : testQuaternion/fast
-
-# Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
-
-# Convenience name for target.
-testQuaternion.run: gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/rule
-
-.PHONY : testQuaternion.run
-
-# fast build rule for target.
-testQuaternion.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testQuaternion.run.dir/build
-.PHONY : testQuaternion.run/fast
+testTriangulation/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/build.make gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/build
+.PHONY : testTriangulation/fast
 
 # Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testSimpleCamera.dir/rule:
@@ -998,6 +743,66 @@ testSimpleCamera.run/fast:
 .PHONY : testSimpleCamera.run/fast
 
 # Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
+
+# Convenience name for target.
+testCal3_S2.run: gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/rule
+
+.PHONY : testCal3_S2.run
+
+# fast build rule for target.
+testCal3_S2.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3_S2.run.dir/build
+.PHONY : testCal3_S2.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
+
+# Convenience name for target.
+testRot3Q.run: gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/rule
+
+.PHONY : testRot3Q.run
+
+# fast build rule for target.
+testRot3Q.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3Q.run.dir/build
+.PHONY : testRot3Q.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
+
+# Convenience name for target.
+testBearingRange.run: gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
+
+.PHONY : testBearingRange.run
+
+# fast build rule for target.
+testBearingRange.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/build
+.PHONY : testBearingRange.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
+
+# Convenience name for target.
+testPinholeSet: gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
+
+.PHONY : testPinholeSet
+
+# fast build rule for target.
+testPinholeSet/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/build
+.PHONY : testPinholeSet/fast
+
+# Convenience name for target.
 gtsam/geometry/tests/CMakeFiles/testPinholeSet.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeSet.run.dir/rule
 .PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeSet.run.dir/rule
@@ -1028,49 +833,244 @@ testCal3Unified/fast:
 .PHONY : testCal3Unified/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
 
 # Convenience name for target.
-testPinholeSet: gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/rule
+testCal3Unified.run: gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/rule
 
-.PHONY : testPinholeSet
+.PHONY : testCal3Unified.run
 
 # fast build rule for target.
-testPinholeSet/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/build.make gtsam/geometry/tests/CMakeFiles/testPinholeSet.dir/build
-.PHONY : testPinholeSet/fast
+testCal3Unified.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCal3Unified.run.dir/build
+.PHONY : testCal3Unified.run/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
+gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
 
 # Convenience name for target.
-testBearingRange.run: gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/rule
+testUnit3: gtsam/geometry/tests/CMakeFiles/testUnit3.dir/rule
 
-.PHONY : testBearingRange.run
+.PHONY : testUnit3
 
 # fast build rule for target.
-testBearingRange.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testBearingRange.run.dir/build
-.PHONY : testBearingRange.run/fast
+testUnit3/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testUnit3.dir/build.make gtsam/geometry/tests/CMakeFiles/testUnit3.dir/build
+.PHONY : testUnit3/fast
 
 # Convenience name for target.
-gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
-.PHONY : gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
+gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
 
 # Convenience name for target.
-testTriangulation: gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/rule
+testCameraSet: gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/rule
 
-.PHONY : testTriangulation
+.PHONY : testCameraSet
 
 # fast build rule for target.
-testTriangulation/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/build.make gtsam/geometry/tests/CMakeFiles/testTriangulation.dir/build
-.PHONY : testTriangulation/fast
+testCameraSet/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/build.make gtsam/geometry/tests/CMakeFiles/testCameraSet.dir/build
+.PHONY : testCameraSet/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
+
+# Convenience name for target.
+testCameraSet.run: gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/rule
+
+.PHONY : testCameraSet.run
+
+# fast build rule for target.
+testCameraSet.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCameraSet.run.dir/build
+.PHONY : testCameraSet.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
+
+# Convenience name for target.
+testRot3M: gtsam/geometry/tests/CMakeFiles/testRot3M.dir/rule
+
+.PHONY : testRot3M
+
+# fast build rule for target.
+testRot3M/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3M.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3M.dir/build
+.PHONY : testRot3M/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
+
+# Convenience name for target.
+testQuaternion: gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/rule
+
+.PHONY : testQuaternion
+
+# fast build rule for target.
+testQuaternion/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/build.make gtsam/geometry/tests/CMakeFiles/testQuaternion.dir/build
+.PHONY : testQuaternion/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
+
+# Convenience name for target.
+testCalibratedCamera: gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/rule
+
+.PHONY : testCalibratedCamera
+
+# fast build rule for target.
+testCalibratedCamera/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/build.make gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.dir/build
+.PHONY : testCalibratedCamera/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
+
+# Convenience name for target.
+testSerializationGeometry: gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/rule
+
+.PHONY : testSerializationGeometry
+
+# fast build rule for target.
+testSerializationGeometry/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/build.make gtsam/geometry/tests/CMakeFiles/testSerializationGeometry.dir/build
+.PHONY : testSerializationGeometry/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
+
+# Convenience name for target.
+testCalibratedCamera.run: gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/rule
+
+.PHONY : testCalibratedCamera.run
+
+# fast build rule for target.
+testCalibratedCamera.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testCalibratedCamera.run.dir/build
+.PHONY : testCalibratedCamera.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
+
+# Convenience name for target.
+testPoint3: gtsam/geometry/tests/CMakeFiles/testPoint3.dir/rule
+
+.PHONY : testPoint3
+
+# fast build rule for target.
+testPoint3/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPoint3.dir/build.make gtsam/geometry/tests/CMakeFiles/testPoint3.dir/build
+.PHONY : testPoint3/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
+
+# Convenience name for target.
+testPose3: gtsam/geometry/tests/CMakeFiles/testPose3.dir/rule
+
+.PHONY : testPose3
+
+# fast build rule for target.
+testPose3/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testPose3.dir/build.make gtsam/geometry/tests/CMakeFiles/testPose3.dir/build
+.PHONY : testPose3/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
+
+# Convenience name for target.
+testEssentialMatrix: gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/rule
+
+.PHONY : testEssentialMatrix
+
+# fast build rule for target.
+testEssentialMatrix/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/build.make gtsam/geometry/tests/CMakeFiles/testEssentialMatrix.dir/build
+.PHONY : testEssentialMatrix/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
+
+# Convenience name for target.
+testCyclic: gtsam/geometry/tests/CMakeFiles/testCyclic.dir/rule
+
+.PHONY : testCyclic
+
+# fast build rule for target.
+testCyclic/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testCyclic.dir/build.make gtsam/geometry/tests/CMakeFiles/testCyclic.dir/build
+.PHONY : testCyclic/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
+
+# Convenience name for target.
+testStereoPoint2: gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/rule
+
+.PHONY : testStereoPoint2
+
+# fast build rule for target.
+testStereoPoint2/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/build.make gtsam/geometry/tests/CMakeFiles/testStereoPoint2.dir/build
+.PHONY : testStereoPoint2/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
+
+# Convenience name for target.
+testRot3.run: gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/rule
+
+.PHONY : testRot3.run
+
+# fast build rule for target.
+testRot3.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/build.make gtsam/geometry/tests/CMakeFiles/testRot3.run.dir/build
+.PHONY : testRot3.run/fast
+
+# Convenience name for target.
+gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
+.PHONY : gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
+
+# Convenience name for target.
+testSO3: gtsam/geometry/tests/CMakeFiles/testSO3.dir/rule
+
+.PHONY : testSO3
+
+# fast build rule for target.
+testSO3/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/geometry/tests/CMakeFiles/testSO3.dir/build.make gtsam/geometry/tests/CMakeFiles/testSO3.dir/build
+.PHONY : testSO3/fast
 
 testBearingRange.o: testBearingRange.cpp.o
 
@@ -1865,70 +1865,70 @@ help:
 	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... testPoint3.run"
 	@echo "... testCal3DS2.run"
 	@echo "... testCal3DS2"
-	@echo "... testRot3M.run"
-	@echo "... testPinholeCamera"
-	@echo "... testSO3.run"
-	@echo "... testSO3"
-	@echo "... testEssentialMatrix"
-	@echo "... testCameraSet"
-	@echo "... testCameraSet.run"
-	@echo "... testPose2"
-	@echo "... testUnit3"
-	@echo "... testCal3Unified.run"
-	@echo "... testPoint3"
-	@echo "... testPose3"
-	@echo "... testCalibratedCamera.run"
-	@echo "... testSerializationGeometry"
-	@echo "... testCal3Bundler.run"
-	@echo "... testRot2"
-	@echo "... testCal3_S2.run"
-	@echo "... testRot3Q.run"
-	@echo "... testStereoCamera"
+	@echo "... testPoint3.run"
 	@echo "... testOrientedPlane3.run"
-	@echo "... testCyclic"
-	@echo "... testRot3Q"
-	@echo "... testCyclic.run"
+	@echo "... testOrientedPlane3"
+	@echo "... testPose2"
+	@echo "... testSO3.run"
+	@echo "... testRot2.run"
+	@echo "... check.geometry"
+	@echo "... testPinholePose.run"
+	@echo "... testPinholeCamera.run"
+	@echo "... testPinholeCamera"
+	@echo "... testRot3M.run"
 	@echo "... rebuild_cache"
 	@echo "... testSerializationGeometry.run"
 	@echo "... testBearingRange"
-	@echo "... check.geometry"
-	@echo "... testRot2.run"
-	@echo "... testUnit3.run"
-	@echo "... testRot3"
-	@echo "... install/local"
-	@echo "... testRot3.run"
-	@echo "... testStereoPoint2"
-	@echo "... testEssentialMatrix.run"
 	@echo "... testCal3Bundler"
-	@echo "... testPose3.run"
-	@echo "... testStereoCamera.run"
-	@echo "... testPoint2.run"
+	@echo "... testRot3"
+	@echo "... testUnit3.run"
+	@echo "... testEssentialMatrix.run"
+	@echo "... testPinholePose"
+	@echo "... testCal3_S2"
+	@echo "... testTriangulation.run"
+	@echo "... testCyclic.run"
+	@echo "... testRot3Q"
+	@echo "... testQuaternion.run"
 	@echo "... testPose2.run"
 	@echo "... testPoint2"
-	@echo "... testOrientedPlane3"
-	@echo "... testTriangulation.run"
-	@echo "... testCal3_S2"
-	@echo "... testPinholePose"
-	@echo "... testPinholeCamera.run"
-	@echo "... testPinholePose.run"
-	@echo "... test"
-	@echo "... package_source"
-	@echo "... testRot3M"
-	@echo "... testCalibratedCamera"
-	@echo "... testQuaternion"
-	@echo "... testQuaternion.run"
+	@echo "... testRot2"
+	@echo "... testCal3Bundler.run"
+	@echo "... testPoint2.run"
+	@echo "... testStereoCamera"
+	@echo "... testStereoCamera.run"
+	@echo "... testPose3.run"
+	@echo "... testTriangulation"
 	@echo "... testSimpleCamera"
 	@echo "... testStereoPoint2.run"
 	@echo "... testSimpleCamera.run"
+	@echo "... testCal3_S2.run"
+	@echo "... testRot3Q.run"
+	@echo "... testBearingRange.run"
+	@echo "... testPinholeSet"
 	@echo "... testPinholeSet.run"
 	@echo "... install/strip"
 	@echo "... testCal3Unified"
-	@echo "... testPinholeSet"
-	@echo "... testBearingRange.run"
-	@echo "... testTriangulation"
+	@echo "... testCal3Unified.run"
+	@echo "... testUnit3"
+	@echo "... testCameraSet"
+	@echo "... testCameraSet.run"
+	@echo "... test"
+	@echo "... package_source"
+	@echo "... testRot3M"
+	@echo "... testQuaternion"
+	@echo "... testCalibratedCamera"
+	@echo "... testSerializationGeometry"
+	@echo "... testCalibratedCamera.run"
+	@echo "... testPoint3"
+	@echo "... testPose3"
+	@echo "... testEssentialMatrix"
+	@echo "... testCyclic"
+	@echo "... install/local"
+	@echo "... testStereoPoint2"
+	@echo "... testRot3.run"
+	@echo "... testSO3"
 	@echo "... testBearingRange.o"
 	@echo "... testBearingRange.i"
 	@echo "... testBearingRange.s"

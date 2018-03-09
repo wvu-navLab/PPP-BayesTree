@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/ceres" TYPE FILE FILES
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/autodiff.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/variadic_evaluate.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/rotation.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/manual_constructor.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/fixed_array.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/jet.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/eigen.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/autodiff.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/example.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/fpclassify.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/manual_constructor.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/rotation.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/variadic_evaluate.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/ceres/macros.h"
     )
 endif()

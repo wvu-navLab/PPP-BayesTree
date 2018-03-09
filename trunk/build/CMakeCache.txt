@@ -262,7 +262,7 @@ DEBUG:BOOL=OFF
 DOXYGEN_DOT_EXECUTABLE:FILEPATH=/usr/bin/dot
 
 //Doxygen documentation generation tool (http://www.doxygen.org)
-DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //enable use of GDB
 GDB:BOOL=OFF
@@ -288,15 +288,6 @@ GTSAM_ALLOW_DEPRECATED_SINCE_V4:BOOL=ON
 //Value Computed by CMake
 GTSAM_BINARY_DIR:STATIC=/home/rmw/Documents/git/PPP-BayesTree/trunk/build
 
-//Enable/Disable building of doxygen docs
-GTSAM_BUILD_DOCS:BOOL=ON
-
-//Enable/Disable doxygen HTML output
-GTSAM_BUILD_DOC_HTML:BOOL=ON
-
-//Enable/Disable doxygen LaTeX output
-GTSAM_BUILD_DOC_LATEX:BOOL=OFF
-
 //Build examples with 'make all' (build with 'make examples' if
 // not)
 GTSAM_BUILD_EXAMPLES_ALWAYS:BOOL=ON
@@ -320,9 +311,6 @@ GTSAM_BUILD_TIMING_ALWAYS:BOOL=OFF
 //Enable/Disable appending the build type to the name of compiled
 // libraries
 GTSAM_BUILD_TYPE_POSTFIXES:BOOL=ON
-
-//Enable/Disable libgtsam_unstable
-GTSAM_BUILD_UNSTABLE:BOOL=ON
 
 //Enable/Disable building of matlab wrap utility (necessary for
 // matlab interface)
@@ -452,9 +440,6 @@ GTSAM_WITH_EIGEN_MKL_OPENMP:BOOL=ON
 //Use Intel Threaded Building Blocks (TBB) if available
 GTSAM_WITH_TBB:BOOL=ON
 
-//If enabled, allows for wrapped objects to be saved via boost.serialization
-GTSAM_WRAP_SERIALIZATION:BOOL=ON
-
 //Path to a library.
 GeographicLib_LIBRARIES:FILEPATH=GeographicLib_LIBRARIES-NOTFOUND
 
@@ -468,37 +453,37 @@ METIS_SHARED:BOOL=TRUE
 METIS_SOURCE_DIR:STATIC=/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/metis
 
 //Path to a library.
-MKL_CORE_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_core.so
+MKL_CORE_LIBRARY:FILEPATH=MKL_CORE_LIBRARY-NOTFOUND
 
 //Path to a file.
-MKL_FFTW_INCLUDE_DIR:PATH=/opt/intel/mkl/include/fftw
+MKL_FFTW_INCLUDE_DIR:PATH=MKL_FFTW_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
-MKL_GNUTHREAD_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_gnu_thread.so
+MKL_GNUTHREAD_LIBRARY:FILEPATH=MKL_GNUTHREAD_LIBRARY-NOTFOUND
 
 //Path to a library.
-MKL_ILP_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_intel_ilp64.so
+MKL_ILP_LIBRARY:FILEPATH=MKL_ILP_LIBRARY-NOTFOUND
 
 //Path to a file.
-MKL_INCLUDE_DIR:PATH=/opt/intel/mkl/include
+MKL_INCLUDE_DIR:PATH=MKL_INCLUDE_DIR-NOTFOUND
 
 //Path to a library.
-MKL_INTELTHREAD_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_intel_thread.so
+MKL_INTELTHREAD_LIBRARY:FILEPATH=MKL_INTELTHREAD_LIBRARY-NOTFOUND
 
 //Path to a library.
 MKL_IOMP5_LIBRARY:FILEPATH=MKL_IOMP5_LIBRARY-NOTFOUND
 
 //Path to a library.
-MKL_LAPACK_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_lapack95_lp64.a
+MKL_LAPACK_LIBRARY:FILEPATH=MKL_LAPACK_LIBRARY-NOTFOUND
 
 //Path to a library.
-MKL_LP_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_intel_lp64.so
+MKL_LP_LIBRARY:FILEPATH=MKL_LP_LIBRARY-NOTFOUND
 
 //Path to a file.
-MKL_ROOT_DIR:PATH=/opt/intel/mkl
+MKL_ROOT_DIR:PATH=MKL_ROOT_DIR-NOTFOUND
 
 //Path to a library.
-MKL_SEQUENTIAL_LIBRARY:FILEPATH=/opt/intel/mkl/lib/intel64/libmkl_sequential.so
+MKL_SEQUENTIAL_LIBRARY:FILEPATH=MKL_SEQUENTIAL_LIBRARY-NOTFOUND
 
 //enable OpenMP support
 OPENMP:BOOL=OFF
@@ -546,13 +531,7 @@ TCMALLOC_LIBRARY:FILEPATH=TCMALLOC_LIBRARY-NOTFOUND
 gtsam_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/usr/lib/x86_64-linux-gnu/libboost_timer.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libtbb.so;general;/usr/lib/x86_64-linux-gnu/libtbbmalloc.so;general;metis;
 
 //Dependencies for the target
-gtsam_unstable_LIB_DEPENDS:STATIC=general;gtsam;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/usr/lib/x86_64-linux-gnu/libboost_timer.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;
-
-//Dependencies for the target
 metis_LIB_DEPENDS:STATIC=general;m;
-
-//Dependencies for the target
-wrap_lib_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;
 
 
 ########################
@@ -703,7 +682,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=43
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=42
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -746,8 +725,6 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
 DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
-//Details about finding Doxygen
-FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/usr/bin/doxygen][v1.8.11()]
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[-fopenmp][-fopenmp][v()]
 //Details about finding Threads

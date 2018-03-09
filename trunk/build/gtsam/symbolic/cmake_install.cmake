@@ -34,15 +34,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/symbolic" TYPE FILE FILES
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicEliminationTree.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicISAM.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicFactor.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicConditional.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicBayesNet.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicISAM.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicEliminationTree.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicFactorGraph.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicFactor-inst.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicFactor.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicBayesTree.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicJunctionTree.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/symbolic/SymbolicBayesNet.h"
     )
 endif()
 

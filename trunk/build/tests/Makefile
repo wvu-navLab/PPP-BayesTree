@@ -123,17 +123,6 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -154,6 +143,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,79 +188,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/testSubgraphSolver.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphSolver.dir/rule
-.PHONY : tests/CMakeFiles/testSubgraphSolver.dir/rule
+tests/CMakeFiles/testGaussianISAM2.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM2.run.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianISAM2.run.dir/rule
 
 # Convenience name for target.
-testSubgraphSolver: tests/CMakeFiles/testSubgraphSolver.dir/rule
+testGaussianISAM2.run: tests/CMakeFiles/testGaussianISAM2.run.dir/rule
 
-.PHONY : testSubgraphSolver
+.PHONY : testGaussianISAM2.run
 
 # fast build rule for target.
-testSubgraphSolver/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphSolver.dir/build.make tests/CMakeFiles/testSubgraphSolver.dir/build
-.PHONY : testSubgraphSolver/fast
+testGaussianISAM2.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM2.run.dir/build.make tests/CMakeFiles/testGaussianISAM2.run.dir/build
+.PHONY : testGaussianISAM2.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSubgraphPreconditioner.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
-.PHONY : tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
+tests/CMakeFiles/testNonlinearFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearFactor.run.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearFactor.run.dir/rule
 
 # Convenience name for target.
-testSubgraphPreconditioner: tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
+testNonlinearFactor.run: tests/CMakeFiles/testNonlinearFactor.run.dir/rule
 
-.PHONY : testSubgraphPreconditioner
+.PHONY : testNonlinearFactor.run
 
 # fast build rule for target.
-testSubgraphPreconditioner/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphPreconditioner.dir/build.make tests/CMakeFiles/testSubgraphPreconditioner.dir/build
-.PHONY : testSubgraphPreconditioner/fast
+testNonlinearFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearFactor.run.dir/build.make tests/CMakeFiles/testNonlinearFactor.run.dir/build
+.PHONY : testNonlinearFactor.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSerializationSLAM.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSerializationSLAM.run.dir/rule
-.PHONY : tests/CMakeFiles/testSerializationSLAM.run.dir/rule
+tests/CMakeFiles/testNonlinearFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearFactor.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearFactor.dir/rule
 
 # Convenience name for target.
-testSerializationSLAM.run: tests/CMakeFiles/testSerializationSLAM.run.dir/rule
+testNonlinearFactor: tests/CMakeFiles/testNonlinearFactor.dir/rule
 
-.PHONY : testSerializationSLAM.run
+.PHONY : testNonlinearFactor
 
 # fast build rule for target.
-testSerializationSLAM.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSerializationSLAM.run.dir/build.make tests/CMakeFiles/testSerializationSLAM.run.dir/build
-.PHONY : testSerializationSLAM.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testSerializationSLAM.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSerializationSLAM.dir/rule
-.PHONY : tests/CMakeFiles/testSerializationSLAM.dir/rule
-
-# Convenience name for target.
-testSerializationSLAM: tests/CMakeFiles/testSerializationSLAM.dir/rule
-
-.PHONY : testSerializationSLAM
-
-# fast build rule for target.
-testSerializationSLAM/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSerializationSLAM.dir/build.make tests/CMakeFiles/testSerializationSLAM.dir/build
-.PHONY : testSerializationSLAM/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testGaussianFactorGraphB.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
-
-# Convenience name for target.
-testGaussianFactorGraphB: tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
-
-.PHONY : testGaussianFactorGraphB
-
-# fast build rule for target.
-testGaussianFactorGraphB/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianFactorGraphB.dir/build.make tests/CMakeFiles/testGaussianFactorGraphB.dir/build
-.PHONY : testGaussianFactorGraphB/fast
+testNonlinearFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearFactor.dir/build.make tests/CMakeFiles/testNonlinearFactor.dir/build
+.PHONY : testNonlinearFactor/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testRot3Optimization.run.dir/rule:
@@ -293,94 +263,244 @@ testRot3Optimization/fast:
 .PHONY : testRot3Optimization/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testBoundingConstraint.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testBoundingConstraint.dir/rule
-.PHONY : tests/CMakeFiles/testBoundingConstraint.dir/rule
+tests/CMakeFiles/testManifold.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testManifold.run.dir/rule
+.PHONY : tests/CMakeFiles/testManifold.run.dir/rule
 
 # Convenience name for target.
-testBoundingConstraint: tests/CMakeFiles/testBoundingConstraint.dir/rule
+testManifold.run: tests/CMakeFiles/testManifold.run.dir/rule
 
-.PHONY : testBoundingConstraint
+.PHONY : testManifold.run
 
 # fast build rule for target.
-testBoundingConstraint/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testBoundingConstraint.dir/build.make tests/CMakeFiles/testBoundingConstraint.dir/build
-.PHONY : testBoundingConstraint/fast
+testManifold.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testManifold.run.dir/build.make tests/CMakeFiles/testManifold.run.dir/build
+.PHONY : testManifold.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
+tests/CMakeFiles/testGaussianISAM.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM.run.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianISAM.run.dir/rule
 
 # Convenience name for target.
-testGaussianFactorGraphB.run: tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
+testGaussianISAM.run: tests/CMakeFiles/testGaussianISAM.run.dir/rule
 
-.PHONY : testGaussianFactorGraphB.run
+.PHONY : testGaussianISAM.run
 
 # fast build rule for target.
-testGaussianFactorGraphB.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianFactorGraphB.run.dir/build.make tests/CMakeFiles/testGaussianFactorGraphB.run.dir/build
-.PHONY : testGaussianFactorGraphB.run/fast
+testGaussianISAM.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM.run.dir/build.make tests/CMakeFiles/testGaussianISAM.run.dir/build
+.PHONY : testGaussianISAM.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testLie.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testLie.run.dir/rule
-.PHONY : tests/CMakeFiles/testLie.run.dir/rule
+tests/CMakeFiles/testGaussianISAM.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianISAM.dir/rule
 
 # Convenience name for target.
-testLie.run: tests/CMakeFiles/testLie.run.dir/rule
+testGaussianISAM: tests/CMakeFiles/testGaussianISAM.dir/rule
 
-.PHONY : testLie.run
+.PHONY : testGaussianISAM
 
 # fast build rule for target.
-testLie.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testLie.run.dir/build.make tests/CMakeFiles/testLie.run.dir/build
-.PHONY : testLie.run/fast
+testGaussianISAM/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM.dir/build.make tests/CMakeFiles/testGaussianISAM.dir/build
+.PHONY : testGaussianISAM/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testBoundingConstraint.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testBoundingConstraint.run.dir/rule
-.PHONY : tests/CMakeFiles/testBoundingConstraint.run.dir/rule
+tests/CMakeFiles/testPCGSolver.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testPCGSolver.run.dir/rule
+.PHONY : tests/CMakeFiles/testPCGSolver.run.dir/rule
 
 # Convenience name for target.
-testBoundingConstraint.run: tests/CMakeFiles/testBoundingConstraint.run.dir/rule
+testPCGSolver.run: tests/CMakeFiles/testPCGSolver.run.dir/rule
 
-.PHONY : testBoundingConstraint.run
+.PHONY : testPCGSolver.run
 
 # fast build rule for target.
-testBoundingConstraint.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testBoundingConstraint.run.dir/build.make tests/CMakeFiles/testBoundingConstraint.run.dir/build
-.PHONY : testBoundingConstraint.run/fast
+testPCGSolver.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testPCGSolver.run.dir/build.make tests/CMakeFiles/testPCGSolver.run.dir/build
+.PHONY : testPCGSolver.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testLie.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testLie.dir/rule
-.PHONY : tests/CMakeFiles/testLie.dir/rule
+tests/CMakeFiles/testNonlinearISAM.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearISAM.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearISAM.dir/rule
 
 # Convenience name for target.
-testLie: tests/CMakeFiles/testLie.dir/rule
+testNonlinearISAM: tests/CMakeFiles/testNonlinearISAM.dir/rule
 
-.PHONY : testLie
+.PHONY : testNonlinearISAM
 
 # fast build rule for target.
-testLie/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testLie.dir/build.make tests/CMakeFiles/testLie.dir/build
-.PHONY : testLie/fast
+testNonlinearISAM/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearISAM.dir/build.make tests/CMakeFiles/testNonlinearISAM.dir/build
+.PHONY : testNonlinearISAM/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSimulated2DOriented.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2DOriented.dir/rule
-.PHONY : tests/CMakeFiles/testSimulated2DOriented.dir/rule
+tests/CMakeFiles/testNonlinearEquality.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearEquality.run.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearEquality.run.dir/rule
 
 # Convenience name for target.
-testSimulated2DOriented: tests/CMakeFiles/testSimulated2DOriented.dir/rule
+testNonlinearEquality.run: tests/CMakeFiles/testNonlinearEquality.run.dir/rule
 
-.PHONY : testSimulated2DOriented
+.PHONY : testNonlinearEquality.run
 
 # fast build rule for target.
-testSimulated2DOriented/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2DOriented.dir/build.make tests/CMakeFiles/testSimulated2DOriented.dir/build
-.PHONY : testSimulated2DOriented/fast
+testNonlinearEquality.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearEquality.run.dir/build.make tests/CMakeFiles/testNonlinearEquality.run.dir/build
+.PHONY : testNonlinearEquality.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testNonlinearOptimizer.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearOptimizer.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearOptimizer.dir/rule
+
+# Convenience name for target.
+testNonlinearOptimizer: tests/CMakeFiles/testNonlinearOptimizer.dir/rule
+
+.PHONY : testNonlinearOptimizer
+
+# fast build rule for target.
+testNonlinearOptimizer/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearOptimizer.dir/build.make tests/CMakeFiles/testNonlinearOptimizer.dir/build
+.PHONY : testNonlinearOptimizer/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
+
+# Convenience name for target.
+testGaussianJunctionTreeB: tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
+
+.PHONY : testGaussianJunctionTreeB
+
+# fast build rule for target.
+testGaussianJunctionTreeB/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianJunctionTreeB.dir/build.make tests/CMakeFiles/testGaussianJunctionTreeB.dir/build
+.PHONY : testGaussianJunctionTreeB/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testExtendedKalmanFilter.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
+.PHONY : tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
+
+# Convenience name for target.
+testExtendedKalmanFilter: tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
+
+.PHONY : testExtendedKalmanFilter
+
+# fast build rule for target.
+testExtendedKalmanFilter/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExtendedKalmanFilter.dir/build.make tests/CMakeFiles/testExtendedKalmanFilter.dir/build
+.PHONY : testExtendedKalmanFilter/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testManifold.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testManifold.dir/rule
+.PHONY : tests/CMakeFiles/testManifold.dir/rule
+
+# Convenience name for target.
+testManifold: tests/CMakeFiles/testManifold.dir/rule
+
+.PHONY : testManifold
+
+# fast build rule for target.
+testManifold/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testManifold.dir/build.make tests/CMakeFiles/testManifold.dir/build
+.PHONY : testManifold/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testGaussianBayesTreeB.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
+
+# Convenience name for target.
+testGaussianBayesTreeB: tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
+
+.PHONY : testGaussianBayesTreeB
+
+# fast build rule for target.
+testGaussianBayesTreeB/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianBayesTreeB.dir/build.make tests/CMakeFiles/testGaussianBayesTreeB.dir/build
+.PHONY : testGaussianBayesTreeB/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testNonlinearEquality.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearEquality.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearEquality.dir/rule
+
+# Convenience name for target.
+testNonlinearEquality: tests/CMakeFiles/testNonlinearEquality.dir/rule
+
+.PHONY : testNonlinearEquality
+
+# fast build rule for target.
+testNonlinearEquality/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearEquality.dir/build.make tests/CMakeFiles/testNonlinearEquality.dir/build
+.PHONY : testNonlinearEquality/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testSerializationSLAM.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSerializationSLAM.dir/rule
+.PHONY : tests/CMakeFiles/testSerializationSLAM.dir/rule
+
+# Convenience name for target.
+testSerializationSLAM: tests/CMakeFiles/testSerializationSLAM.dir/rule
+
+.PHONY : testSerializationSLAM
+
+# fast build rule for target.
+testSerializationSLAM/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSerializationSLAM.dir/build.make tests/CMakeFiles/testSerializationSLAM.dir/build
+.PHONY : testSerializationSLAM/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testExpressionFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExpressionFactor.run.dir/rule
+.PHONY : tests/CMakeFiles/testExpressionFactor.run.dir/rule
+
+# Convenience name for target.
+testExpressionFactor.run: tests/CMakeFiles/testExpressionFactor.run.dir/rule
+
+.PHONY : testExpressionFactor.run
+
+# fast build rule for target.
+testExpressionFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExpressionFactor.run.dir/build.make tests/CMakeFiles/testExpressionFactor.run.dir/build
+.PHONY : testExpressionFactor.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
+.PHONY : tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
+
+# Convenience name for target.
+testExtendedKalmanFilter.run: tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
+
+.PHONY : testExtendedKalmanFilter.run
+
+# fast build rule for target.
+testExtendedKalmanFilter.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExtendedKalmanFilter.run.dir/build.make tests/CMakeFiles/testExtendedKalmanFilter.run.dir/build
+.PHONY : testExtendedKalmanFilter.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testSimulated3D.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated3D.run.dir/rule
+.PHONY : tests/CMakeFiles/testSimulated3D.run.dir/rule
+
+# Convenience name for target.
+testSimulated3D.run: tests/CMakeFiles/testSimulated3D.run.dir/rule
+
+.PHONY : testSimulated3D.run
+
+# fast build rule for target.
+testSimulated3D.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated3D.run.dir/build.make tests/CMakeFiles/testSimulated3D.run.dir/build
+.PHONY : testSimulated3D.run/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testGradientDescentOptimizer.dir/rule:
@@ -398,64 +518,94 @@ testGradientDescentOptimizer/fast:
 .PHONY : testGradientDescentOptimizer/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearFactor.run.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearFactor.run.dir/rule
+tests/CMakeFiles/testExpressionFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExpressionFactor.dir/rule
+.PHONY : tests/CMakeFiles/testExpressionFactor.dir/rule
 
 # Convenience name for target.
-testNonlinearFactor.run: tests/CMakeFiles/testNonlinearFactor.run.dir/rule
+testExpressionFactor: tests/CMakeFiles/testExpressionFactor.dir/rule
 
-.PHONY : testNonlinearFactor.run
+.PHONY : testExpressionFactor
 
 # fast build rule for target.
-testNonlinearFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearFactor.run.dir/build.make tests/CMakeFiles/testNonlinearFactor.run.dir/build
-.PHONY : testNonlinearFactor.run/fast
+testExpressionFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExpressionFactor.dir/build.make tests/CMakeFiles/testExpressionFactor.dir/build
+.PHONY : testExpressionFactor/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSimulated2DOriented.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
-.PHONY : tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
+tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
+.PHONY : tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
 
 # Convenience name for target.
-testSimulated2DOriented.run: tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
+testGeneralSFMFactorB.run: tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
 
-.PHONY : testSimulated2DOriented.run
+.PHONY : testGeneralSFMFactorB.run
 
 # fast build rule for target.
-testSimulated2DOriented.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2DOriented.run.dir/build.make tests/CMakeFiles/testSimulated2DOriented.run.dir/build
-.PHONY : testSimulated2DOriented.run/fast
+testGeneralSFMFactorB.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGeneralSFMFactorB.run.dir/build.make tests/CMakeFiles/testGeneralSFMFactorB.run.dir/build
+.PHONY : testGeneralSFMFactorB.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
+tests/CMakeFiles/testIterative.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testIterative.dir/rule
+.PHONY : tests/CMakeFiles/testIterative.dir/rule
 
 # Convenience name for target.
-testGaussianJunctionTreeB.run: tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
+testIterative: tests/CMakeFiles/testIterative.dir/rule
 
-.PHONY : testGaussianJunctionTreeB.run
+.PHONY : testIterative
 
 # fast build rule for target.
-testGaussianJunctionTreeB.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/build.make tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/build
-.PHONY : testGaussianJunctionTreeB.run/fast
+testIterative/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testIterative.dir/build.make tests/CMakeFiles/testIterative.dir/build
+.PHONY : testIterative/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
+tests/CMakeFiles/testGeneralSFMFactorB.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
+.PHONY : tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
 
 # Convenience name for target.
-testGaussianJunctionTreeB: tests/CMakeFiles/testGaussianJunctionTreeB.dir/rule
+testGeneralSFMFactorB: tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
 
-.PHONY : testGaussianJunctionTreeB
+.PHONY : testGeneralSFMFactorB
 
 # fast build rule for target.
-testGaussianJunctionTreeB/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianJunctionTreeB.dir/build.make tests/CMakeFiles/testGaussianJunctionTreeB.dir/build
-.PHONY : testGaussianJunctionTreeB/fast
+testGeneralSFMFactorB/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGeneralSFMFactorB.dir/build.make tests/CMakeFiles/testGeneralSFMFactorB.dir/build
+.PHONY : testGeneralSFMFactorB/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
+.PHONY : tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
+
+# Convenience name for target.
+testSubgraphPreconditioner.run: tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
+
+.PHONY : testSubgraphPreconditioner.run
+
+# fast build rule for target.
+testSubgraphPreconditioner.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphPreconditioner.run.dir/build.make tests/CMakeFiles/testSubgraphPreconditioner.run.dir/build
+.PHONY : testSubgraphPreconditioner.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testPreconditioner.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testPreconditioner.dir/rule
+.PHONY : tests/CMakeFiles/testPreconditioner.dir/rule
+
+# Convenience name for target.
+testPreconditioner: tests/CMakeFiles/testPreconditioner.dir/rule
+
+.PHONY : testPreconditioner
+
+# fast build rule for target.
+testPreconditioner/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testPreconditioner.dir/build.make tests/CMakeFiles/testPreconditioner.dir/build
+.PHONY : testPreconditioner/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testSimulated2D.run.dir/rule:
@@ -488,66 +638,6 @@ testPCGSolver/fast:
 .PHONY : testPCGSolver/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testPreconditioner.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testPreconditioner.dir/rule
-.PHONY : tests/CMakeFiles/testPreconditioner.dir/rule
-
-# Convenience name for target.
-testPreconditioner: tests/CMakeFiles/testPreconditioner.dir/rule
-
-.PHONY : testPreconditioner
-
-# fast build rule for target.
-testPreconditioner/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testPreconditioner.dir/build.make tests/CMakeFiles/testPreconditioner.dir/build
-.PHONY : testPreconditioner/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testSimulated2D.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2D.dir/rule
-.PHONY : tests/CMakeFiles/testSimulated2D.dir/rule
-
-# Convenience name for target.
-testSimulated2D: tests/CMakeFiles/testSimulated2D.dir/rule
-
-.PHONY : testSimulated2D
-
-# fast build rule for target.
-testSimulated2D/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2D.dir/build.make tests/CMakeFiles/testSimulated2D.dir/build
-.PHONY : testSimulated2D/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testPCGSolver.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testPCGSolver.run.dir/rule
-.PHONY : tests/CMakeFiles/testPCGSolver.run.dir/rule
-
-# Convenience name for target.
-testPCGSolver.run: tests/CMakeFiles/testPCGSolver.run.dir/rule
-
-.PHONY : testPCGSolver.run
-
-# fast build rule for target.
-testPCGSolver.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testPCGSolver.run.dir/build.make tests/CMakeFiles/testPCGSolver.run.dir/build
-.PHONY : testPCGSolver.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testExtendedKalmanFilter.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
-.PHONY : tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
-
-# Convenience name for target.
-testExtendedKalmanFilter: tests/CMakeFiles/testExtendedKalmanFilter.dir/rule
-
-.PHONY : testExtendedKalmanFilter
-
-# fast build rule for target.
-testExtendedKalmanFilter/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExtendedKalmanFilter.dir/build.make tests/CMakeFiles/testExtendedKalmanFilter.dir/build
-.PHONY : testExtendedKalmanFilter/fast
-
-# Convenience name for target.
 tests/CMakeFiles/testGaussianISAM2.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM2.dir/rule
 .PHONY : tests/CMakeFiles/testGaussianISAM2.dir/rule
@@ -576,21 +666,6 @@ testNonlinearFactorGraph.run: tests/CMakeFiles/testNonlinearFactorGraph.run.dir/
 testNonlinearFactorGraph.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearFactorGraph.run.dir/build.make tests/CMakeFiles/testNonlinearFactorGraph.run.dir/build
 .PHONY : testNonlinearFactorGraph.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testManifold.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testManifold.run.dir/rule
-.PHONY : tests/CMakeFiles/testManifold.run.dir/rule
-
-# Convenience name for target.
-testManifold.run: tests/CMakeFiles/testManifold.run.dir/rule
-
-.PHONY : testManifold.run
-
-# fast build rule for target.
-testManifold.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testManifold.run.dir/build.make tests/CMakeFiles/testManifold.run.dir/build
-.PHONY : testManifold.run/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testIterative.run.dir/rule:
@@ -623,21 +698,6 @@ testNonlinearFactorGraph/fast:
 .PHONY : testNonlinearFactorGraph/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGraph.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGraph.run.dir/rule
-.PHONY : tests/CMakeFiles/testGraph.run.dir/rule
-
-# Convenience name for target.
-testGraph.run: tests/CMakeFiles/testGraph.run.dir/rule
-
-.PHONY : testGraph.run
-
-# fast build rule for target.
-testGraph.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGraph.run.dir/build.make tests/CMakeFiles/testGraph.run.dir/build
-.PHONY : testGraph.run/fast
-
-# Convenience name for target.
 tests/CMakeFiles/testSimulated3D.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated3D.dir/rule
 .PHONY : tests/CMakeFiles/testSimulated3D.dir/rule
@@ -653,109 +713,34 @@ testSimulated3D/fast:
 .PHONY : testSimulated3D/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGaussianBayesTreeB.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
+tests/CMakeFiles/testSubgraphPreconditioner.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
+.PHONY : tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
 
 # Convenience name for target.
-testGaussianBayesTreeB: tests/CMakeFiles/testGaussianBayesTreeB.dir/rule
+testSubgraphPreconditioner: tests/CMakeFiles/testSubgraphPreconditioner.dir/rule
 
-.PHONY : testGaussianBayesTreeB
+.PHONY : testSubgraphPreconditioner
 
 # fast build rule for target.
-testGaussianBayesTreeB/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianBayesTreeB.dir/build.make tests/CMakeFiles/testGaussianBayesTreeB.dir/build
-.PHONY : testGaussianBayesTreeB/fast
+testSubgraphPreconditioner/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphPreconditioner.dir/build.make tests/CMakeFiles/testSubgraphPreconditioner.dir/build
+.PHONY : testSubgraphPreconditioner/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testManifold.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testManifold.dir/rule
-.PHONY : tests/CMakeFiles/testManifold.dir/rule
+tests/CMakeFiles/testGraph.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGraph.run.dir/rule
+.PHONY : tests/CMakeFiles/testGraph.run.dir/rule
 
 # Convenience name for target.
-testManifold: tests/CMakeFiles/testManifold.dir/rule
+testGraph.run: tests/CMakeFiles/testGraph.run.dir/rule
 
-.PHONY : testManifold
+.PHONY : testGraph.run
 
 # fast build rule for target.
-testManifold/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testManifold.dir/build.make tests/CMakeFiles/testManifold.dir/build
-.PHONY : testManifold/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testExpressionFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExpressionFactor.dir/rule
-.PHONY : tests/CMakeFiles/testExpressionFactor.dir/rule
-
-# Convenience name for target.
-testExpressionFactor: tests/CMakeFiles/testExpressionFactor.dir/rule
-
-.PHONY : testExpressionFactor
-
-# fast build rule for target.
-testExpressionFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExpressionFactor.dir/build.make tests/CMakeFiles/testExpressionFactor.dir/build
-.PHONY : testExpressionFactor/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testNonlinearFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearFactor.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearFactor.dir/rule
-
-# Convenience name for target.
-testNonlinearFactor: tests/CMakeFiles/testNonlinearFactor.dir/rule
-
-.PHONY : testNonlinearFactor
-
-# fast build rule for target.
-testNonlinearFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearFactor.dir/build.make tests/CMakeFiles/testNonlinearFactor.dir/build
-.PHONY : testNonlinearFactor/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testMarginals.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testMarginals.dir/rule
-.PHONY : tests/CMakeFiles/testMarginals.dir/rule
-
-# Convenience name for target.
-testMarginals: tests/CMakeFiles/testMarginals.dir/rule
-
-.PHONY : testMarginals
-
-# fast build rule for target.
-testMarginals/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testMarginals.dir/build.make tests/CMakeFiles/testMarginals.dir/build
-.PHONY : testMarginals/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testNonlinearISAM.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearISAM.run.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearISAM.run.dir/rule
-
-# Convenience name for target.
-testNonlinearISAM.run: tests/CMakeFiles/testNonlinearISAM.run.dir/rule
-
-.PHONY : testNonlinearISAM.run
-
-# fast build rule for target.
-testNonlinearISAM.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearISAM.run.dir/build.make tests/CMakeFiles/testNonlinearISAM.run.dir/build
-.PHONY : testNonlinearISAM.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
-
-# Convenience name for target.
-testGaussianBayesTreeB.run: tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
-
-.PHONY : testGaussianBayesTreeB.run
-
-# fast build rule for target.
-testGaussianBayesTreeB.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianBayesTreeB.run.dir/build.make tests/CMakeFiles/testGaussianBayesTreeB.run.dir/build
-.PHONY : testGaussianBayesTreeB.run/fast
+testGraph.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGraph.run.dir/build.make tests/CMakeFiles/testGraph.run.dir/build
+.PHONY : testGraph.run/fast
 
 # Convenience name for target.
 tests/CMakeFiles/check.tests.dir/rule:
@@ -773,36 +758,6 @@ check.tests/fast:
 .PHONY : check.tests/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGaussianISAM2.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM2.run.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianISAM2.run.dir/rule
-
-# Convenience name for target.
-testGaussianISAM2.run: tests/CMakeFiles/testGaussianISAM2.run.dir/rule
-
-.PHONY : testGaussianISAM2.run
-
-# fast build rule for target.
-testGaussianISAM2.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM2.run.dir/build.make tests/CMakeFiles/testGaussianISAM2.run.dir/build
-.PHONY : testGaussianISAM2.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testDoglegOptimizer.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testDoglegOptimizer.dir/rule
-.PHONY : tests/CMakeFiles/testDoglegOptimizer.dir/rule
-
-# Convenience name for target.
-testDoglegOptimizer: tests/CMakeFiles/testDoglegOptimizer.dir/rule
-
-.PHONY : testDoglegOptimizer
-
-# fast build rule for target.
-testDoglegOptimizer/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testDoglegOptimizer.dir/build.make tests/CMakeFiles/testDoglegOptimizer.dir/build
-.PHONY : testDoglegOptimizer/fast
-
-# Convenience name for target.
 tests/CMakeFiles/testGradientDescentOptimizer.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGradientDescentOptimizer.run.dir/rule
 .PHONY : tests/CMakeFiles/testGradientDescentOptimizer.run.dir/rule
@@ -818,64 +773,79 @@ testGradientDescentOptimizer.run/fast:
 .PHONY : testGradientDescentOptimizer.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSubgraphSolver.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphSolver.run.dir/rule
-.PHONY : tests/CMakeFiles/testSubgraphSolver.run.dir/rule
+tests/CMakeFiles/testLie.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testLie.run.dir/rule
+.PHONY : tests/CMakeFiles/testLie.run.dir/rule
 
 # Convenience name for target.
-testSubgraphSolver.run: tests/CMakeFiles/testSubgraphSolver.run.dir/rule
+testLie.run: tests/CMakeFiles/testLie.run.dir/rule
 
-.PHONY : testSubgraphSolver.run
+.PHONY : testLie.run
 
 # fast build rule for target.
-testSubgraphSolver.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphSolver.run.dir/build.make tests/CMakeFiles/testSubgraphSolver.run.dir/build
-.PHONY : testSubgraphSolver.run/fast
+testLie.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testLie.run.dir/build.make tests/CMakeFiles/testLie.run.dir/build
+.PHONY : testLie.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
+tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
 
 # Convenience name for target.
-testNonlinearOptimizer.run: tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
+testGaussianFactorGraphB.run: tests/CMakeFiles/testGaussianFactorGraphB.run.dir/rule
 
-.PHONY : testNonlinearOptimizer.run
+.PHONY : testGaussianFactorGraphB.run
 
 # fast build rule for target.
-testNonlinearOptimizer.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearOptimizer.run.dir/build.make tests/CMakeFiles/testNonlinearOptimizer.run.dir/build
-.PHONY : testNonlinearOptimizer.run/fast
+testGaussianFactorGraphB.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianFactorGraphB.run.dir/build.make tests/CMakeFiles/testGaussianFactorGraphB.run.dir/build
+.PHONY : testGaussianFactorGraphB.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testDoglegOptimizer.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
-.PHONY : tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
+tests/CMakeFiles/testSerializationSLAM.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSerializationSLAM.run.dir/rule
+.PHONY : tests/CMakeFiles/testSerializationSLAM.run.dir/rule
 
 # Convenience name for target.
-testDoglegOptimizer.run: tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
+testSerializationSLAM.run: tests/CMakeFiles/testSerializationSLAM.run.dir/rule
 
-.PHONY : testDoglegOptimizer.run
+.PHONY : testSerializationSLAM.run
 
 # fast build rule for target.
-testDoglegOptimizer.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testDoglegOptimizer.run.dir/build.make tests/CMakeFiles/testDoglegOptimizer.run.dir/build
-.PHONY : testDoglegOptimizer.run/fast
+testSerializationSLAM.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSerializationSLAM.run.dir/build.make tests/CMakeFiles/testSerializationSLAM.run.dir/build
+.PHONY : testSerializationSLAM.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearISAM.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearISAM.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearISAM.dir/rule
+tests/CMakeFiles/testNonlinearISAM.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearISAM.run.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearISAM.run.dir/rule
 
 # Convenience name for target.
-testNonlinearISAM: tests/CMakeFiles/testNonlinearISAM.dir/rule
+testNonlinearISAM.run: tests/CMakeFiles/testNonlinearISAM.run.dir/rule
 
-.PHONY : testNonlinearISAM
+.PHONY : testNonlinearISAM.run
 
 # fast build rule for target.
-testNonlinearISAM/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearISAM.dir/build.make tests/CMakeFiles/testNonlinearISAM.dir/build
-.PHONY : testNonlinearISAM/fast
+testNonlinearISAM.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearISAM.run.dir/build.make tests/CMakeFiles/testNonlinearISAM.run.dir/build
+.PHONY : testNonlinearISAM.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testMarginals.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testMarginals.dir/rule
+.PHONY : tests/CMakeFiles/testMarginals.dir/rule
+
+# Convenience name for target.
+testMarginals: tests/CMakeFiles/testMarginals.dir/rule
+
+.PHONY : testMarginals
+
+# fast build rule for target.
+testMarginals/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testMarginals.dir/build.make tests/CMakeFiles/testMarginals.dir/build
+.PHONY : testMarginals/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testMarginals.run.dir/rule:
@@ -893,19 +863,64 @@ testMarginals.run/fast:
 .PHONY : testMarginals.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearOptimizer.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearOptimizer.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearOptimizer.dir/rule
+tests/CMakeFiles/testSimulated2DOriented.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2DOriented.dir/rule
+.PHONY : tests/CMakeFiles/testSimulated2DOriented.dir/rule
 
 # Convenience name for target.
-testNonlinearOptimizer: tests/CMakeFiles/testNonlinearOptimizer.dir/rule
+testSimulated2DOriented: tests/CMakeFiles/testSimulated2DOriented.dir/rule
 
-.PHONY : testNonlinearOptimizer
+.PHONY : testSimulated2DOriented
 
 # fast build rule for target.
-testNonlinearOptimizer/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearOptimizer.dir/build.make tests/CMakeFiles/testNonlinearOptimizer.dir/build
-.PHONY : testNonlinearOptimizer/fast
+testSimulated2DOriented/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2DOriented.dir/build.make tests/CMakeFiles/testSimulated2DOriented.dir/build
+.PHONY : testSimulated2DOriented/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
+
+# Convenience name for target.
+testGaussianJunctionTreeB.run: tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/rule
+
+.PHONY : testGaussianJunctionTreeB.run
+
+# fast build rule for target.
+testGaussianJunctionTreeB.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/build.make tests/CMakeFiles/testGaussianJunctionTreeB.run.dir/build
+.PHONY : testGaussianJunctionTreeB.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testSimulated2DOriented.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
+.PHONY : tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
+
+# Convenience name for target.
+testSimulated2DOriented.run: tests/CMakeFiles/testSimulated2DOriented.run.dir/rule
+
+.PHONY : testSimulated2DOriented.run
+
+# fast build rule for target.
+testSimulated2DOriented.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2DOriented.run.dir/build.make tests/CMakeFiles/testSimulated2DOriented.run.dir/build
+.PHONY : testSimulated2DOriented.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testDoglegOptimizer.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testDoglegOptimizer.dir/rule
+.PHONY : tests/CMakeFiles/testDoglegOptimizer.dir/rule
+
+# Convenience name for target.
+testDoglegOptimizer: tests/CMakeFiles/testDoglegOptimizer.dir/rule
+
+.PHONY : testDoglegOptimizer
+
+# fast build rule for target.
+testDoglegOptimizer/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testDoglegOptimizer.dir/build.make tests/CMakeFiles/testDoglegOptimizer.dir/build
+.PHONY : testDoglegOptimizer/fast
 
 # Convenience name for target.
 tests/CMakeFiles/testPreconditioner.run.dir/rule:
@@ -923,6 +938,51 @@ testPreconditioner.run/fast:
 .PHONY : testPreconditioner.run/fast
 
 # Convenience name for target.
+tests/CMakeFiles/testLie.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testLie.dir/rule
+.PHONY : tests/CMakeFiles/testLie.dir/rule
+
+# Convenience name for target.
+testLie: tests/CMakeFiles/testLie.dir/rule
+
+.PHONY : testLie
+
+# fast build rule for target.
+testLie/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testLie.dir/build.make tests/CMakeFiles/testLie.dir/build
+.PHONY : testLie/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testBoundingConstraint.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testBoundingConstraint.run.dir/rule
+.PHONY : tests/CMakeFiles/testBoundingConstraint.run.dir/rule
+
+# Convenience name for target.
+testBoundingConstraint.run: tests/CMakeFiles/testBoundingConstraint.run.dir/rule
+
+.PHONY : testBoundingConstraint.run
+
+# fast build rule for target.
+testBoundingConstraint.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testBoundingConstraint.run.dir/build.make tests/CMakeFiles/testBoundingConstraint.run.dir/build
+.PHONY : testBoundingConstraint.run/fast
+
+# Convenience name for target.
+tests/CMakeFiles/testSubgraphSolver.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphSolver.dir/rule
+.PHONY : tests/CMakeFiles/testSubgraphSolver.dir/rule
+
+# Convenience name for target.
+testSubgraphSolver: tests/CMakeFiles/testSubgraphSolver.dir/rule
+
+.PHONY : testSubgraphSolver
+
+# fast build rule for target.
+testSubgraphSolver/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphSolver.dir/build.make tests/CMakeFiles/testSubgraphSolver.dir/build
+.PHONY : testSubgraphSolver/fast
+
+# Convenience name for target.
 tests/CMakeFiles/testGraph.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGraph.dir/rule
 .PHONY : tests/CMakeFiles/testGraph.dir/rule
@@ -938,169 +998,109 @@ testGraph/fast:
 .PHONY : testGraph/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSimulated3D.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated3D.run.dir/rule
-.PHONY : tests/CMakeFiles/testSimulated3D.run.dir/rule
+tests/CMakeFiles/testSimulated2D.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSimulated2D.dir/rule
+.PHONY : tests/CMakeFiles/testSimulated2D.dir/rule
 
 # Convenience name for target.
-testSimulated3D.run: tests/CMakeFiles/testSimulated3D.run.dir/rule
+testSimulated2D: tests/CMakeFiles/testSimulated2D.dir/rule
 
-.PHONY : testSimulated3D.run
+.PHONY : testSimulated2D
 
 # fast build rule for target.
-testSimulated3D.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated3D.run.dir/build.make tests/CMakeFiles/testSimulated3D.run.dir/build
-.PHONY : testSimulated3D.run/fast
+testSimulated2D/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSimulated2D.dir/build.make tests/CMakeFiles/testSimulated2D.dir/build
+.PHONY : testSimulated2D/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearEquality.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearEquality.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearEquality.dir/rule
+tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
 
 # Convenience name for target.
-testNonlinearEquality: tests/CMakeFiles/testNonlinearEquality.dir/rule
+testGaussianBayesTreeB.run: tests/CMakeFiles/testGaussianBayesTreeB.run.dir/rule
 
-.PHONY : testNonlinearEquality
+.PHONY : testGaussianBayesTreeB.run
 
 # fast build rule for target.
-testNonlinearEquality/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearEquality.dir/build.make tests/CMakeFiles/testNonlinearEquality.dir/build
-.PHONY : testNonlinearEquality/fast
+testGaussianBayesTreeB.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianBayesTreeB.run.dir/build.make tests/CMakeFiles/testGaussianBayesTreeB.run.dir/build
+.PHONY : testGaussianBayesTreeB.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testExpressionFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExpressionFactor.run.dir/rule
-.PHONY : tests/CMakeFiles/testExpressionFactor.run.dir/rule
+tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
+.PHONY : tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
 
 # Convenience name for target.
-testExpressionFactor.run: tests/CMakeFiles/testExpressionFactor.run.dir/rule
+testNonlinearOptimizer.run: tests/CMakeFiles/testNonlinearOptimizer.run.dir/rule
 
-.PHONY : testExpressionFactor.run
+.PHONY : testNonlinearOptimizer.run
 
 # fast build rule for target.
-testExpressionFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExpressionFactor.run.dir/build.make tests/CMakeFiles/testExpressionFactor.run.dir/build
-.PHONY : testExpressionFactor.run/fast
+testNonlinearOptimizer.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearOptimizer.run.dir/build.make tests/CMakeFiles/testNonlinearOptimizer.run.dir/build
+.PHONY : testNonlinearOptimizer.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testNonlinearEquality.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testNonlinearEquality.run.dir/rule
-.PHONY : tests/CMakeFiles/testNonlinearEquality.run.dir/rule
+tests/CMakeFiles/testSubgraphSolver.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphSolver.run.dir/rule
+.PHONY : tests/CMakeFiles/testSubgraphSolver.run.dir/rule
 
 # Convenience name for target.
-testNonlinearEquality.run: tests/CMakeFiles/testNonlinearEquality.run.dir/rule
+testSubgraphSolver.run: tests/CMakeFiles/testSubgraphSolver.run.dir/rule
 
-.PHONY : testNonlinearEquality.run
+.PHONY : testSubgraphSolver.run
 
 # fast build rule for target.
-testNonlinearEquality.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testNonlinearEquality.run.dir/build.make tests/CMakeFiles/testNonlinearEquality.run.dir/build
-.PHONY : testNonlinearEquality.run/fast
+testSubgraphSolver.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphSolver.run.dir/build.make tests/CMakeFiles/testSubgraphSolver.run.dir/build
+.PHONY : testSubgraphSolver.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
-.PHONY : tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
+tests/CMakeFiles/testDoglegOptimizer.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
+.PHONY : tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
 
 # Convenience name for target.
-testSubgraphPreconditioner.run: tests/CMakeFiles/testSubgraphPreconditioner.run.dir/rule
+testDoglegOptimizer.run: tests/CMakeFiles/testDoglegOptimizer.run.dir/rule
 
-.PHONY : testSubgraphPreconditioner.run
+.PHONY : testDoglegOptimizer.run
 
 # fast build rule for target.
-testSubgraphPreconditioner.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testSubgraphPreconditioner.run.dir/build.make tests/CMakeFiles/testSubgraphPreconditioner.run.dir/build
-.PHONY : testSubgraphPreconditioner.run/fast
+testDoglegOptimizer.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testDoglegOptimizer.run.dir/build.make tests/CMakeFiles/testDoglegOptimizer.run.dir/build
+.PHONY : testDoglegOptimizer.run/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testGeneralSFMFactorB.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
-.PHONY : tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
+tests/CMakeFiles/testGaussianFactorGraphB.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
+.PHONY : tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
 
 # Convenience name for target.
-testGeneralSFMFactorB: tests/CMakeFiles/testGeneralSFMFactorB.dir/rule
+testGaussianFactorGraphB: tests/CMakeFiles/testGaussianFactorGraphB.dir/rule
 
-.PHONY : testGeneralSFMFactorB
+.PHONY : testGaussianFactorGraphB
 
 # fast build rule for target.
-testGeneralSFMFactorB/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGeneralSFMFactorB.dir/build.make tests/CMakeFiles/testGeneralSFMFactorB.dir/build
-.PHONY : testGeneralSFMFactorB/fast
+testGaussianFactorGraphB/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianFactorGraphB.dir/build.make tests/CMakeFiles/testGaussianFactorGraphB.dir/build
+.PHONY : testGaussianFactorGraphB/fast
 
 # Convenience name for target.
-tests/CMakeFiles/testIterative.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testIterative.dir/rule
-.PHONY : tests/CMakeFiles/testIterative.dir/rule
+tests/CMakeFiles/testBoundingConstraint.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testBoundingConstraint.dir/rule
+.PHONY : tests/CMakeFiles/testBoundingConstraint.dir/rule
 
 # Convenience name for target.
-testIterative: tests/CMakeFiles/testIterative.dir/rule
+testBoundingConstraint: tests/CMakeFiles/testBoundingConstraint.dir/rule
 
-.PHONY : testIterative
+.PHONY : testBoundingConstraint
 
 # fast build rule for target.
-testIterative/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testIterative.dir/build.make tests/CMakeFiles/testIterative.dir/build
-.PHONY : testIterative/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
-.PHONY : tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
-
-# Convenience name for target.
-testGeneralSFMFactorB.run: tests/CMakeFiles/testGeneralSFMFactorB.run.dir/rule
-
-.PHONY : testGeneralSFMFactorB.run
-
-# fast build rule for target.
-testGeneralSFMFactorB.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGeneralSFMFactorB.run.dir/build.make tests/CMakeFiles/testGeneralSFMFactorB.run.dir/build
-.PHONY : testGeneralSFMFactorB.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
-.PHONY : tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
-
-# Convenience name for target.
-testExtendedKalmanFilter.run: tests/CMakeFiles/testExtendedKalmanFilter.run.dir/rule
-
-.PHONY : testExtendedKalmanFilter.run
-
-# fast build rule for target.
-testExtendedKalmanFilter.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testExtendedKalmanFilter.run.dir/build.make tests/CMakeFiles/testExtendedKalmanFilter.run.dir/build
-.PHONY : testExtendedKalmanFilter.run/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testGaussianISAM.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianISAM.dir/rule
-
-# Convenience name for target.
-testGaussianISAM: tests/CMakeFiles/testGaussianISAM.dir/rule
-
-.PHONY : testGaussianISAM
-
-# fast build rule for target.
-testGaussianISAM/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM.dir/build.make tests/CMakeFiles/testGaussianISAM.dir/build
-.PHONY : testGaussianISAM/fast
-
-# Convenience name for target.
-tests/CMakeFiles/testGaussianISAM.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/testGaussianISAM.run.dir/rule
-.PHONY : tests/CMakeFiles/testGaussianISAM.run.dir/rule
-
-# Convenience name for target.
-testGaussianISAM.run: tests/CMakeFiles/testGaussianISAM.run.dir/rule
-
-.PHONY : testGaussianISAM.run
-
-# fast build rule for target.
-testGaussianISAM.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testGaussianISAM.run.dir/build.make tests/CMakeFiles/testGaussianISAM.run.dir/build
-.PHONY : testGaussianISAM.run/fast
+testBoundingConstraint/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f tests/CMakeFiles/testBoundingConstraint.dir/build.make tests/CMakeFiles/testBoundingConstraint.dir/build
+.PHONY : testBoundingConstraint/fast
 
 testBoundingConstraint.o: testBoundingConstraint.cpp.o
 
@@ -1924,70 +1924,70 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... testSubgraphSolver"
-	@echo "... testSubgraphPreconditioner"
-	@echo "... testSerializationSLAM.run"
-	@echo "... testSerializationSLAM"
-	@echo "... testGaussianFactorGraphB"
-	@echo "... testRot3Optimization.run"
-	@echo "... testRot3Optimization"
-	@echo "... testBoundingConstraint"
-	@echo "... testGaussianFactorGraphB.run"
-	@echo "... testLie.run"
-	@echo "... testBoundingConstraint.run"
-	@echo "... testLie"
-	@echo "... testSimulated2DOriented"
-	@echo "... testGradientDescentOptimizer"
-	@echo "... testNonlinearFactor.run"
-	@echo "... testSimulated2DOriented.run"
-	@echo "... testGaussianJunctionTreeB.run"
-	@echo "... testGaussianJunctionTreeB"
-	@echo "... testSimulated2D.run"
-	@echo "... testPCGSolver"
-	@echo "... testPreconditioner"
-	@echo "... testSimulated2D"
-	@echo "... testPCGSolver.run"
-	@echo "... testExtendedKalmanFilter"
-	@echo "... testGaussianISAM2"
-	@echo "... testNonlinearFactorGraph.run"
-	@echo "... testManifold.run"
-	@echo "... testIterative.run"
-	@echo "... testNonlinearFactorGraph"
-	@echo "... testGraph.run"
-	@echo "... testSimulated3D"
-	@echo "... testGaussianBayesTreeB"
-	@echo "... testManifold"
-	@echo "... edit_cache"
-	@echo "... testExpressionFactor"
-	@echo "... testNonlinearFactor"
-	@echo "... testMarginals"
-	@echo "... testNonlinearISAM.run"
-	@echo "... testGaussianBayesTreeB.run"
-	@echo "... check.tests"
 	@echo "... list_install_components"
 	@echo "... testGaussianISAM2.run"
-	@echo "... testDoglegOptimizer"
-	@echo "... testGradientDescentOptimizer.run"
-	@echo "... testSubgraphSolver.run"
-	@echo "... testNonlinearOptimizer.run"
-	@echo "... testDoglegOptimizer.run"
+	@echo "... testNonlinearFactor.run"
+	@echo "... testNonlinearFactor"
+	@echo "... testRot3Optimization.run"
+	@echo "... testRot3Optimization"
+	@echo "... testManifold.run"
+	@echo "... testGaussianISAM.run"
+	@echo "... testGaussianISAM"
+	@echo "... testPCGSolver.run"
 	@echo "... testNonlinearISAM"
-	@echo "... testMarginals.run"
+	@echo "... testNonlinearEquality.run"
 	@echo "... testNonlinearOptimizer"
-	@echo "... testPreconditioner.run"
-	@echo "... testGraph"
-	@echo "... testSimulated3D.run"
+	@echo "... testGaussianJunctionTreeB"
+	@echo "... testExtendedKalmanFilter"
+	@echo "... testManifold"
+	@echo "... testGaussianBayesTreeB"
 	@echo "... testNonlinearEquality"
+	@echo "... testSerializationSLAM"
 	@echo "... rebuild_cache"
 	@echo "... testExpressionFactor.run"
-	@echo "... testNonlinearEquality.run"
-	@echo "... testSubgraphPreconditioner.run"
-	@echo "... testGeneralSFMFactorB"
-	@echo "... testIterative"
-	@echo "... testGeneralSFMFactorB.run"
 	@echo "... testExtendedKalmanFilter.run"
-	@echo "... testGaussianISAM"
-	@echo "... testGaussianISAM.run"
+	@echo "... testSimulated3D.run"
+	@echo "... testGradientDescentOptimizer"
+	@echo "... edit_cache"
+	@echo "... testExpressionFactor"
+	@echo "... testGeneralSFMFactorB.run"
+	@echo "... testIterative"
+	@echo "... testGeneralSFMFactorB"
+	@echo "... testSubgraphPreconditioner.run"
+	@echo "... testPreconditioner"
+	@echo "... testSimulated2D.run"
+	@echo "... testPCGSolver"
+	@echo "... testGaussianISAM2"
+	@echo "... testNonlinearFactorGraph.run"
+	@echo "... testIterative.run"
+	@echo "... testNonlinearFactorGraph"
+	@echo "... testSimulated3D"
+	@echo "... testSubgraphPreconditioner"
+	@echo "... testGraph.run"
+	@echo "... check.tests"
+	@echo "... testGradientDescentOptimizer.run"
+	@echo "... testLie.run"
+	@echo "... testGaussianFactorGraphB.run"
+	@echo "... testSerializationSLAM.run"
+	@echo "... testNonlinearISAM.run"
+	@echo "... testMarginals"
+	@echo "... testMarginals.run"
+	@echo "... testSimulated2DOriented"
+	@echo "... testGaussianJunctionTreeB.run"
+	@echo "... testSimulated2DOriented.run"
+	@echo "... testDoglegOptimizer"
+	@echo "... testPreconditioner.run"
+	@echo "... testLie"
+	@echo "... testBoundingConstraint.run"
+	@echo "... testSubgraphSolver"
+	@echo "... testGraph"
+	@echo "... testSimulated2D"
+	@echo "... testGaussianBayesTreeB.run"
+	@echo "... testNonlinearOptimizer.run"
+	@echo "... testSubgraphSolver.run"
+	@echo "... testDoglegOptimizer.run"
+	@echo "... testGaussianFactorGraphB"
+	@echo "... testBoundingConstraint"
 	@echo "... testBoundingConstraint.o"
 	@echo "... testBoundingConstraint.i"
 	@echo "... testBoundingConstraint.s"

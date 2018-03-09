@@ -188,6 +188,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
+
+# Convenience name for target.
+testNavState.run: gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
+
+.PHONY : testNavState.run
+
+# fast build rule for target.
+testNavState.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/build
+.PHONY : testNavState.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
+
+# Convenience name for target.
+testNavState: gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
+
+.PHONY : testNavState
+
+# fast build rule for target.
+testNavState/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testNavState.dir/build.make gtsam/navigation/tests/CMakeFiles/testNavState.dir/build
+.PHONY : testNavState/fast
+
+# Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/rule
 .PHONY : gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/rule
@@ -201,6 +231,96 @@ testAHRSFactor.run: gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/rul
 testAHRSFactor.run/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testAHRSFactor.run.dir/build
 .PHONY : testAHRSFactor.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
+
+# Convenience name for target.
+testScenarios: gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
+
+.PHONY : testScenarios
+
+# fast build rule for target.
+testScenarios/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenarios.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenarios.dir/build
+.PHONY : testScenarios/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
+
+# Convenience name for target.
+testImuFactor.run: gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
+
+.PHONY : testImuFactor.run
+
+# fast build rule for target.
+testImuFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/build
+.PHONY : testImuFactor.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
+
+# Convenience name for target.
+testCombinedImuFactor: gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
+
+.PHONY : testCombinedImuFactor
+
+# fast build rule for target.
+testCombinedImuFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/build.make gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/build
+.PHONY : testCombinedImuFactor/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
+
+# Convenience name for target.
+testImuBias.run: gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
+
+.PHONY : testImuBias.run
+
+# fast build rule for target.
+testImuBias.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/build
+.PHONY : testImuBias.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
+
+# Convenience name for target.
+testAttitudeFactor.run: gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
+
+.PHONY : testAttitudeFactor.run
+
+# fast build rule for target.
+testAttitudeFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/build
+.PHONY : testAttitudeFactor.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
+
+# Convenience name for target.
+testManifoldPreintegration: gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
+
+.PHONY : testManifoldPreintegration
+
+# fast build rule for target.
+testManifoldPreintegration/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/build.make gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/build
+.PHONY : testManifoldPreintegration/fast
 
 # Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testAHRSFactor.dir/rule:
@@ -233,79 +353,19 @@ testCombinedImuFactor.run/fast:
 .PHONY : testCombinedImuFactor.run/fast
 
 # Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
+gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
 
 # Convenience name for target.
-testManifoldPreintegration: gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/rule
+check.navigation: gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
 
-.PHONY : testManifoldPreintegration
+.PHONY : check.navigation
 
 # fast build rule for target.
-testManifoldPreintegration/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/build.make gtsam/navigation/tests/CMakeFiles/testManifoldPreintegration.dir/build
-.PHONY : testManifoldPreintegration/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
-
-# Convenience name for target.
-testAttitudeFactor.run: gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/rule
-
-.PHONY : testAttitudeFactor.run
-
-# fast build rule for target.
-testAttitudeFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.run.dir/build
-.PHONY : testAttitudeFactor.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
-
-# Convenience name for target.
-testScenarios.run: gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
-
-.PHONY : testScenarios.run
-
-# fast build rule for target.
-testScenarios.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/build
-.PHONY : testScenarios.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
-
-# Convenience name for target.
-testImuBias.run: gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/rule
-
-.PHONY : testImuBias.run
-
-# fast build rule for target.
-testImuBias.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuBias.run.dir/build
-.PHONY : testImuBias.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
-
-# Convenience name for target.
-testCombinedImuFactor: gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/rule
-
-.PHONY : testCombinedImuFactor
-
-# fast build rule for target.
-testCombinedImuFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/build.make gtsam/navigation/tests/CMakeFiles/testCombinedImuFactor.dir/build
-.PHONY : testCombinedImuFactor/fast
+check.navigation/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/check.navigation.dir/build.make gtsam/navigation/tests/CMakeFiles/check.navigation.dir/build
+.PHONY : check.navigation/fast
 
 # Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testImuBias.dir/rule:
@@ -323,51 +383,6 @@ testImuBias/fast:
 .PHONY : testImuBias/fast
 
 # Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
-
-# Convenience name for target.
-testImuFactor.run: gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/rule
-
-.PHONY : testImuFactor.run
-
-# fast build rule for target.
-testImuFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuFactor.run.dir/build
-.PHONY : testImuFactor.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
-
-# Convenience name for target.
-testScenarios: gtsam/navigation/tests/CMakeFiles/testScenarios.dir/rule
-
-.PHONY : testScenarios
-
-# fast build rule for target.
-testScenarios/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenarios.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenarios.dir/build
-.PHONY : testScenarios/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
-
-# Convenience name for target.
-check.navigation: gtsam/navigation/tests/CMakeFiles/check.navigation.dir/rule
-
-.PHONY : check.navigation
-
-# fast build rule for target.
-check.navigation/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/check.navigation.dir/build.make gtsam/navigation/tests/CMakeFiles/check.navigation.dir/build
-.PHONY : check.navigation/fast
-
-# Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/rule
 .PHONY : gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/rule
@@ -381,6 +396,36 @@ testAttitudeFactor: gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/rul
 testAttitudeFactor/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/build.make gtsam/navigation/tests/CMakeFiles/testAttitudeFactor.dir/build
 .PHONY : testAttitudeFactor/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
+
+# Convenience name for target.
+testScenarios.run: gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/rule
+
+.PHONY : testScenarios.run
+
+# fast build rule for target.
+testScenarios.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenarios.run.dir/build
+.PHONY : testScenarios.run/fast
+
+# Convenience name for target.
+gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
+
+# Convenience name for target.
+testImuFactorSerialization.run: gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
+
+.PHONY : testImuFactorSerialization.run
+
+# fast build rule for target.
+testImuFactorSerialization.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/build
+.PHONY : testImuFactorSerialization.run/fast
 
 # Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testTangentPreintegration.dir/rule:
@@ -443,49 +488,19 @@ testManifoldPreintegration.run/fast:
 .PHONY : testManifoldPreintegration.run/fast
 
 # Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
+gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
 
 # Convenience name for target.
-testNavState: gtsam/navigation/tests/CMakeFiles/testNavState.dir/rule
+testScenario: gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
 
-.PHONY : testNavState
+.PHONY : testScenario
 
 # fast build rule for target.
-testNavState/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testNavState.dir/build.make gtsam/navigation/tests/CMakeFiles/testNavState.dir/build
-.PHONY : testNavState/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
-
-# Convenience name for target.
-testNavState.run: gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/rule
-
-.PHONY : testNavState.run
-
-# fast build rule for target.
-testNavState.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testNavState.run.dir/build
-.PHONY : testNavState.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
-
-# Convenience name for target.
-testPoseVelocityBias: gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
-
-.PHONY : testPoseVelocityBias
-
-# fast build rule for target.
-testPoseVelocityBias/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/build.make gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/build
-.PHONY : testPoseVelocityBias/fast
+testScenario/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenario.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenario.dir/build
+.PHONY : testScenario/fast
 
 # Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testScenario.run.dir/rule:
@@ -503,19 +518,19 @@ testScenario.run/fast:
 .PHONY : testScenario.run/fast
 
 # Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
+gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
 
 # Convenience name for target.
-testPoseVelocityBias.run: gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
+testPoseVelocityBias: gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/rule
 
-.PHONY : testPoseVelocityBias.run
+.PHONY : testPoseVelocityBias
 
 # fast build rule for target.
-testPoseVelocityBias.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/build
-.PHONY : testPoseVelocityBias.run/fast
+testPoseVelocityBias/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/build.make gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.dir/build
+.PHONY : testPoseVelocityBias/fast
 
 # Convenience name for target.
 gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.dir/rule:
@@ -533,34 +548,19 @@ testImuFactorSerialization/fast:
 .PHONY : testImuFactorSerialization/fast
 
 # Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
+gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
+.PHONY : gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
 
 # Convenience name for target.
-testImuFactorSerialization.run: gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/rule
+testPoseVelocityBias.run: gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/rule
 
-.PHONY : testImuFactorSerialization.run
+.PHONY : testPoseVelocityBias.run
 
 # fast build rule for target.
-testImuFactorSerialization.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testImuFactorSerialization.run.dir/build
-.PHONY : testImuFactorSerialization.run/fast
-
-# Convenience name for target.
-gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
-.PHONY : gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
-
-# Convenience name for target.
-testScenario: gtsam/navigation/tests/CMakeFiles/testScenario.dir/rule
-
-.PHONY : testScenario
-
-# fast build rule for target.
-testScenario/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testScenario.dir/build.make gtsam/navigation/tests/CMakeFiles/testScenario.dir/build
-.PHONY : testScenario/fast
+testPoseVelocityBias.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/build.make gtsam/navigation/tests/CMakeFiles/testPoseVelocityBias.run.dir/build
+.PHONY : testPoseVelocityBias.run/fast
 
 testAHRSFactor.o: testAHRSFactor.cpp.o
 
@@ -899,33 +899,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install/local"
+	@echo "... testNavState.run"
+	@echo "... testNavState"
 	@echo "... install/strip"
 	@echo "... testAHRSFactor.run"
+	@echo "... testScenarios"
+	@echo "... testImuFactor.run"
+	@echo "... testCombinedImuFactor"
+	@echo "... testImuBias.run"
+	@echo "... testAttitudeFactor.run"
+	@echo "... testManifoldPreintegration"
 	@echo "... testAHRSFactor"
 	@echo "... testCombinedImuFactor.run"
-	@echo "... testManifoldPreintegration"
-	@echo "... testAttitudeFactor.run"
-	@echo "... testScenarios.run"
-	@echo "... testImuBias.run"
-	@echo "... testCombinedImuFactor"
-	@echo "... testImuBias"
-	@echo "... testImuFactor.run"
-	@echo "... testScenarios"
 	@echo "... install"
 	@echo "... check.navigation"
+	@echo "... testImuBias"
 	@echo "... testAttitudeFactor"
+	@echo "... testScenarios.run"
+	@echo "... testImuFactorSerialization.run"
 	@echo "... testTangentPreintegration"
 	@echo "... testImuFactor"
 	@echo "... testTangentPreintegration.run"
 	@echo "... testManifoldPreintegration.run"
-	@echo "... testNavState"
-	@echo "... testNavState.run"
-	@echo "... testPoseVelocityBias"
-	@echo "... testScenario.run"
-	@echo "... testPoseVelocityBias.run"
-	@echo "... testImuFactorSerialization"
-	@echo "... testImuFactorSerialization.run"
 	@echo "... testScenario"
+	@echo "... testScenario.run"
+	@echo "... testPoseVelocityBias"
+	@echo "... testImuFactorSerialization"
+	@echo "... testPoseVelocityBias.run"
 	@echo "... testAHRSFactor.o"
 	@echo "... testAHRSFactor.i"
 	@echo "... testAHRSFactor.s"

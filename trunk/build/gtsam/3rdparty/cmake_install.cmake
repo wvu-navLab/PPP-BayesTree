@@ -41,83 +41,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Sparse")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/QtAlignedMalloc")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/PardisoSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/LU")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Householder")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SPQRSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Core")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/UmfPackSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/QR")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseLU")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Dense")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SuperLUSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/PaStiXSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/StdList")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigen")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Cholesky")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Array")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/CholmodSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseCore")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseCholesky")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Geometry")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -125,43 +49,23 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/IterativeLinearSolvers")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/UmfPackSupport")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/MetisSupport")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Array")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigenvalues")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigen")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Jacobi")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/StdList")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseQR")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/LeastSquares")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/StdVector")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SVD")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigen2Support")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Geometry")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SuperLUSupport")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -169,31 +73,99 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MatrixFunctions")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Cholesky")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AlignedVector3")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/LU")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AdolcForward")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Core")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/Skyline")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigenvalues")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AutoDiff")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Sparse")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/OpenGLSupport")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/PaStiXSupport")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/NumericalDiff")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/IterativeLinearSolvers")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/PardisoSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseLU")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/LeastSquares")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Jacobi")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SVD")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Dense")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/CholmodSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseCholesky")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/StdVector")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Eigen2Support")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseCore")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SparseQR")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/QtAlignedMalloc")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/QR")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/SPQRSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/Householder")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/Eigen/MetisSupport")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -201,15 +173,27 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/ArpackSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/FFT")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/Splines")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AutoDiff")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MoreVectorization")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MPRealSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/Skyline")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MatrixFunctions")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -217,7 +201,39 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/Splines")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AlignedVector3")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/NumericalDiff")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/IterativeSolvers")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/KroneckerProduct")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/SVD")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/OpenGLSupport")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MoreVectorization")
+endif()
+
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/AdolcForward")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -229,23 +245,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/ArpackSupport")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/SVD")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/SparseExtra")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/IterativeSolvers")
-endif()
-
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/3rdparty/Eigen/unsupported/Eigen" TYPE FILE FILES "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/3rdparty/Eigen/unsupported/Eigen/MPRealSupport")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")

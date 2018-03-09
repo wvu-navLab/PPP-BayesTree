@@ -34,21 +34,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gtsam/navigation" TYPE FILE FILES
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/AttitudeFactor.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegrationParams.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ImuBias.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ManifoldPreintegration.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ScenarioRunner.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegratedRotation.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/GPSFactor.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/AHRSFactor.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegrationBase.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/MagFactor.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/TangentPreintegration.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/Scenario.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ManifoldPreintegration.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/NavState.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/CombinedImuFactor.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ImuFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/MagFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegrationBase.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/CombinedImuFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/AttitudeFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/AHRSFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegratedRotation.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/ScenarioRunner.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/GPSFactor.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/gtsam/navigation/PreintegrationParams.h"
     )
 endif()
 

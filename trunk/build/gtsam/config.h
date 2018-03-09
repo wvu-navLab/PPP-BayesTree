@@ -27,7 +27,7 @@
 // Paths to example datasets distributed with GTSAM
 #define GTSAM_SOURCE_TREE_DATASET_DIR "/home/rmw/Documents/git/PPP-BayesTree/trunk/examples/Data"
 #define GTSAM_INSTALLED_DATASET_DIR "/gtsam_examples/Data"
-#define NAVLAB_GNSS_DATASETS "/home/rmw/Documents/git/PPP-BayesTree/trunk/gnssData"
+#define NAVLAB_GNSS_DATASETS "/home/rmw/Documents/git/PPP-BayesTree/trunk/data"
 
 // Whether GTSAM is compiled to use quaternions for Rot3 (otherwise uses rotation matrices)
 /* #undef GTSAM_USE_QUATERNIONS */

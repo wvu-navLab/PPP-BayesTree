@@ -111,15 +111,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -132,16 +133,15 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : rebuild_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -188,81 +188,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
-
-# Convenience name for target.
-testCallRecord: gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
-
-.PHONY : testCallRecord
-
-# fast build rule for target.
-testCallRecord/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/build
-.PHONY : testCallRecord/fast
-
-# Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
-
-# Convenience name for target.
-check.nonlinear: gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
-
-.PHONY : check.nonlinear
-
-# fast build rule for target.
-check.nonlinear/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/build.make gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/build
-.PHONY : check.nonlinear/fast
-
-# Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
-
-# Convenience name for target.
-testSerializationNonlinear: gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
-
-.PHONY : testSerializationNonlinear
-
-# fast build rule for target.
-testSerializationNonlinear/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/build
-.PHONY : testSerializationNonlinear/fast
-
-# Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
-
-# Convenience name for target.
-testValues.run: gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
-
-.PHONY : testValues.run
-
-# fast build rule for target.
-testValues.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/build
-.PHONY : testValues.run/fast
-
-# Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
-
-# Convenience name for target.
-testSerializationNonlinear.run: gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
-
-.PHONY : testSerializationNonlinear.run
-
-# fast build rule for target.
-testSerializationNonlinear.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/build
-.PHONY : testSerializationNonlinear.run/fast
-
-# Convenience name for target.
 gtsam/nonlinear/tests/CMakeFiles/testLinearContainerFactor.run.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testLinearContainerFactor.run.dir/rule
 .PHONY : gtsam/nonlinear/tests/CMakeFiles/testLinearContainerFactor.run.dir/rule
@@ -293,19 +218,49 @@ testAdaptAutoDiff.run/fast:
 .PHONY : testAdaptAutoDiff.run/fast
 
 # Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
+gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
 
 # Convenience name for target.
-testCallRecord.run: gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
+testValues.run: gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/rule
 
-.PHONY : testCallRecord.run
+.PHONY : testValues.run
 
 # fast build rule for target.
-testCallRecord.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/build
-.PHONY : testCallRecord.run/fast
+testValues.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testValues.run.dir/build
+.PHONY : testValues.run/fast
+
+# Convenience name for target.
+gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
+
+# Convenience name for target.
+testSerializationNonlinear: gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/rule
+
+.PHONY : testSerializationNonlinear
+
+# fast build rule for target.
+testSerializationNonlinear/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.dir/build
+.PHONY : testSerializationNonlinear/fast
+
+# Convenience name for target.
+gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
+
+# Convenience name for target.
+check.nonlinear: gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/rule
+
+.PHONY : check.nonlinear
+
+# fast build rule for target.
+check.nonlinear/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/build.make gtsam/nonlinear/tests/CMakeFiles/check.nonlinear.dir/build
+.PHONY : check.nonlinear/fast
 
 # Convenience name for target.
 gtsam/nonlinear/tests/CMakeFiles/testLinearContainerFactor.dir/rule:
@@ -338,6 +293,21 @@ testAdaptAutoDiff/fast:
 .PHONY : testAdaptAutoDiff/fast
 
 # Convenience name for target.
+gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
+
+# Convenience name for target.
+testCallRecord.run: gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/rule
+
+.PHONY : testCallRecord.run
+
+# fast build rule for target.
+testCallRecord.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testCallRecord.run.dir/build
+.PHONY : testCallRecord.run/fast
+
+# Convenience name for target.
 gtsam/nonlinear/tests/CMakeFiles/testValues.dir/rule:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testValues.dir/rule
 .PHONY : gtsam/nonlinear/tests/CMakeFiles/testValues.dir/rule
@@ -366,6 +336,36 @@ testExecutionTrace: gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.dir/rule
 testExecutionTrace/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.dir/build
 .PHONY : testExecutionTrace/fast
+
+# Convenience name for target.
+gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
+
+# Convenience name for target.
+testExecutionTrace.run: gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
+
+.PHONY : testExecutionTrace.run
+
+# fast build rule for target.
+testExecutionTrace.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/build
+.PHONY : testExecutionTrace.run/fast
+
+# Convenience name for target.
+gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
+
+# Convenience name for target.
+testCallRecord: gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/rule
+
+.PHONY : testCallRecord
+
+# fast build rule for target.
+testCallRecord/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testCallRecord.dir/build
+.PHONY : testCallRecord/fast
 
 # Convenience name for target.
 gtsam/nonlinear/tests/CMakeFiles/testWhiteNoiseFactor.dir/rule:
@@ -398,19 +398,19 @@ testExpression/fast:
 .PHONY : testExpression/fast
 
 # Convenience name for target.
-gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
-.PHONY : gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
+gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
+.PHONY : gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
 
 # Convenience name for target.
-testExecutionTrace.run: gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/rule
+testSerializationNonlinear.run: gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/rule
 
-.PHONY : testExecutionTrace.run
+.PHONY : testSerializationNonlinear.run
 
 # fast build rule for target.
-testExecutionTrace.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testExecutionTrace.run.dir/build
-.PHONY : testExecutionTrace.run/fast
+testSerializationNonlinear.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/build.make gtsam/nonlinear/tests/CMakeFiles/testSerializationNonlinear.run.dir/build
+.PHONY : testSerializationNonlinear.run/fast
 
 # Convenience name for target.
 gtsam/nonlinear/tests/CMakeFiles/testExpression.run.dir/rule:
@@ -668,25 +668,25 @@ help:
 	@echo "... package"
 	@echo "... edit_cache"
 	@echo "... package_source"
-	@echo "... testCallRecord"
-	@echo "... check.nonlinear"
-	@echo "... testSerializationNonlinear"
-	@echo "... testValues.run"
-	@echo "... install/strip"
-	@echo "... testSerializationNonlinear.run"
-	@echo "... list_install_components"
 	@echo "... testLinearContainerFactor.run"
 	@echo "... testAdaptAutoDiff.run"
-	@echo "... testCallRecord.run"
-	@echo "... install/local"
+	@echo "... testValues.run"
+	@echo "... testSerializationNonlinear"
+	@echo "... install/strip"
+	@echo "... check.nonlinear"
 	@echo "... testLinearContainerFactor"
 	@echo "... testAdaptAutoDiff"
 	@echo "... rebuild_cache"
+	@echo "... testCallRecord.run"
+	@echo "... install/local"
 	@echo "... testValues"
 	@echo "... testExecutionTrace"
+	@echo "... testExecutionTrace.run"
+	@echo "... testCallRecord"
 	@echo "... testWhiteNoiseFactor"
 	@echo "... testExpression"
-	@echo "... testExecutionTrace.run"
+	@echo "... list_install_components"
+	@echo "... testSerializationNonlinear.run"
 	@echo "... testExpression.run"
 	@echo "... testWhiteNoiseFactor.run"
 	@echo "... install"

@@ -34,11 +34,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/CppUnitLite" TYPE FILE FILES
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/TestRegistry.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/TestResult.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/Failure.h"
-    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/TestHarness.h"
     "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/Test.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/Failure.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/TestRegistry.h"
+    "/home/rmw/Documents/git/PPP-BayesTree/trunk/CppUnitLite/TestHarness.h"
     )
 endif()
 

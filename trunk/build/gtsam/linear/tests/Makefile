@@ -123,6 +123,17 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/rmw/Documents/git/PPP-BayesTree/trunk/build/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+
+.PHONY : package_source/fast
+
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
@@ -143,17 +154,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/rmw/Documents/git/PPP-BayesTree/trunk/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,64 +188,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
+gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
 
 # Convenience name for target.
-testGaussianBayesNet: gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
+testNoiseModel.run: gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
 
-.PHONY : testGaussianBayesNet
+.PHONY : testNoiseModel.run
 
 # fast build rule for target.
-testGaussianBayesNet/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/build
-.PHONY : testGaussianBayesNet/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
-
-# Convenience name for target.
-testHessianFactor.run: gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
-
-.PHONY : testHessianFactor.run
-
-# fast build rule for target.
-testHessianFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/build
-.PHONY : testHessianFactor.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
-
-# Convenience name for target.
-testHessianFactor: gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
-
-.PHONY : testHessianFactor
-
-# fast build rule for target.
-testHessianFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/build
-.PHONY : testHessianFactor/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
-
-# Convenience name for target.
-testRegularHessianFactor: gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
-
-.PHONY : testRegularHessianFactor
-
-# fast build rule for target.
-testRegularHessianFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/build
-.PHONY : testRegularHessianFactor/fast
+testNoiseModel.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/build.make gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/build
+.PHONY : testNoiseModel.run/fast
 
 # Convenience name for target.
 gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.run.dir/rule:
@@ -263,169 +218,19 @@ testGaussianBayesTree.run/fast:
 .PHONY : testGaussianBayesTree.run/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
+gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
 
 # Convenience name for target.
-testErrors.run: gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
+testGaussianBayesTree: gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
 
-.PHONY : testErrors.run
+.PHONY : testGaussianBayesTree
 
 # fast build rule for target.
-testErrors.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testErrors.run.dir/build.make gtsam/linear/tests/CMakeFiles/testErrors.run.dir/build
-.PHONY : testErrors.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
-
-# Convenience name for target.
-testKalmanFilter: gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
-
-.PHONY : testKalmanFilter
-
-# fast build rule for target.
-testKalmanFilter/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/build.make gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/build
-.PHONY : testKalmanFilter/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
-
-# Convenience name for target.
-testGaussianDensity.run: gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
-
-.PHONY : testGaussianDensity.run
-
-# fast build rule for target.
-testGaussianDensity.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/build
-.PHONY : testGaussianDensity.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
-
-# Convenience name for target.
-testGaussianDensity: gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
-
-.PHONY : testGaussianDensity
-
-# fast build rule for target.
-testGaussianDensity/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/build
-.PHONY : testGaussianDensity/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
-
-# Convenience name for target.
-testGaussianFactorGraph: gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
-
-.PHONY : testGaussianFactorGraph
-
-# fast build rule for target.
-testGaussianFactorGraph/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/build
-.PHONY : testGaussianFactorGraph/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
-
-# Convenience name for target.
-testJacobianFactor.run: gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
-
-.PHONY : testJacobianFactor.run
-
-# fast build rule for target.
-testJacobianFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/build
-.PHONY : testJacobianFactor.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
-
-# Convenience name for target.
-testRegularHessianFactor.run: gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
-
-.PHONY : testRegularHessianFactor.run
-
-# fast build rule for target.
-testRegularHessianFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/build
-.PHONY : testRegularHessianFactor.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
-
-# Convenience name for target.
-testVectorValues.run: gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
-
-.PHONY : testVectorValues.run
-
-# fast build rule for target.
-testVectorValues.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/build.make gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/build
-.PHONY : testVectorValues.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testSampler.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
-
-# Convenience name for target.
-testSampler: gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
-
-.PHONY : testSampler
-
-# fast build rule for target.
-testSampler/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSampler.dir/build.make gtsam/linear/tests/CMakeFiles/testSampler.dir/build
-.PHONY : testSampler/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
-
-# Convenience name for target.
-testJacobianFactor: gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
-
-.PHONY : testJacobianFactor
-
-# fast build rule for target.
-testJacobianFactor/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/build
-.PHONY : testJacobianFactor/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
-
-# Convenience name for target.
-testVectorValues: gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
-
-.PHONY : testVectorValues
-
-# fast build rule for target.
-testVectorValues/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testVectorValues.dir/build.make gtsam/linear/tests/CMakeFiles/testVectorValues.dir/build
-.PHONY : testVectorValues/fast
+testGaussianBayesTree/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/build
+.PHONY : testGaussianBayesTree/fast
 
 # Convenience name for target.
 gtsam/linear/tests/CMakeFiles/testNoiseModel.dir/rule:
@@ -443,139 +248,64 @@ testNoiseModel/fast:
 .PHONY : testNoiseModel/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
+gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
 
 # Convenience name for target.
-testSerializationLinear.run: gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
+testVectorValues: gtsam/linear/tests/CMakeFiles/testVectorValues.dir/rule
 
-.PHONY : testSerializationLinear.run
+.PHONY : testVectorValues
 
 # fast build rule for target.
-testSerializationLinear.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/build.make gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/build
-.PHONY : testSerializationLinear.run/fast
+testVectorValues/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testVectorValues.dir/build.make gtsam/linear/tests/CMakeFiles/testVectorValues.dir/build
+.PHONY : testVectorValues/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/check.linear.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
+gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
 
 # Convenience name for target.
-check.linear: gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
+testJacobianFactor: gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/rule
 
-.PHONY : check.linear
+.PHONY : testJacobianFactor
 
 # fast build rule for target.
-check.linear/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/check.linear.dir/build.make gtsam/linear/tests/CMakeFiles/check.linear.dir/build
-.PHONY : check.linear/fast
+testJacobianFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testJacobianFactor.dir/build
+.PHONY : testJacobianFactor/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
+gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
 
 # Convenience name for target.
-testScatter.run: gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
+testHessianFactor.run: gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/rule
 
-.PHONY : testScatter.run
+.PHONY : testHessianFactor.run
 
 # fast build rule for target.
-testScatter.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testScatter.run.dir/build.make gtsam/linear/tests/CMakeFiles/testScatter.run.dir/build
-.PHONY : testScatter.run/fast
+testHessianFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testHessianFactor.run.dir/build
+.PHONY : testHessianFactor.run/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
+gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
 
 # Convenience name for target.
-testSampler.run: gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
+testRegularHessianFactor: gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/rule
 
-.PHONY : testSampler.run
+.PHONY : testRegularHessianFactor
 
 # fast build rule for target.
-testSampler.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSampler.run.dir/build.make gtsam/linear/tests/CMakeFiles/testSampler.run.dir/build
-.PHONY : testSampler.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
-
-# Convenience name for target.
-testRegularJacobianFactor.run: gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
-
-.PHONY : testRegularJacobianFactor.run
-
-# fast build rule for target.
-testRegularJacobianFactor.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/build
-.PHONY : testRegularJacobianFactor.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
-
-# Convenience name for target.
-testGaussianBayesNet.run: gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
-
-.PHONY : testGaussianBayesNet.run
-
-# fast build rule for target.
-testGaussianBayesNet.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/build
-.PHONY : testGaussianBayesNet.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
-
-# Convenience name for target.
-testKalmanFilter.run: gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
-
-.PHONY : testKalmanFilter.run
-
-# fast build rule for target.
-testKalmanFilter.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/build.make gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/build
-.PHONY : testKalmanFilter.run/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testScatter.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
-
-# Convenience name for target.
-testScatter: gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
-
-.PHONY : testScatter
-
-# fast build rule for target.
-testScatter/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testScatter.dir/build.make gtsam/linear/tests/CMakeFiles/testScatter.dir/build
-.PHONY : testScatter/fast
-
-# Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
-
-# Convenience name for target.
-testGaussianFactorGraph.run: gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
-
-.PHONY : testGaussianFactorGraph.run
-
-# fast build rule for target.
-testGaussianFactorGraph.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/build
-.PHONY : testGaussianFactorGraph.run/fast
+testRegularHessianFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.dir/build
+.PHONY : testRegularHessianFactor/fast
 
 # Convenience name for target.
 gtsam/linear/tests/CMakeFiles/testSerializationLinear.dir/rule:
@@ -593,34 +323,199 @@ testSerializationLinear/fast:
 .PHONY : testSerializationLinear/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
+gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
 
 # Convenience name for target.
-testNoiseModel.run: gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/rule
+testGaussianFactorGraph.run: gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/rule
 
-.PHONY : testNoiseModel.run
+.PHONY : testGaussianFactorGraph.run
 
 # fast build rule for target.
-testNoiseModel.run/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/build.make gtsam/linear/tests/CMakeFiles/testNoiseModel.run.dir/build
-.PHONY : testNoiseModel.run/fast
+testGaussianFactorGraph.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.run.dir/build
+.PHONY : testGaussianFactorGraph.run/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testErrors.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
+gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
 
 # Convenience name for target.
-testErrors: gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
+testJacobianFactor.run: gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/rule
 
-.PHONY : testErrors
+.PHONY : testJacobianFactor.run
 
 # fast build rule for target.
-testErrors/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testErrors.dir/build.make gtsam/linear/tests/CMakeFiles/testErrors.dir/build
-.PHONY : testErrors/fast
+testJacobianFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testJacobianFactor.run.dir/build
+.PHONY : testJacobianFactor.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
+
+# Convenience name for target.
+testGaussianFactorGraph: gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/rule
+
+.PHONY : testGaussianFactorGraph
+
+# fast build rule for target.
+testGaussianFactorGraph/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianFactorGraph.dir/build
+.PHONY : testGaussianFactorGraph/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
+
+# Convenience name for target.
+testGaussianDensity.run: gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/rule
+
+.PHONY : testGaussianDensity.run
+
+# fast build rule for target.
+testGaussianDensity.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianDensity.run.dir/build
+.PHONY : testGaussianDensity.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testSampler.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
+
+# Convenience name for target.
+testSampler: gtsam/linear/tests/CMakeFiles/testSampler.dir/rule
+
+.PHONY : testSampler
+
+# fast build rule for target.
+testSampler/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSampler.dir/build.make gtsam/linear/tests/CMakeFiles/testSampler.dir/build
+.PHONY : testSampler/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
+
+# Convenience name for target.
+testScatter.run: gtsam/linear/tests/CMakeFiles/testScatter.run.dir/rule
+
+.PHONY : testScatter.run
+
+# fast build rule for target.
+testScatter.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testScatter.run.dir/build.make gtsam/linear/tests/CMakeFiles/testScatter.run.dir/build
+.PHONY : testScatter.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/check.linear.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
+
+# Convenience name for target.
+check.linear: gtsam/linear/tests/CMakeFiles/check.linear.dir/rule
+
+.PHONY : check.linear
+
+# fast build rule for target.
+check.linear/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/check.linear.dir/build.make gtsam/linear/tests/CMakeFiles/check.linear.dir/build
+.PHONY : check.linear/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
+
+# Convenience name for target.
+testSerializationLinear.run: gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/rule
+
+.PHONY : testSerializationLinear.run
+
+# fast build rule for target.
+testSerializationLinear.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/build.make gtsam/linear/tests/CMakeFiles/testSerializationLinear.run.dir/build
+.PHONY : testSerializationLinear.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
+
+# Convenience name for target.
+testRegularJacobianFactor.run: gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/rule
+
+.PHONY : testRegularJacobianFactor.run
+
+# fast build rule for target.
+testRegularJacobianFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.run.dir/build
+.PHONY : testRegularJacobianFactor.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
+
+# Convenience name for target.
+testSampler.run: gtsam/linear/tests/CMakeFiles/testSampler.run.dir/rule
+
+.PHONY : testSampler.run
+
+# fast build rule for target.
+testSampler.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testSampler.run.dir/build.make gtsam/linear/tests/CMakeFiles/testSampler.run.dir/build
+.PHONY : testSampler.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
+
+# Convenience name for target.
+testVectorValues.run: gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/rule
+
+.PHONY : testVectorValues.run
+
+# fast build rule for target.
+testVectorValues.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/build.make gtsam/linear/tests/CMakeFiles/testVectorValues.run.dir/build
+.PHONY : testVectorValues.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
+
+# Convenience name for target.
+testRegularHessianFactor.run: gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/rule
+
+.PHONY : testRegularHessianFactor.run
+
+# fast build rule for target.
+testRegularHessianFactor.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularHessianFactor.run.dir/build
+.PHONY : testRegularHessianFactor.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
+
+# Convenience name for target.
+testGaussianBayesNet: gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/rule
+
+.PHONY : testGaussianBayesNet
+
+# fast build rule for target.
+testGaussianBayesNet/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.dir/build
+.PHONY : testGaussianBayesNet/fast
 
 # Convenience name for target.
 gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.dir/rule:
@@ -636,6 +531,21 @@ testRegularJacobianFactor: gtsam/linear/tests/CMakeFiles/testRegularJacobianFact
 testRegularJacobianFactor/fast:
 	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testRegularJacobianFactor.dir/build
 .PHONY : testRegularJacobianFactor/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testErrors.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
+
+# Convenience name for target.
+testErrors: gtsam/linear/tests/CMakeFiles/testErrors.dir/rule
+
+.PHONY : testErrors
+
+# fast build rule for target.
+testErrors/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testErrors.dir/build.make gtsam/linear/tests/CMakeFiles/testErrors.dir/build
+.PHONY : testErrors/fast
 
 # Convenience name for target.
 gtsam/linear/tests/CMakeFiles/testGaussianConditional.dir/rule:
@@ -668,19 +578,109 @@ testGaussianConditional.run/fast:
 .PHONY : testGaussianConditional.run/fast
 
 # Convenience name for target.
-gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
-.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
+gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
 
 # Convenience name for target.
-testGaussianBayesTree: gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/rule
+testErrors.run: gtsam/linear/tests/CMakeFiles/testErrors.run.dir/rule
 
-.PHONY : testGaussianBayesTree
+.PHONY : testErrors.run
 
 # fast build rule for target.
-testGaussianBayesTree/fast:
-	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesTree.dir/build
-.PHONY : testGaussianBayesTree/fast
+testErrors.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testErrors.run.dir/build.make gtsam/linear/tests/CMakeFiles/testErrors.run.dir/build
+.PHONY : testErrors.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
+
+# Convenience name for target.
+testKalmanFilter: gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/rule
+
+.PHONY : testKalmanFilter
+
+# fast build rule for target.
+testKalmanFilter/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/build.make gtsam/linear/tests/CMakeFiles/testKalmanFilter.dir/build
+.PHONY : testKalmanFilter/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testScatter.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
+
+# Convenience name for target.
+testScatter: gtsam/linear/tests/CMakeFiles/testScatter.dir/rule
+
+.PHONY : testScatter
+
+# fast build rule for target.
+testScatter/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testScatter.dir/build.make gtsam/linear/tests/CMakeFiles/testScatter.dir/build
+.PHONY : testScatter/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
+
+# Convenience name for target.
+testGaussianBayesNet.run: gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/rule
+
+.PHONY : testGaussianBayesNet.run
+
+# fast build rule for target.
+testGaussianBayesNet.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianBayesNet.run.dir/build
+.PHONY : testGaussianBayesNet.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
+
+# Convenience name for target.
+testKalmanFilter.run: gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/rule
+
+.PHONY : testKalmanFilter.run
+
+# fast build rule for target.
+testKalmanFilter.run/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/build.make gtsam/linear/tests/CMakeFiles/testKalmanFilter.run.dir/build
+.PHONY : testKalmanFilter.run/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
+
+# Convenience name for target.
+testGaussianDensity: gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/rule
+
+.PHONY : testGaussianDensity
+
+# fast build rule for target.
+testGaussianDensity/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/build.make gtsam/linear/tests/CMakeFiles/testGaussianDensity.dir/build
+.PHONY : testGaussianDensity/fast
+
+# Convenience name for target.
+gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f CMakeFiles/Makefile2 gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
+.PHONY : gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
+
+# Convenience name for target.
+testHessianFactor: gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/rule
+
+.PHONY : testHessianFactor
+
+# fast build rule for target.
+testHessianFactor/fast:
+	cd /home/rmw/Documents/git/PPP-BayesTree/trunk/build && $(MAKE) -f gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/build.make gtsam/linear/tests/CMakeFiles/testHessianFactor.dir/build
+.PHONY : testHessianFactor/fast
 
 testErrors.o: testErrors.cpp.o
 
@@ -1126,42 +1126,42 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... testGaussianBayesNet"
-	@echo "... testHessianFactor.run"
-	@echo "... testHessianFactor"
-	@echo "... testRegularHessianFactor"
-	@echo "... testGaussianBayesTree.run"
-	@echo "... testErrors.run"
-	@echo "... testKalmanFilter"
-	@echo "... testGaussianDensity.run"
-	@echo "... testGaussianDensity"
-	@echo "... package"
-	@echo "... testGaussianFactorGraph"
-	@echo "... testJacobianFactor.run"
-	@echo "... testRegularHessianFactor.run"
-	@echo "... testVectorValues.run"
-	@echo "... testSampler"
-	@echo "... testJacobianFactor"
-	@echo "... testVectorValues"
-	@echo "... testNoiseModel"
-	@echo "... testSerializationLinear.run"
-	@echo "... check.linear"
-	@echo "... testScatter.run"
-	@echo "... list_install_components"
-	@echo "... testSampler.run"
-	@echo "... testRegularJacobianFactor.run"
-	@echo "... testGaussianBayesNet.run"
-	@echo "... testKalmanFilter.run"
-	@echo "... testScatter"
-	@echo "... testGaussianFactorGraph.run"
-	@echo "... testSerializationLinear"
 	@echo "... package_source"
 	@echo "... testNoiseModel.run"
-	@echo "... testErrors"
+	@echo "... testGaussianBayesTree.run"
+	@echo "... testGaussianBayesTree"
+	@echo "... testNoiseModel"
+	@echo "... testVectorValues"
+	@echo "... testJacobianFactor"
+	@echo "... testHessianFactor.run"
+	@echo "... testRegularHessianFactor"
+	@echo "... testSerializationLinear"
+	@echo "... testGaussianFactorGraph.run"
+	@echo "... package"
+	@echo "... testJacobianFactor.run"
+	@echo "... testGaussianFactorGraph"
+	@echo "... testGaussianDensity.run"
+	@echo "... testSampler"
+	@echo "... testScatter.run"
+	@echo "... check.linear"
+	@echo "... testSerializationLinear.run"
+	@echo "... list_install_components"
+	@echo "... testRegularJacobianFactor.run"
+	@echo "... testSampler.run"
+	@echo "... testVectorValues.run"
+	@echo "... testRegularHessianFactor.run"
+	@echo "... testGaussianBayesNet"
 	@echo "... testRegularJacobianFactor"
+	@echo "... testErrors"
 	@echo "... testGaussianConditional"
 	@echo "... testGaussianConditional.run"
-	@echo "... testGaussianBayesTree"
+	@echo "... testErrors.run"
+	@echo "... testKalmanFilter"
+	@echo "... testScatter"
+	@echo "... testGaussianBayesNet.run"
+	@echo "... testKalmanFilter.run"
+	@echo "... testGaussianDensity"
+	@echo "... testHessianFactor"
 	@echo "... testErrors.o"
 	@echo "... testErrors.i"
 	@echo "... testErrors.s"

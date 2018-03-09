@@ -18,5 +18,5 @@ endif()
 list(APPEND GTSAM_INCLUDE_DIR "/usr/local/include/gtsam/3rdparty/Eigen/")
 
 if("0")
-  list(APPEND GTSAM_INCLUDE_DIR "/opt/intel/mkl/include")
+  list(APPEND GTSAM_INCLUDE_DIR "MKL_INCLUDE_DIR-NOTFOUND")
 endif()
