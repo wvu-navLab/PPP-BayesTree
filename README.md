@@ -27,8 +27,7 @@ This repository contains a modified version of [GTSAM](https://bitbucket.org/gtb
 ````bash
 
 cd PPP-BayesTree/truck/gtsam;
-mkdir build;  
-cd build;
+mkdir build && cd build;
 cmake ..
 make
 
