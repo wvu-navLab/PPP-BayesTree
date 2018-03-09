@@ -1,2 +1,0 @@
-/usr/bin/ar qc libCppUnitLite.a  CMakeFiles/CppUnitLite.dir/TestRegistry.cpp.o CMakeFiles/CppUnitLite.dir/Test.cpp.o CMakeFiles/CppUnitLite.dir/TestResult.cpp.o
-/usr/bin/ranlib libCppUnitLite.a
