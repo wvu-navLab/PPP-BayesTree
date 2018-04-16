@@ -40,21 +40,11 @@ if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
   message(FATAL_ERROR "In-source builds not allowed. Please make a new directory (called a build directory) and run CMake from there. You may need to remove CMakeCache.txt. ")
 endif()
 
-# See whether gtsam_unstable is available (it will be present only if we're using a git checkout)
-if(EXISTS "${PROJECT_SOURCE_DIR}/gtsam_unstable" AND IS_DIRECTORY "${PROJECT_SOURCE_DIR}/gtsam_unstable")
-    set(GTSAM_UNSTABLE_AVAILABLE 1)
-else()
-    set(GTSAM_UNSTABLE_AVAILABLE 0)
-endif()
-
 
 ###############################################################################
 # Set up options
 
 # Configurable Options
-if(GTSAM_UNSTABLE_AVAILABLE)
-    option(GTSAM_BUILD_UNSTABLE              "Enable/Disable libgtsam_unstable"          ON)
-endif()
 option(GTSAM_BUILD_STATIC_LIBRARY        "Build a static gtsam library, instead of shared" OFF)
 option(GTSAM_USE_QUATERNIONS             "Enable/Disable using an internal Quaternion representation for rotations instead of rotation matrices. If enable, Rot3::EXPMAP is enforced by default." OFF)
 option(GTSAM_POSE3_EXPMAP 			 	 "Enable/Disable using Pose3::EXPMAP as the default mode. If disabled, Pose3::FIRST_ORDER will be used." OFF)
@@ -342,6 +332,11 @@ endif()
 # Build CppUnitLite
 add_subdirectory(CppUnitLite)
 
+# Build wrap
+if (GTSAM_BUILD_WRAP)
+    add_subdirectory(wrap)
+endif(GTSAM_BUILD_WRAP)
+
 # Build GTSAM library
 add_subdirectory(gtsam)
 
@@ -353,6 +348,25 @@ add_subdirectory(examples)
 
 # Build timing
 add_subdirectory(timing)
+
+# Matlab toolbox
+if (GTSAM_INSTALL_MATLAB_TOOLBOX)
+	add_subdirectory(matlab)
+endif()
+
+# Python wrap
+if (GTSAM_BUILD_PYTHON)
+	include(GtsamPythonWrap)
+
+	# NOTE: The automatic generation of python wrapper from the gtsampy.h interface is
+	#       not working yet, so we're using a handwritten wrapper files on python/handwritten.
+	#       Once the python wrapping from the interface file is working, you can _swap_ the
+	#       comments on the next lines
+
+	# wrap_and_install_python(gtsampy.h "${GTSAM_ADDITIONAL_LIBRARIES}" "")
+	add_subdirectory(python)
+
+endif()
 
 # Install config and export files
 GtsamMakeConfigFile(GTSAM "${CMAKE_CURRENT_SOURCE_DIR}/gtsam_extra.cmake.in")
@@ -385,7 +399,6 @@ set(CPACK_PACKAGE_INSTALL_DIRECTORY "CMake ${CMake_VERSION_MAJOR}.${CMake_VERSIO
 #set(CPACK_INSTALLED_DIRECTORIES "doc;.") # Include doc directory
 #set(CPACK_INSTALLED_DIRECTORIES ".") # FIXME: throws error
 set(CPACK_SOURCE_IGNORE_FILES "/build*;/\\\\.;/makestats.sh$")
-set(CPACK_SOURCE_IGNORE_FILES "${CPACK_SOURCE_IGNORE_FILES}" "/gtsam_unstable/")
 set(CPACK_SOURCE_IGNORE_FILES "${CPACK_SOURCE_IGNORE_FILES}" "/package_scripts/")
 set(CPACK_SOURCE_PACKAGE_FILE_NAME "gtsam-${GTSAM_VERSION_MAJOR}.${GTSAM_VERSION_MINOR}.${GTSAM_VERSION_PATCH}")
 #set(CPACK_SOURCE_PACKAGE_FILE_NAME "gtsam-aspn${GTSAM_VERSION_PATCH}") # Used for creating ASPN tarballs
@@ -410,10 +423,6 @@ if (DOXYGEN_FOUND)
 endif()
 print_config_flag(${GTSAM_BUILD_STATIC_LIBRARY}        "Build static GTSAM library instead of shared")
 print_config_flag(${GTSAM_BUILD_TYPE_POSTFIXES}        "Put build type in library name ")
-if(GTSAM_UNSTABLE_AVAILABLE)
-    print_config_flag(${GTSAM_BUILD_UNSTABLE}          "Build libgtsam_unstable        ")
-endif()
-string(TOUPPER "${CMAKE_BUILD_TYPE}" cmake_build_type_toupper)
 if(NOT MSVC AND NOT XCODE_VERSION)
     message(STATUS "  Build type                     : ${CMAKE_BUILD_TYPE}")
     message(STATUS "  C compilation flags            : ${CMAKE_C_FLAGS} ${CMAKE_C_FLAGS_${cmake_build_type_toupper}}")
