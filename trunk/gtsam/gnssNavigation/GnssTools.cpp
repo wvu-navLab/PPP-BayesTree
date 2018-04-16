@@ -22,7 +22,31 @@ Vector obsMap(const Point3 &p1, const Point3 &p2, const int &Trop) {
                 double el = calcEl(p1,p2);
                 double mapT = tropMap(el);
                 Vector5 H; H << (p1.x()-p2.x())/r, (p1.y()- p2.y())/r,
-                (p1.z()-p2.z())/r, 1.0, mapT;
+                (p1.z()-p2.z())/r, 1.0,mapT;
+                return H;
+        }
+        else {
+                Vector5 H; H << (p1.x()-p2.x())/r, (p1.y()- p2.y())/r,
+                (p1.z()-p2.z())/r, 1.0, 0.0;
+                return H;
+        }
+}
+
+Vector obsMapNED(const Point3 &p1, const Point3 &p2, const int &Trop) {
+        /*
+           inputs ::
+           p1 --> ECEF xyz coordinates of satellite [meter]
+           p2 --> ECEF xyz coordinates of receiver [meter]
+           Trop --> Troposphere modeling switch
+           outputs ::
+           H --> measurement mapping
+         */
+        double r = sqrt( ((p1.x()-p2.x()))*(p1.x()-p2.x()) + ((p1.y()-p2.y())*(p1.y()-p2.y())) + ((p1.z()-p2.z())*(p1.z()-p2.z())) );
+        if (Trop == 1) {
+                double el = calcElNed(p1);
+                double mapT = tropMap(el);
+                Vector5 H; H << (p1.x()-p2.x())/r, (p1.y()- p2.y())/r,
+                (p1.z()-p2.z())/r, 1.0,mapT;
                 return H;
         }
         else {
@@ -98,6 +122,16 @@ double deltaObs(const Point3 &p1, const Point3 &p2, const double &meas){
          */
         double r = norm3(p1-p2) + tropMap(calcEl(p1,p2))*tropDry(p2);
         return meas - r;
+}
+
+double deltaTrop(const Point3 &p1, const Point3 &p2){
+        /*
+           inputs ::
+           p1 --> ECEF xyz coordinates of satellite [meter]
+           p2 --> ECEF xyz coordinates of receiver [meter]
+           meas --> observed range between satellite and receiver [meter]
+         */
+        return tropMap(calcEl(p1,p2))*tropDry(p2);
 }
 
 Point3 xyz2llh(const Point3 &p1){

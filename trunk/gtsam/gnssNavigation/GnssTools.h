@@ -30,7 +30,11 @@ Point3 inertialToECEF( const Point3& inertialPosition, const double t, const dou
 Matrix earthToNavTrans( const Point3& ECEFxyz);
 
 //// Compute mapping from meas. to states
-Vector obsMap(const Point3& p1, const Point3& q, const int& Trop = 0);
+Vector obsMap(const Point3& p1, const Point3& q, const int& Trop = 1);
+
+//// Compute mapping from meas. to states
+Vector obsMapNED(const Point3& p1, const Point3& q, const int& Trop = 1);
+
 
 //// Extract PRN Vector from GNSS data structure
 Eigen::VectorXi getPRN(const Matrix& p);
@@ -40,6 +44,9 @@ bool checkPRN(const Eigen::VectorXi& p, const int& n);
 
 /// computer delta pseudorange observables
 double deltaObs(const Point3& p1, const Point3& p2, const double& pseudorange);
+
+/// compute the delta troposphere correction
+double deltaTrop(const Point3& p1, const Point3& p2);
 
 //// Convert from WGS-84 ECEF coordinated to local-level-tangent (ENU) coordinates
 ////

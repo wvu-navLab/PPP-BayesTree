@@ -36,5 +36,6 @@ make
 ### 4) Test
 
 ````bash
-./examples/pppBayesTree -c ../data/example.conf
+cd ../data
+./../build/examples/pppBayesTree -c phastball.conf
 ````

@@ -1,7 +1,6 @@
 /*
-
- * @file gnssOnlyISAM.cpp
- * @brief Iterative GPS Range/Phase Estimator
+ * @file pppBayesTree.cpp
+ * @brief Iterative GPS Range/Phase Estimator with collected data
  * @author Ryan Watson & Jason Gross
  */
 
@@ -53,16 +52,16 @@ using symbol_shorthand::G;   // bias states ( Phase Biases )
 
 int main(int argc, char* argv[])
 {
-        int nThreads(-1), break_count(0);
-        double xn, yn, zn, gpsErf;
-        double east, north, vertical;
-        string confFile, gnssFile;
+        // define std out print color
+        vector<int> prn_vec;
+        vector<rnxData> data;
         const string red("\033[0;31m");
         const string green("\033[0;32m");
-        bool printBias(true), trop(true), printXYZ(true);
-        Eigen::VectorXi prn_pre(1), prn_curr(1);
-        Eigen::Matrix<double,96,1> gps = Eigen::Matrix<double,96,1>::Zero();
-        Eigen::Matrix<double,96,1> gps_pre = Eigen::Matrix<double,96,1>::Zero();
+        string confFile, gnssFile, station;
+        double xn, yn, zn, range, phase, rho, gnssTime;
+        int startKey(0), currKey, startEpoch(0), svn;
+        int nThreads(-1), phase_break, break_count(0), nextKey;
+        bool printECEF, printENU, printAmb, first_ob(true);
 
         cout.precision(12);
 
@@ -78,7 +77,6 @@ int main(int argc, char* argv[])
 
         ConfDataReader confReader;
         confReader.open(confFile);
-        string station;
 
         if (confFile.empty() ) {
                 cout << red << "\n\n Currently, you need to provide a conf file \n"
@@ -90,20 +88,19 @@ int main(int argc, char* argv[])
                 xn = confReader.fetchListValueAsDouble("nominalECEF",station);
                 yn = confReader.fetchListValueAsDouble("nominalECEF",station);
                 zn = confReader.fetchListValueAsDouble("nominalECEF",station);
-                east = confReader.fetchListValueAsDouble("nominalENU", station);
-                north = confReader.fetchListValueAsDouble("nominalENU", station);
-                vertical = -1*confReader.fetchListValueAsDouble("nominalENU", station);
-                gpsErf = confReader.getValueAsDouble("productScale", station);
+                printENU = confReader.getValueAsBoolean("printENU", station);
+                printAmb = confReader.getValueAsBoolean("printAmb", station);
+                printECEF = confReader.getValueAsBoolean("printECEF", station);
                 gnssFile = confReader("dataFile", station);
         }
 
-        gnssFile = findExampleDataFile(gnssFile);
         Point3 nomXYZ(xn, yn, zn);
         Point3 prop_xyz = nomXYZ;
 
-        if ( gnssFile.empty() ) {
-                cout << red << "\n\n GNSS data must be specified in the config \n"
-                     << "\n\n" << green << desc << endl;
+        try { data = readGNSS(gnssFile); }
+        catch(std::exception& e)
+        {
+                cout << red << "\n\n Cannot read GNSS data file " << endl;
                 exit(1);
         }
 
@@ -123,7 +120,6 @@ int main(int argc, char* argv[])
         }
         #endif
 
-
         ISAM2DoglegParams doglegParams;
         ISAM2Params parameters;
         parameters.relinearizeThreshold = 0.1;
@@ -132,128 +128,106 @@ int main(int argc, char* argv[])
 
         double output_time = 0.0;
         double rangeWeight = pow(2.5,2);
-        double phaseWeight = pow(0.0025,2);
+        double phaseWeight = pow(0.25,2);
 
         ifstream file(gnssFile.c_str());
         string value;
 
-        nonBiasStates prior_nonBias = (gtsam::Vector(5) << north, east, vertical, 3e6, 0.0).finished();
+        nonBiasStates prior_nonBias = (gtsam::Vector(5) << 0.0, 0.0, 0.0, 0.0, 0.0).finished();
 
-        biasStates bias_state(Z_1x1);
+        phaseBias bias_state(Z_1x1);
+        gnssStateVector phase_arc(Z_34x1);
         gnssStateVector bias_counter(Z_34x1);
-        for (int i=1; i<31; i++) {bias_counter(i) = bias_counter(i-1) + 1000; }
+        for (int i=1; i<34; i++) {bias_counter(i) = bias_counter(i-1) + 10000; }
+
+        nonBiasStates initEst(Z_5x1);
         nonBiasStates between_nonBias_State(Z_5x1);
-        nonBiasStates prior_nonBias_State(Z_5x1);
 
         Values initial_values;
         Values result;
-        int correction_count = 0;
-        initial_values.insert(X(correction_count), prior_nonBias);
 
-        noiseModel::Diagonal::shared_ptr nonBias_InitNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 1.0, 1.0, 1.0, 3e6, 3e-1).finished());
+        noiseModel::Diagonal::shared_ptr nonBias_InitNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 3.0, 3.0, 3.0, 1e3, 1e-1).finished());
 
-        noiseModel::Diagonal::shared_ptr nonBias_ProcessNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 5.0, 5.0, 5.0, 2e4, 100).finished());
+        noiseModel::Diagonal::shared_ptr nonBias_ProcessNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(5) << 1.0, 1.0, 1.0, 10, 1e-3).finished());
 
-        biasStates initNoise = (gtsam::Vector(1) << 5e-5).finished();
-        diagNoise::shared_ptr biasInitNoise = diagNoise::Sigmas( initNoise );
+        noiseModel::Diagonal::shared_ptr initNoise = noiseModel::Diagonal::Sigmas((gtsam::Vector(1) << 1).finished());
+
 
         NonlinearFactorGraph *graph = new NonlinearFactorGraph();
-        graph->add(PriorFactor<nonBiasStates>(X(correction_count), prior_nonBias,  nonBias_InitNoise));
 
-        while ( file.good() ) {
-                if (correction_count > 0 ) {
-                        gps_pre = Eigen::Matrix<double,96,1>::Zero();
-                        gps_pre = gps;
-                        prn_pre = prn_curr;
+        for(unsigned int i = startEpoch; i < data.size(); i++ ) {
+
+                // Get the current epoch's observables
+                gnssTime = get<0>(data[i]);
+                currKey = get<1>(data[i]);
+                if (first_ob) {
+                        startKey = currKey; first_ob=false;
+                        graph->add(PriorFactor<nonBiasStates>(X(currKey), initEst,  nonBias_InitNoise));
+                        initial_values.insert(X(currKey), initEst);
                 }
+                nextKey = get<1>(data[i+1]);
+                svn = get<2>(data[i]);
+                Point3 satXYZ = get<3>(data[i]);
+                rho = get<4>(data[i]);
+                range = get<5>(data[i]);
+                phase = get<6>(data[i]);
+                phase_break = get<7>(data[i]);
 
-                getline(file, value, ',');
-                gps = Eigen::Matrix<double,96,1>::Zero();
-                for (int i=0; i<94; ++i) {
-                        getline(file, value, ',');
-                        gps(i) = atof(value.c_str());
+                if (phase_arc[svn]!=phase_break)
+                {
+                        bias_state[0] = phase - range;
+                        if (currKey > startKey) { bias_counter[svn] = bias_counter[svn] +1; }
+                        graph->add(PriorFactor<phaseBias>(G(bias_counter[svn]), bias_state,  initNoise));
+                        initial_values.insert(G(bias_counter[svn]), bias_state);
+                        phase_arc[svn] = phase_break;
                 }
-                if ( gps(0) == 0 ) { return 0; }
+                // Generate pseudorange factor
+                PseudorangeFactor gpsRangeFactor(X(currKey), (range-rho), satXYZ, nomXYZ, diagNoise::Sigmas( (gtsam::Vector(1) << elDepWeight(satXYZ, nomXYZ, rangeWeight)).finished()));
 
-                prn_curr = getPRN(gps);
-                int numSats = gps(0);
-                int phase_break = gps(1);
+                graph->add(gpsRangeFactor);
 
-                int count = 2;
+                // Generate phase factor
+                PhaseFactor gpsPhaseFactor(X(currKey), G(bias_counter[svn]), (phase-rho), satXYZ, nomXYZ, diagNoise::Sigmas( (gtsam::Vector(1) << elDepWeight(satXYZ, nomXYZ, phaseWeight)).finished() ));
 
-                if ( phase_break || !((prn_pre - prn_curr).norm()==0) ) {
-                        break_count++;
-                        phase_break=0;
+                graph->add(gpsPhaseFactor);
+                prn_vec.push_back(svn);
 
-                        if (correction_count > 0) {
-                                for (int i=0; i<numSats; i++) {
-                                        phase_break = gps(count+1);
-                                        if ( !checkPRN(prn_pre, prn_curr(i)) || phase_break) {
-                                                bias_counter[prn_curr(i)] = bias_counter[prn_curr(i)] +1;
-                                                bias_state[0] = gps(count+3)-gps(count+2);
-                                                initial_values.insert(G(bias_counter[prn_curr(i)]), bias_state);
-                                                graph->add(PriorFactor<biasStates>(G(bias_counter[prn_curr(i)]), bias_state, biasInitNoise));
-                                        }
-                                        count = count + 7;
+                if (currKey != nextKey) {
+                        if (currKey > startKey ) {
+                                graph->add(BetweenFactor<nonBiasStates>(X(currKey), X(currKey-1), between_nonBias_State, nonBias_ProcessNoise));
+                        }
+                        isam.update(*graph, initial_values);
+                        result = isam.calculateEstimate();
+
+                        prior_nonBias = result.at<nonBiasStates>(X(currKey));
+                        Point3 delta_xyz = (gtsam::Vector(3) << prior_nonBias.x(), prior_nonBias.y(), prior_nonBias.z()).finished();
+                        prop_xyz = nomXYZ - delta_xyz;
+
+                        if (printECEF) {
+                                cout << "xyz " << gnssTime << " " << prop_xyz.x() << " " << prop_xyz.y() << " " << prop_xyz.z() << endl;
+                        }
+
+                        if (printENU) {
+                                Point3 enu = xyz2enu(prop_xyz, nomXYZ);
+                                cout << "enu " << gnssTime << " " << enu.x() << " " << enu.y() << " " << enu.z() << endl;
+                        }
+
+                        if (printAmb) {
+                                cout << "gps " << " " << gnssTime << " ";
+                                for (int k=0; k<prn_vec.size(); k++) {
+                                        cout << result.at<phaseBias>(G(bias_counter[prn_vec[k]])) << " ";
                                 }
+                                cout << endl;
                         }
-                        else {
-                                for (int i=0; i<numSats; i++) {
-                                        bias_state[0] = gps(count+3)-gps(count+2);
-                                        initial_values.insert(G(bias_counter[prn_curr(i)]), bias_state);
-                                        graph->add(PriorFactor<biasStates>(G(bias_counter[prn_curr(i)]), bias_state, biasInitNoise));
-                                        count = count+7;
-                                }
-                        }
+
+                        output_time = output_time +1;
+                        graph->resize(0);
+                        initial_values.clear();
+                        prn_vec.clear();
+                        initial_values.insert(X(nextKey), prior_nonBias);
                 }
-
-                if (correction_count > 1) {
-                        graph->add(BetweenFactor<nonBiasStates>(X(correction_count), X(correction_count-1), between_nonBias_State, nonBias_ProcessNoise));
-                }
-
-                count = 2;
-                for ( int j=0; j<numSats; j++ ) {
-                        Point3 satXYZ = (gtsam::Vector(3) << gps(count+4),gps(count+5), gps(count+6)).finished();
-
-                        double deltaRange = deltaObs(satXYZ, prop_xyz, gps(count+2));
-
-                        double deltaPhase = deltaObs(satXYZ, prop_xyz, gps(count+3));
-
-                        PseudorangeFactor gpsRangeFactor(X(correction_count), deltaRange, satXYZ, prop_xyz, diagNoise::Sigmas( (gtsam::Vector(1) << elDepWeight(satXYZ, prop_xyz, rangeWeight)).finished()));
-
-                        PhaseFactor gpsPhaseFactor(X(correction_count), G(bias_counter[prn_curr(j)]),deltaPhase,satXYZ, prop_xyz, diagNoise::Sigmas( (gtsam::Vector(1) << elDepWeight(satXYZ, prop_xyz, phaseWeight)).finished() ));
-
-                        graph->add(gpsRangeFactor);
-                        graph->add(gpsPhaseFactor);
-
-                        count = count + 7;
-                }
-                isam.update(*graph, initial_values);
-                result = isam.calculateEstimate();
-
-                prior_nonBias = result.at<nonBiasStates>(X(correction_count));
-                Point3 delta_xyz = (gtsam::Vector(3) << prior_nonBias.x(), prior_nonBias.y(), prior_nonBias.z()).finished();
-                prop_xyz = prop_xyz - delta_xyz;
-
-                if (printXYZ) {
-                        cout << "ECEF-XYZ " << prop_xyz.x() << " " << prop_xyz.y() << " " << prop_xyz.z() << endl;
-                }
-
-                if (printBias) {
-                        cout << "Carrier-Phase Ambiguity ";
-                        for (int k=0; k<numSats; k++) {
-                                cout << result.at<biasStates>(G(bias_counter[prn_curr(k)])) << " ";
-                        }
-                        cout << endl;
-                }
-
-                output_time = output_time +1;
-                graph->resize(0);
-                initial_values.clear();
-
-                correction_count++;
-                initial_values.insert(X(correction_count), prior_nonBias);
 
         }
+        isam.saveGraph("gnss.tree");
         return 0;
 }

@@ -16,13 +16,14 @@
 
 namespace gtsam {
 
-class GTSAM_EXPORT PhaseFactor : public NoiseModelFactor2<nonBiasStates, biasStates> {
+class GTSAM_EXPORT PhaseFactor : public NoiseModelFactor2<nonBiasStates, phaseBias> {
 
 private:
-typedef NoiseModelFactor2<nonBiasStates, biasStates> Base;
-double measured_;
+typedef NoiseModelFactor2<nonBiasStates, phaseBias> Base;
 Point3 satXYZ_;
 Point3 nomXYZ_;
+double measured_;
+nonBiasStates h_;
 
 public:
 
@@ -30,13 +31,14 @@ typedef boost::shared_ptr<PhaseFactor> shared_ptr;
 typedef PhaseFactor This;
 
 PhaseFactor() : measured_(0) {
+        h_=(Matrix(1,5)<<1,1,1,1,1).finished();
 }
 
 virtual ~PhaseFactor() {
 }
 
 PhaseFactor(Key deltaStates, Key bias, const double measurement,
-            const Point3 satXYZ, const Point3 nomXYZ,const SharedNoiseModel& model) :
+            const Point3 satXYZ, const Point3 nomXYZ,const SharedNoiseModel &model) :
         Base(model, deltaStates, bias), measured_(measurement)
 {
         satXYZ_=satXYZ;
@@ -48,7 +50,7 @@ virtual gtsam::NonlinearFactor::shared_ptr clone() const {
                        gtsam::NonlinearFactor::shared_ptr(new PhaseFactor(*this)));
 }
 
-Vector evaluateError(const nonBiasStates& q, const biasStates& g,
+Vector evaluateError(const nonBiasStates& q, const phaseBias& g,
                      boost::optional<Matrix&> H1 = boost::none,
                      boost::optional<Matrix&> H2 = boost::none ) const;
 

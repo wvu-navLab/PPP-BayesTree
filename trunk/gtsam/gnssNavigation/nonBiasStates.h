@@ -44,6 +44,7 @@ enum { dimension = 5 };
 /// @name Standard Constructors
 /// @{
 
+using Vector5::Vector5;
 nonBiasStates() :
         x_(0), y_(0), z_(0), cb_(0), tz_(0) {
 }
@@ -53,16 +54,14 @@ nonBiasStates(double x, double y, double z, double cb, double tz) :
         x_(x), y_(y), z_(z), cb_(cb), tz_(tz) {
 }
 
-/// construct from 3D vector
+// construct from 5D vector
 explicit nonBiasStates(const Vector5& v) :
         x_(v(0)), y_(v(1)), z_(v(2)), cb_(v(3)), tz_(v(4)) {
 }
 
-using Vector5::Vector5;
-
-/// @}
-/// @name Testable
-/// @{
+// @}
+// @name Testable
+// @{
 
 /** print with optional string */
 void print(const std::string& s = "") const;
@@ -127,7 +126,7 @@ inline double cb() const {
 
 // get tz
 inline double tz() const {
-        return (*this)[5];
+        return (*this)[4];
 }
 /// @}
 
