@@ -2,6 +2,24 @@
 
 This repository contains a modified version of [GTSAM](https://bitbucket.org/gtborg/gtsam), which has been updated for GNSS data processing. To enable RINEX file reading and GNSS observation modeling, the [GPSTk](http://www.gpstk.org/bin/view/Documentation/WebHome) library is utilized. A detailed description of the modification made can be found in ["Evaluation of Kinematic Precise Point Positioning Convergence with an Incremental Graph Optimizer"](https://www.researchgate.net/publication/324454778_Evaluation_of_Kinematic_Precise_Point_Positioning_Convergence_with_an_Incremental_Graph_Optimizer). This software has been cleared for public release by the USAF Case # 88ABW-2018-0905
 
+<br/>
+<br/>
+
+If you utilze this software for an academic purpose, please consider using the following citation:
+
+```
+@inproceedings{ watson2018evaluation, 
+				        title={Evaluation of kinematic precise point positioning convergence with an incremental graph optimizer},
+				        author={Watson, Ryan M and Gross, Jason N},
+			          booktitle={2018 IEEE/ION Position, Location and Navigation Symposium (PLANS)},
+			          pages={589--596},
+				        year={2018},
+				        organization={IEEE}
+              }
+```
+
+<br/>
+<br/>
 
 ## How to Install
 
